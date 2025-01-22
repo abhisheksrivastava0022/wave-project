@@ -5,30 +5,125 @@ const Home = () => {
     return (
         <>
 
+            <div class="container">
+                <div class="container">
+                    <div class="top-logo">
+                        <ul>
+                            <li class="logo-left">
+                                <a href="/">
+                                    <img src="/wave-seller/assets/waves-logo-GYymflVY.png" alt="" /></a>
+                                <a href="https://www.nfdcindia.com/" target="blank">
+                                    <img src="/wave-seller/assets/nfdc-logo-DlFUDg2O.png" alt="" />
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="innerpage mt-3">
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Basic Information</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 mb-4 css-isbt42">
+                                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0">
+                                                    <div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root form-control css-1vbfw84">
+                                                        <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1niro10" data-shrink="true" for=":r0:" id=":r0:-label"><span>Enter title name<span> *</span></span></label>
+                                                        <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-xhkvgb">
+                                                            <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-5v2ak0">
+                                                                <legend class="css-w1u3ce"><span><span>Enter title name<span > *</span></span></span></legend>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42">
+                                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0">
+                                                    <div class="MuiFormControl-root MuiFormControl-fullWidth css-17qa0m8">
+                                                        <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-160rfsr" data-shrink="false" id="category-label">Select Segment <span> *</span></label>
+                                                        <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-98ra8i">
+                                                            <div tabindex="0" role="combobox" aria-controls=":r1:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="category-label mui-component-select-category" id="mui-component-select-category" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-mp9f0v"><span class="notranslate">&ZeroWidthSpace;</span></div>
+                                                            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1l3b12y" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
+                                                                <path d="M7 10l5 5 5-5z"></path>
+                                                            </svg>
+                                                            <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-5v2ak0">
+                                                                <legend class="css-w4cd9x"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Continue</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-title">
+                                <h2>My Projects</h2>
+                                <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" href="/wave-seller/my-project">Create Project</a>
+                            </div>
+                            <div class="shadow-sm white-bg mb-3">
+                                <div class="user-list">
+                                    <ul>
+                                        <li>
+                                            <div><img src="https://wavesbazaar.com/api/waves-seller/file/read/1736413592519_9509098.png" alt="703016_1722519935.png" class="project-img" /></div>
+                                            <div class="text-notification">
+                                                <h4>test title</h4>
+                                                <ul class="discription-data">
+                                                    <li>Film</li>
+                                                    <li>Live Shoot</li>
+                                                    <li>Featured</li>
+                                                    <li>Film Ready For Distribution</li>
+                                                    <li>India</li>
+                                                    <li>English, Gujarati</li>
+                                                    <li>Action, Arts, Music and Culture, Drama, Mystery, Thriller</li>
+                                                    <li>6 min</li>
+                                                </ul>
+                                                <ul class="link-details mt-3">
+                                                    <li><a class="" href="/wave-seller/project/view/663">View Details</a></li>
+                                                    <li><a class="btn border-radius pending" href="/wave-seller/project/663">Edit</a></li>
+                                                    <li><button class="btn border-radius makeactive">Click to active</button></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shadow-sm white-bg mb-3">
+                                <div class="user-list">
+                                    <ul>
+                                        <li>
+                                            <div><img src="/wave-seller/assets/project-default-o-dvoozX.png" alt="user" class="project-img" /></div>
+                                            <div class="text-notification">
+                                                <h4>Ff</h4>
+                                                <ul class="discription-data">
+                                                    <li>TV</li>
+                                                </ul>
+                                                <ul class="link-details mt-3">
+                                                    <li><a class="" href="/wave-seller/wave-project/view/653">View Details</a></li>
+                                                    <li><a class="btn border-radius pending" href="/wave-seller/wave-project/653">Edit</a></li>
+                                                    <li><button class="btn border-radius delete">Delete</button></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
 
 
-
-
-            <div className="container">
-            <div className="row">
-            <div className="container">
-            <div className="top-logo">
-            <ul>
-            <li className="logo-left"><a href="/waves-buyer">
-            <img src={defaultimg} alt="user" className="user-img-notification1 project-img" 
-            style={{width: "120px", height: "120px",objectFit: "cover"}}/>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="text-notification"><h4>Chetak</h4><ul className="discription-data">
-            <li title="Segment">Film</li><li title="Videography">Live Shoot</li><li title="Format Type">Featured</li><li title="Stage Type">Script</li></ul><ul className="link-details mt-3 "><li><a className="" href="/waves-buyer/seller-projects/view/670">View Details</a></li><li><a className="" href="/waves-buyer/seller/view/568">Seller Info</a></li><li><button className="btn border-radius show-interest" style={{cursor: "pointer"}}>Show Interest</button></li></ul></div></li></ul></div></div><div className="shadow-sm white-bg mb-3"><div className="user-list"><ul><li><div>
-                <img src={defaultimg} alt="Pratibaada eng poster _1.jpg" className="project-img" style={{width: "120px", height: "120px", objectFit: "cover"}}/>
-                </div>
-                <div className="text-notification"><h4>PRATIBAADA</h4><ul className="discription-data"><li title="Segment">Film</li><li title="Videography">Live Shoot</li><li title="Format Type">Non Featured</li><li title="Stage Type">Film Ready For Distribution</li><li title="Countries">India</li><li title="Languages">Oriya</li><li title="Genre">Drama</li><li title="Duration">29 min</li></ul><ul className="link-details mt-3 "><li><a className="" href="/waves-buyer/seller-projects/view/668">View Details</a></li><li><a className="" href="/waves-buyer/seller/view/484">Seller Info</a></li><li><button className="btn border-radius show-interest" style="cursor: pointer;">Show Interest</button></li></ul></div></li></ul></div></div><div className="shadow-sm white-bg mb-3"><div className="user-list"><ul><li><div><img src={defaultimg} alt="TAK-TAK MARATHI FEATURE (Director's Working Still 2) Vishal Kudale.jpg" className="project-img" style={{width: "120px", height: "120px", ObjectFit: "cover"}}/></div><div className="text-notification"><h4>Tak-Tak</h4><ul className="discription-data"><li title="Segment">Film</li><li title="Videography">Live Shoot</li><li title="Format Type">Featured</li><li title="Stage Type">Film Ready For Distribution</li><li title="Countries"></li><li title="Languages">Marathi</li><li title="Genre">Action, Drama, Mystery, Others, Thriller</li><li title="Duration">92 min</li></ul><ul className="link-details mt-3 "><li><a className="" href="/waves-buyer/seller-projects/view/666">View Details</a></li><li><a className="" href="/waves-buyer/seller/view/727">Seller Info</a></li><li><button className="btn border-radius show-interest" >Show Interest</button></li></ul></div></li></ul></div></div><div className="shadow-sm white-bg mb-3"><div className="user-list"><ul><li><div><img src={defaultimg} alt="IMG_1821.png" className="project-img" style={{width: "120px", height: "120px", ObjectFit: "cover"}}/></div><div className="text-notification"><h4>Bad God</h4><ul className="discription-data"><li title="Segment">Film</li><li title="Videography">Live Shoot</li><li title="Format Type">Featured</li><li title="Stage Type">Script</li><li title="Languages">English, Kannada, Tamil</li></ul><ul className="link-details mt-3 "><li><a className="" href="/waves-buyer/seller-projects/view/665">View Details</a></li><li><a className="" href="/waves-buyer/seller/view/635">Seller Info</a></li><li><button className="btn border-radius show-interest" >Show Interest</button></li></ul></div></li></ul></div></div><div className="shadow-sm white-bg mb-3"><div className="user-list"><ul><li><div><img src={defaultimg} alt="A028C027_230512NF_1.92.3.jpg" className="project-img" style={{width: "120px", height: "120px", ObjectFit: "cover"}}/></div><div className="text-notification"><h4>Jagan</h4><ul className="discription-data"><li title="Segment">Film</li><li title="Videography">Live Shoot</li><li title="Format Type">Featured</li><li title="Stage Type">Film Ready For Distribution</li><li title="Countries">India</li><li title="Languages">Hindi</li><li title="Genre">Drama</li><li title="Duration">109 min</li></ul><ul className="link-details mt-3 "><li><a className="" href="/waves-buyer/seller-projects/view/661">View Details</a></li><li><a className="" href="/waves-buyer/seller/view/72">Seller Info</a></li><li><button className="btn border-radius show-interest">Show Interest</button></li></ul></div></li></ul></div></div><nav aria-label="..."><div className="col-md-12 mt-4"><nav aria-label="Page navigation example"><ul className="pagination"><li className="page-item active"><button className="page-link">1</button></li><li className="page-item "><button className="page-link">2</button></li><li className="page-item "><button className="page-link">3</button></li><li className="page-item "><button className="page-link">4</button></li><li className="page-item "><button className="page-link">5</button></li><li className="page-item "><button className="page-link">6</button></li><li className="page-item "><button className="page-link">7</button></li><li className="page-item "><button className="page-link">8</button></li><li className="page-item "><button className="page-link">9</button></li><li className="page-item "><button className="page-link">10</button></li><li className="page-item "><button className="page-link">11</button></li><li className="page-item disabled"><span className="page-link">...</span></li><li className="page-item "><button className="page-link">25</button></li><li className="page-item"><button className="page-link">Next</button></li></ul></nav></div></nav></div></div>
-                </div>
-                
-                
-                <div className="offcanvas offcanvas-end p-4" tabindex="-1" id="filterSearch" aria-labelledby="filterSearchLabel"><div className="offcanvas-header"><h5 className="offcanvas-title" id="filterSearchLabel"> <i className="bi bi-search"></i> Search</h5><button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div className="offcanvas-body"><div className="mb-3"><div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42"><div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0"><label for="ProjectTitle" className="form-label">Search Title</label><form><div className="form-group"><div className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root form-control css-1vbfw84"><label className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-160rfsr" data-shrink="false" for=":r2:" id=":r2:-label">Search</label><div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-xhkvgb"><input aria-invalid="false" id=":r2:" name="title" type="text" className="MuiInputBase-input MuiOutlinedInput-input css-1pk1fka" value=""><fieldset aria-hidden="true" className="MuiOutlinedInput-notchedOutline css-5v2ak0"><legend className="css-81qg8w"><span>Search</span></legend></fieldset></div></div></div></form></div><div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0"><label className="form-label">Select Segment</label><div className="MuiFormControl-root MuiFormControl-fullWidth css-17qa0m8"><label className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-160rfsr" data-shrink="false" id="segment-types">Select </label><div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-98ra8i"><div tabindex="0" role="combobox" aria-controls=":r3:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="segment-types mui-component-select-category" id="mui-component-select-category" className="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-mp9f0v"><span className="notranslate">&ZeroWidthSpace;</span></div>
-                <input aria-invalid="false" name="category" aria-hidden="true" tabindex="-1" className="MuiSelect-nativeInput css-147e5lo" value=""/><svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1l3b12y" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="M7 10l5 5 5-5z"></path></svg><fieldset aria-hidden="true" className="MuiOutlinedInput-notchedOutline css-5v2ak0"><legend className="css-81qg8w"><span>Select segment types</span></legend></fieldset></div></div></div><div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0"><label className="form-label">Select stage</label><div className="MuiFormControl-root MuiFormControl-fullWidth css-17qa0m8"><label className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-160rfsr" data-shrink="false" id="stage-types">Select </label><div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-98ra8i"><div tabindex="0" role="combobox" aria-controls=":r4:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="stage-types mui-component-select-stage_type" id="mui-component-select-stage_type" className="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-mp9f0v"><span className="notranslate">&ZeroWidthSpace;</span></div>
-                <input aria-invalid="false" name="stage_type" aria-hidden="true" tabindex="-1" className="MuiSelect-nativeInput css-147e5lo" value=""/><svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1l3b12y" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon"><path d="M7 10l5 5 5-5z"></path></svg><fieldset aria-hidden="true" className="MuiOutlinedInput-notchedOutline css-5v2ak0"><legend className="css-81qg8w"><span>Select stage types</span></legend></fieldset></div></div></div><div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0"><div className="mb-3 text-end" style="display: flex; justify-content: end; margin-top: 5px;"><button className="btn btn-primary border-radius">Search</button></div></div></div></div></div></div></div></div></div></div>
+
 
         </>
     )
