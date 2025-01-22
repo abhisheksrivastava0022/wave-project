@@ -1,38 +1,22 @@
-// import React from 'react';
-import React, { Suspense, lazy } from 'react';
-//import HomePage from "../components/HomePage/HomePage";
-//import AboutPage from '../components/AboutPage/AboutPage';
-// import NotFound from '../components/NotFound/NotFound';
-
+import React from 'react';
 import NotFound from '../components/NotFound/NotFound';
+import Home from '../components/Home/Home';
+
+const basePrefix = '/project'; // Ensure this matches your Vite config
 
 export const routes = [
-
-    {
-        path: '/',
-        element: <NotFound />,
-        children: [
-            {
-                path: '/',
-                // element: <HomePage />,
-                element: (
-                    <NotFound />
-
-                ),
-
-            },
-
-        ],
-        loader: async () => {
-
-            return false;
-        },
-    },
-
-    {
-        path: '*', // This catches all undefined routes
-        element: <NotFound />,
-        //   errorElement: <ErrorBoundary />,
-    },
-
+  {
+    path: basePrefix, // Adjust base path for the router
+    element: <Home />,
+    children: [
+      {
+        path: '', // Use empty path for nested base route
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: '*',
+    element: <NotFound />,
+  },
 ];
