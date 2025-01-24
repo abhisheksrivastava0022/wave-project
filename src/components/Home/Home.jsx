@@ -231,8 +231,8 @@ const Home = () => {
                         <p style={{ display: "flex", justifyContent: "center" }}> </p>
                         <p style={{ textAlign: "center", padding: "30px" }} className='text-center'>To view the Waves Bazaar project details, Please sign up as a Buyer or Seller.  </p>
                         <div class="top-btn text-center ">
-                            <a href="https://wavesbazaar.com/wave-seller/login" class="btn btn-primary border-radius">Seller Login</a>&nbsp;
-                            <a href="https://wavesbazaar.com/waves-buyer/login" class="btn btn-primary border-radius">Buyer Login</a>
+                            <a href="https://wavesbazaar.com/wave-seller/login" class="btn btn-primary border-radius mb-3">Seller Login</a>&nbsp;
+                            <a href="https://wavesbazaar.com/waves-buyer/login" class="btn btn-primary border-radius  mb-3">Buyer Login</a>
                         </div>
                     </>
                 )
