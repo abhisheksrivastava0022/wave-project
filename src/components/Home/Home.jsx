@@ -22,9 +22,10 @@ function getCookie() {
 
 }
 const Home = () => {
-
+    const [loggedinData, setLoggedinData] = useState({})
     React.useEffect(() => {
         const myCookieValue = getCookie();
+        setLoggedinData(myCookieValue)
         console.log({ myCookieValue })
         //console.log('Cookie Value:', myCookieValue);
     }, []);
@@ -336,9 +337,15 @@ const Home = () => {
                                                     <li title="Duration">{row.duration} min</li>
                                                 ) : null}
                                             </ul>
-                                            <Link onClick={handleClickOpen} className="btn btn-primary">
-                                                View Details
-                                            </Link>
+                                            {
+                                                (loggedinData.buyerloggedin) ?
+                                                    <a href={"waves-buyer/seller-projects/view/" + row.id}> View Details</a>
+                                                    :
+                                                    <Link onClick={handleClickOpen} className="btn btn-primary">
+                                                        View Details
+                                                    </Link>
+                                            }
+
 
                                         </div>
                                     </div>
