@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import WavesLogo from "../../assets/img/Waves.png";
 
+import category_1 from "../../assets/img/category_1.jpg"
 import NFDCLogo from "../../assets/img/NFDC.png"
 import WAVESLoader from "../../assets/img/spinner.gif"
 import ApiClient from '../API/ApiClient';
