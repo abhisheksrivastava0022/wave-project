@@ -339,7 +339,7 @@ const Home = () => {
                                             </ul>
                                             {
                                                 (loggedinData.buyerloggedin) ?
-                                                    <a href={"waves-buyer/seller-projects/view/" + row.id}> View Details</a>
+                                                    <a href={"/waves-buyer/seller-projects/view/" + row.id} className="btn btn-primary"> View Details</a>
                                                     :
                                                     <Link onClick={handleClickOpen} className="btn btn-primary">
                                                         View Details
