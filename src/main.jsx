@@ -1,11 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import React from "react";
+
 import App from './App.jsx'
 import './assets/css/wavebazaar-style.css'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <React.Fragment>
     <App />
-  </StrictMode>,
+  </React.Fragment>,
 )

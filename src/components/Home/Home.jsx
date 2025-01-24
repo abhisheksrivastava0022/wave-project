@@ -1,133 +1,362 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import defaultimg from '../../assets/img/project.png';
 import WavesLogo from "../../assets/img/Waves.png";
-import NFDCLogo from "../../assets/img/NFDC.png"
 
+import NFDCLogo from "../../assets/img/NFDC.png"
+import WAVESLoader from "../../assets/img/spinner.gif"
+import ApiClient from '../API/ApiClient';
+import { Link } from 'react-router-dom';
+import Typography from '@mui/material/Typography';
+import AlertMessage from '../AlertMessage';
+const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
+//const dataurl = "https://wavesbazaar.com/api/waves-buyer";
+function getCookie() {
+    const allCookies = document.cookie;
+    const cookiesObj = allCookies.split('; ').reduce((acc, cookie) => {
+        const [key, value] = cookie.split('=');
+        acc[key] = value;
+        return acc;
+    }, {});
+    return cookiesObj
+
+}
 const Home = () => {
+
+    React.useEffect(() => {
+        const myCookieValue = getCookie();
+        console.log({ myCookieValue })
+        //console.log('Cookie Value:', myCookieValue);
+    }, []);
+
+    const { getRequestApi } = ApiClient();
+    const [pagination, setPagination] = useState({
+        totalPosts: 0,
+        totalPages: 0,
+        currentPage: 1,
+        limit: 12,
+    });
+
+
+
+    const [searchForm, setSearchForm] = useState({ title: '', category: '' });
+
+    const [data, setData] = useState([])
+    const [genre, setGenre] = useState([])
+    const [filmtype, setFilmtype] = useState([]);
+    const [language, setlanguage] = useState([]);
+    const [country, setCountry] = useState([]);
+    const [film_status, setFilm_status] = useState({});
+    const [loading, setLoading] = useState(false);
+
+    const [hasMore, setHasMore] = useState(true); // Track if more data is available
+
+    const [formData, setFormData] = useState({
+        title: '',
+        videography_type: "",
+        format_type: "",
+        stage_type: "",
+        segment: "",
+    });
+
+    const [formDataDetails, setFormDataDetails] = useState([]);
+    const [formatTypes, setFormatTypes] = useState([]);
+    const [stageTypes, setStageTypes] = useState([]);
+    const [segmentTypes, setSegmentTypes] = useState([]);
+
+
+    const handleScroll = () => {
+        if (
+            window.innerHeight + document.documentElement.scrollTop + 1 >=
+            document.documentElement.scrollHeight
+        ) {
+            if (!loading && hasMore) {
+                setPage((prevPage) => {
+                    const nextPage = prevPage + 1;
+                    loadPreLoadData(nextPage);
+                    return nextPage;
+                });
+            }
+        }
+    };
+
+    useEffect(() => {
+        preloading();
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const preloading = async () => {
+        const endpoints = ['film-type', 'language', 'country', 'genre', 'segment', 'stage-type', 'format-type', 'videography-type'];
+        const results = await Promise.all(endpoints.map(endpoint => getRequestApi(`site/${endpoint}`)));
+
+        if (results.every(result => result.status)) {
+            setFilmtype(results[0].data);
+            setlanguage(results[1].data);
+            setCountry(results[2].data);
+            setGenre(results[3].data);
+            setSegmentTypes(results[4].data);
+            setStageTypes(results[5].data);
+            setFormatTypes(results[6].data);
+            setFormDataDetails(results[7].data);
+
+        } else {
+            console.error("Error fetching preloading data");
+        }
+
+
+        loadPreLoadData(page);
+
+    };
+
+    const [page, setPage] = useState(1); // Keep track of the current page
+
+    const loadPreLoadData = async (pageNumber) => {
+
+        try {
+            setLoading(true);
+
+            const queryParams = new URLSearchParams({
+                limit: 12, // Number of items per page
+                page: pageNumber,
+            });
+            const response = await getRequestApi("film", queryParams);
+            if (response?.status) {
+                setData((prevData) => [...prevData, ...response.data]); // Append new data
+                if (!response.data.length) setHasMore(false); // Stop loading if no more data
+            }
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const getSegment = (videoIds) => {
+        if (!videoIds) return "";
+
+        const Videography = segmentTypes?.find((c) => c.id === videoIds);
+        return Videography ? Videography.name : "";
+    };
+    const getVideography = (videoIds) => {
+        if (!videoIds) return "";
+
+        const Videography = formDataDetails?.find((c) => c.id === videoIds);
+        return Videography ? Videography.name : "";
+    };
+    const getformattype = (formatIds) => {
+        if (!formatIds) return "";
+
+        const getformattypedetails = formatTypes?.find((c) => c.id === formatIds);
+        return getformattypedetails ? getformattypedetails.name : "";
+    };
+    const getformatstagetype = (stageIds) => {
+        if (!stageIds) return "";
+
+        const stagetype = stageTypes?.find((c) => c.id === stageIds);
+        return stagetype ? stagetype.name : "";
+    };
+
+    function getCountryNamesByIds(ids) {
+
+        if (typeof ids === 'string') {
+            try {
+
+                ids = JSON.parse(ids); // Convert stringified array to an actual array
+            } catch (error) {
+                console.error("Invalid IDs format:", ids);
+                return '';
+            }
+        } else {
+
+        }
+
+        // Filter and map the country names based on IDs
+        const countryNames = country
+            .filter(item => ids.includes(item.id)) // Ensure the item ID is in the provided IDs array
+            .map(item => item.name); // Extract the names of matched countries
+        // Join the country names with a comma and return
+        return countryNames.join(', ');
+    }
+
+    function getLanguageNamesByIds(ids) {
+        if (typeof ids === 'string') {
+            try {
+                ids = JSON.parse(ids); // Convert stringified array to an actual array
+            } catch (error) {
+                console.error("Invalid IDs format:", ids);
+                return '';
+            }
+        }
+        const countryNames = language
+            .filter(country => ids.includes(country.id)) // Filter countries with matching IDs
+            .map(country => country.name); // Extract their names
+        return countryNames.join(', '); // Join the names with a comma
+    }
+    function getGenre(ids) {
+        if (typeof ids === 'string') {
+            try {
+                ids = JSON.parse(ids); // Convert stringified array to an actual array
+            } catch (error) {
+                console.error("Invalid IDs format:", ids);
+                return '';
+            }
+        }
+        const countryNames = genre
+            .filter(country => ids.includes(country.id)) // Filter countries with matching IDs
+            .map(country => country.name); // Extract their names
+        return countryNames.join(', '); // Join the names with a comma
+    }
+    const [alertData, setAlertData] = useState({
+        heading: "",
+        content: ""
+    });
+    const [open, setOpen] = useState(false);
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+
+    };
+    useEffect(() => {
+        setAlertData({
+            heading: "Signup Required",
+            content:
+                (
+                    <>
+                        <p style={{ display: "flex", justifyContent: "center" }}> </p>
+                        <p style={{ textAlign: "center", padding: "30px" }} className='text-center'>To view the Waves Bazaar project details, Please sign up as a Buyer or Seller.  </p>
+                        <div class="top-btn text-center ">
+                            <a href="https://wavesbazaar.com/wave-seller/login" class="btn btn-primary border-radius">Seller Login</a>&nbsp;
+                            <a href="https://wavesbazaar.com/waves-buyer/login" class="btn btn-primary border-radius">Buyer Login</a>
+                        </div>
+                    </>
+                )
+        });
+
+    }, []);
     return (
         <>
-
-            <div className="container">
-                <div className="container">
-                    <div className="top-logo">
-                        <ul>
-                            <li className="logo-left">
-                                <a href="/">
-                                    <img src={WavesLogo} alt="" /></a>
-                                <a href="https://www.nfdcindia.com/" target="blank">
-                                    <img src={NFDCLogo} alt="" />
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                </div>
-                <div className="innerpage mt-3">
-                    <div className="row">
-
-                        <div className="col-md-12 col-sm-12">
-                            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div className="modal-dialog">
-                                    <div className="modal-content">
-                                        <div className="modal-header">
-                                            <h5 className="modal-title" id="exampleModalLabel">Basic Information</h5>
-                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div className="modal-body">
-                                            <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 mb-4 css-isbt42">
-                                                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0">
-                                                    <div className="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root form-control css-1vbfw84">
-                                                        <label className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1niro10" data-shrink="true" for=":r0:" id=":r0:-label"><span>Enter title name<span> *</span></span></label>
-                                                        <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-xhkvgb">
-                                                            <fieldset aria-hidden="true" className="MuiOutlinedInput-notchedOutline css-5v2ak0">
-                                                                <legend className="css-w1u3ce"><span><span>Enter title name<span > *</span></span></span></legend>
-                                                            </fieldset>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42">
-                                                <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0">
-                                                    <div className="MuiFormControl-root MuiFormControl-fullWidth css-17qa0m8">
-                                                        <label className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-160rfsr" data-shrink="false" id="category-label">Select Segment <span> *</span></label>
-                                                        <div className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-98ra8i">
-                                                            <div tabindex="0" role="combobox" aria-controls=":r1:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="category-label mui-component-select-category" id="mui-component-select-category" className="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-mp9f0v"><span className="notranslate">&ZeroWidthSpace;</span></div>
-                                                            <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1l3b12y" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
-                                                                <path d="M7 10l5 5 5-5z"></path>
-                                                            </svg>
-                                                            <fieldset aria-hidden="true" className="MuiOutlinedInput-notchedOutline css-5v2ak0">
-                                                                <legend className="css-w4cd9x"><span className="notranslate">&ZeroWidthSpace;</span></legend>
-                                                            </fieldset>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="modal-footer"><button type="button" className="btn btn-primary" data-bs-dismiss="modal">Close</button><button type="button" className="btn btn-primary">Continue</button></div>
-                                    </div>
-                                </div>
+            <div class="col-lg-12 top-menu-custom">
+                <div class="container">
+                    <div class="logo-landing-header">
+                        <div class="top-logo">
+                            <img src="https://wavesbazaar.com/landing-page-img/waves-logo.png" />
+                            <img src="https://wavesbazaar.com/landing-page-img/mib.png" />
+                            <img src="https://wavesbazaar.com/landing-page-img/nfdc-logo.png" />
+                            <button class="btn btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                <img src="https://www.iffigoa.org/public/images/menu.svg" alt="image" class="menu-link" />
+                                Menu
+                            </button>
+                        </div>
+                        <div class="offcanvas offcanvas-end text-bg-dark sidemenu" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
-                            <div className="page-title">
-                                <h2>My Projects</h2>
-                               
+                            <div class="offcanvas-body">
+                                <ul class="navigation-menu">
+                                    <li><a href="https://wavesindia.org/" target="_blank">WAVES India</a></li>
+                                    <li>  <a href="https://wavesbazaar.com/wave-seller/login">Seller Login</a> </li>
+                                    <li>  <a href="https://wavesbazaar.com/waves-buyer/login">Buyer Login</a></li>
+                                    <li>  <a href="https://wavesbazaar.com/waves-buyer/login">Explore Project</a></li>
+                                </ul>
                             </div>
-                            <div className="shadow-sm white-bg mb-3">
-                                <div className="user-list">
-                                    <ul>
-                                        <li>
-                                            <div><img src="https://wavesbazaar.com/api/waves-seller/file/read/1736413592519_9509098.png" alt="703016_1722519935.png" className="project-img" /></div>
-                                            <div className="text-notification">
-                                                <h4>test title</h4>
-                                                <ul className="discription-data">
-                                                    <li>Film</li>
-                                                    <li>Live Shoot</li>
-                                                    <li>Featured</li>
-                                                    <li>Film Ready For Distribution</li>
-                                                    <li>India</li>
-                                                    <li>English, Gujarati</li>
-                                                    <li>Action, Arts, Music and Culture, Drama, Mystery, Thriller</li>
-                                                    <li>6 min</li>
-                                                </ul>
-                                                <ul className="link-details mt-3">
-                                                    <li><a className="" href="/wave-seller/project/view/663">View Details</a></li>
-                                                    <li><a className="btn border-radius pending" href="/wave-seller/project/663">Edit</a></li>
-                                                    <li><button className="btn border-radius makeactive">Click to active</button></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="shadow-sm white-bg mb-3">
-                                <div className="user-list">
-                                    <ul>
-                                        <li>
-                                            <div>
-                                                <img src={defaultimg} alt="user" className="project-img" /></div>
-                                            <div className="text-notification">
-                                                <h4>Ff</h4>
-                                                <ul className="discription-data">
-                                                    <li>TV</li>
-                                                </ul>
-                                                <ul className="link-details mt-3">
-                                                    <li><a className="" href="/wave-seller/wave-project/view/653">View Details</a></li>
-                                                    <li><a className="btn border-radius pending" href="/wave-seller/wave-project/653">Edit</a></li>
-                                                    <li><button className="btn border-radius delete">Delete</button></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
+            <div className="container">
 
 
+
+                <div className="innerpage mt-3">
+                    <div className="row">
+
+
+                        <div className="page-title list-name text-center mb-4">
+                            <h2>Explore Projects</h2>
+
+                        </div>
+                        {data && data.length > 0 ? (
+                            <></>
+                        ) : (
+                            <div className="shadow-sm white-bg mb-3">
+                                <div className="user-list">
+
+                                    <p>Data not present</p>
+                                </div>
+                            </div>
+                        )}
+                        {
+
+                            data.map((row) => {
+                                const type2Document = row.FilmDocuments.find(doc => doc.type === 8);
+
+                                return <div className="col-md-3 col-sm-3">
+                                    <div className="image-container">
+                                        {type2Document ?
+                                            <img src={`${dataurl}/file/read/${type2Document.url}`} alt={type2Document.name}
+                                            />
+                                            :
+                                            <div className='defaultimagecontainer text-center'>
+                                                <img src={`/project/src/assets/img/category_${row.category}.jpg`} alt="user" className='defualtImage' />
+                                            </div>
+
+                                        }
+                                        <div className="project-title-name"><h5 className="card-title"> {row.title}</h5></div>
+                                        <div className="hover-content">
+                                            <h5 className="card-title">{row.title}</h5>
+                                            <ul className="ProjectType-list">
+                                                {row.category != null && row.category !== undefined ? (
+                                                    <li title="Category">{getSegment(row.category)}</li>
+                                                ) : null}
+                                                {row.videography_type ? (
+                                                    <li title="Videography">{getVideography(row.videography_type)}</li>
+                                                ) : null}
+                                                {row.format_type ? (
+                                                    <li title="Format Type">{getformattype(row.format_type)}</li>
+                                                ) : null}
+                                                {row.stage_type ? (
+                                                    <li title="Stage Type">{getformatstagetype(row.stage_type)}</li>
+                                                ) : null}
+                                                {row.country ? (
+                                                    <li title="Countries">{getCountryNamesByIds(row.country)}</li>
+                                                ) : null}
+                                                {row.language ? (
+                                                    <li title="Languages">{getLanguageNamesByIds(row.language)}</li>
+                                                ) : null}
+                                                {row.genre ? (
+                                                    <li title="Genre">{getGenre(row.genre)}</li>
+                                                ) : null}
+                                                {row.duration ? (
+                                                    <li title="Duration">{row.duration} min</li>
+                                                ) : null}
+                                            </ul>
+                                            <Link onClick={handleClickOpen} className="btn btn-primary">
+                                                View Details
+                                            </Link>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            })
+                        }
+                        {loading && <div className="text-center loader">
+                            <img src={WAVESLoader} />
+
+                        </div>}
+                    </div>
+                </div>
+            </div>
+
+            <AlertMessage handleClickOpen={handleClickOpen} setOpen={setOpen} open={open} handleClose={handleClose}
+
+                data={alertData}
+            />
         </>
     )
 }
