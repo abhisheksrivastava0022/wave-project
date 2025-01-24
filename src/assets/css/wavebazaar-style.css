@@ -1667,8 +1667,8 @@ li.sidebar-signout a {
 
 .image-container img {
   width: 100% !important;
-  min-height: 350px !important;
-  max-height: 350px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
 }
 
 .ProjectType-list {
