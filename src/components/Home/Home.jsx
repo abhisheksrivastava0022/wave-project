@@ -245,9 +245,9 @@ const Home = () => {
                 <div class="container">
                     <div class="logo-landing-header">
                         <div class="top-logo">
-                            <img src="https://wavesbazaar.com/landing-page-img/waves-logo.png" />
-                            <img src="https://wavesbazaar.com/landing-page-img/mib.png" />
-                            <img src="https://wavesbazaar.com/landing-page-img/nfdc-logo.png" />
+                            <a href="https://wavesbazaar.com/" ><img src="https://wavesbazaar.com/landing-page-img/waves-logo.png" /></a>
+                            <a href="https://www.mib.gov.in/" target='_blank'><img src="https://wavesbazaar.com/landing-page-img/mib.png" /></a>
+                            <a href="https://nfdcindia.com/" target='_blank'><img src="https://wavesbazaar.com/landing-page-img/nfdc-logo.png" /></a>
                             <button class="btn btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                                 <img src="https://www.iffigoa.org/public/images/menu.svg" alt="image" class="menu-link" />
                                 Menu
@@ -260,10 +260,11 @@ const Home = () => {
                             </div>
                             <div class="offcanvas-body">
                                 <ul class="navigation-menu">
-                                    <li><a href="https://wavesindia.org/" target="_blank">WAVES India</a></li>
+                                    <li><a href="https://wavesbazaar.com/" >Home</a></li>
                                     <li>  <a href="https://wavesbazaar.com/wave-seller/login">Seller Login</a> </li>
                                     <li>  <a href="https://wavesbazaar.com/waves-buyer/login">Buyer Login</a></li>
-                                    <li>  <a href="https://wavesbazaar.com/waves-buyer/login">Explore Project</a></li>
+                                    <li>  <a href="https://wavesbazaar.com/project">Explore Project</a></li>
+                                    <li><a href="https://wavesindia.org/" target="_blank">WAVES India</a></li>
                                 </ul>
                             </div>
                         </div>
