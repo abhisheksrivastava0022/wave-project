@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import defaultimg from '../../assets/img/project.png';
+
 import WavesLogo from "../../assets/img/Waves.png";
 
 import NFDCLogo from "../../assets/img/NFDC.png"
