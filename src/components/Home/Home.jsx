@@ -303,7 +303,7 @@ const Home = () => {
                                             />
                                             :
                                             <div className='defaultimagecontainer text-center'>
-                                                <img src={`/project/src/assets/img/category_${row.category}.jpg`} alt="user" className='defualtImage' />
+                                                <img src={`/project/img/category_${row.category}.jpg`} alt="user" className='defualtImage' />
                                             </div>
 
                                         }
