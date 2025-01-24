@@ -1695,7 +1695,7 @@ li.sidebar-signout a {
 .project-title-name {
   position: absolute;
   width: 100%;
-  background-color: rgba(88, 28, 188, 0.5);
+  background-color: #19083582;
   color: #fff;
   bottom: 0;
   padding: 20px;
@@ -1764,7 +1764,7 @@ li.sidebar-signout a {
 
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .logo-landing-header .menu-link {
-    width: 40px !important
+    width: 30px !important
   }
 
   .logo-landing-header .top-logo img {
@@ -1773,6 +1773,10 @@ li.sidebar-signout a {
 
   .logo-landing-header .top-logo {
     padding: 0 !important
+  }
+
+  .menu-link {
+    width: 40px !important
   }
 }
 
