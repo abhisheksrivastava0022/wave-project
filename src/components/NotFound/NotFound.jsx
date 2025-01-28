@@ -47,7 +47,7 @@ const NotFound = () => {
                                     <img src={NotFoundPage} alt="" />
                                 </h2>
                                 {/* <img src={NotFoundPage} /> */}
-                                <p className="text-center mb-4">Sorry, the page you are looking for does not exist.</p>
+                                <p className="text-center mb-3">Sorry, the page you are looking for does not exist.</p>
                             </div>
                         </div>
                     </div>
