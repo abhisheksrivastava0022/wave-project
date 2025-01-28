@@ -6,9 +6,9 @@ import NotFoundPage from "../../assets/img/notfound.png";
 
 const NotFound = () => {
 
-	return (
-		<>
-		 <div className="col-lg-12 top-menu-custom">
+    return (
+        <>
+            <div className="col-lg-12 top-menu-custom">
                 <div className="container">
                     <div className="logo-landing-header">
                         <div className="top-logo">
@@ -38,24 +38,24 @@ const NotFound = () => {
                     </div>
                 </div>
             </div>
-		<div className="hero-banner-background">
-			<main className="d-flex flex-column u-hero u-hero--end mnh-100vh mt-5">
-				<div className="container py-11 my-auto ">
-					<div className="row d-flex justify-content-center align-items-center">
-						<div className="col-md-6 col-lg-6 offset-lg-1 mb-4 mb-md-0" style={{ width: '100%' }}>
-									<h2 className="text-center mb-4">
-										<img src={NotFoundPage} alt="" />
-										</h2>
-									{/* <img src={NotFoundPage} /> */}
-									<p className="text-center mb-4">Sorry, the page you are looking for does not exist.</p>
-						</div>
-					</div>
-				</div>
-			</main>
-		</div>
-		<Footer/>
-		</>
-	);
+            <div className="hero-banner-background">
+                <main className="d-flex flex-column u-hero u-hero--end mnh-100vh ">
+                    <div className="container py-11 my-auto ">
+                        <div className="row d-flex justify-content-center align-items-center">
+                            <div className="col-md-6 col-lg-6 offset-lg-1 mb-md-0" style={{ width: '100%' }}>
+                                <h2 className="text-center">
+                                    <img src={NotFoundPage} alt="" />
+                                </h2>
+                                {/* <img src={NotFoundPage} /> */}
+                                <p className="text-center mb-4">Sorry, the page you are looking for does not exist.</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <Footer />
+        </>
+    );
 };
 
 export default NotFound;
