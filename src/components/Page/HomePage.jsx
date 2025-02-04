@@ -536,11 +536,16 @@ const HomePage = () => {
             </div>
 
             {/* Footer */}
-            <footer>
-                <div className="container">
-                    <p className="text-center">© 2025 Waves Bazaar. All Rights Reserved.</p>
+            <div class="footer text-center ">
+                <div class="container">
+                    <div class="footer-landing-page">
+                        <a href="https://wavesindia.org/" target="_blank">Waves India</a>
+                        <a href="https://wavesbazaar.com/project/terms-and-conditions">Terms and conditions</a>
+                        <span>All right reserved, Copyright© Powered by Waves Bazaar.</span>
+                        <a href="mailto:@info@wavesbazaar.com">For Queries: info@wavesbazaar.com</a>
+                    </div>
                 </div>
-            </footer>
+            </div>
         </div >
     );
 };
