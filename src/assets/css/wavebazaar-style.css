@@ -1776,17 +1776,32 @@ li.sidebar-signout a {
 body {
   background: url('/public/img/background-header.jpg') left top repeat-x;
 }
-.terms-codition h6{ background-color: #f5f5f5; font-size: 16px; font-weight: 600; margin-bottom: 10px; margin-top: 15px; padding: 5px 15px;}
-.terms-codition ul{ margin-bottom: 10px;}
-.terms-codition ul li{ margin-bottom: 8px;}
-.static-footer{
-  background: #5F259E;
-    color: #fff;
-    padding: 5px 0;
-    margin-top: 20px;
+
+.terms-codition h6 {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  padding: 5px 15px;
 }
 
- .footer-landing-page {
+.terms-codition ul {
+  margin-bottom: 10px;
+}
+
+.terms-codition ul li {
+  margin-bottom: 8px;
+}
+
+.static-footer {
+  background: #5F259E;
+  color: #fff;
+  padding: 5px 0;
+  margin-top: 20px;
+}
+
+.footer-landing-page {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1794,8 +1809,15 @@ body {
   font-size: 14px;
   flex-direction: row;
 }
-.footer-landing-page a { color: #fff!important; }
-.footer-landing-page a:hover{ color: #ddd; }
+
+.footer-landing-page a {
+  color: #fff !important;
+}
+
+.footer-landing-page a:hover {
+  color: #ddd;
+}
+
 @media screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .logo-landing-header .top-logo img {
     width: 60px !important;
@@ -1816,8 +1838,10 @@ body {
   .menu-link {
     width: 40px !important
   }
-  
- .footer-landing-page {
-  flex-direction: column;
+
+  .footer-landing-page {
+    flex-direction: column;
+  }
 }
-}
+
+/* Landing CSS */
