@@ -228,8 +228,8 @@ const Home = () => {
             content:
                 (
                     <>
-                        <p style={{ display: "flex", justifyContent: "center" }}> </p>
-                        <p style={{ textAlign: "center", padding: "30px" }} className='text-center'>To view the Waves Bazaar project details, Please sign up as a Buyer or Seller.  </p>
+
+                        <p className='text-center p-4'>To view the Waves Bazaar project details, Please sign up as a Buyer or Seller.  </p>
                         <div class="top-btn text-center ">
                             <a href="https://wavesbazaar.com/wave-seller/login" class="btn btn-primary border-radius mb-3">Seller Login</a>&nbsp;
                             <a href="https://wavesbazaar.com/waves-buyer/login" class="btn btn-primary border-radius  mb-3">Buyer Login</a>
@@ -275,12 +275,12 @@ const Home = () => {
 
 
 
-                <div className="innerpage mt-3">
+                <div className="innerpage mt-0">
                     <div className="row">
 
 
-                        <div className="page-title list-name text-center mb-4">
-                            <h2>Explore Projects</h2>
+                        <div className="page-title list-name text-center mb-4 ">
+                            <h2 className='animated fadeInRight'>Explore Projects</h2>
 
                         </div>
                         {data && data.length > 0 ? (
@@ -298,7 +298,7 @@ const Home = () => {
                             data.map((row) => {
                                 const type2Document = row.FilmDocuments.find(doc => doc.type === 8);
 
-                                return <div className="col-md-3 col-sm-3">
+                                return <div className="col-md-3 col-sm-3 animated fadeInUp">
                                     <div className="image-container">
                                         {type2Document ?
                                             <img src={`${dataurl}/file/read/${type2Document.url}`} alt={type2Document.name}

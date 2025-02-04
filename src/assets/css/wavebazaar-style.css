@@ -1620,7 +1620,7 @@ li.sidebar-signout a {
 .list-name {
   justify-content: center !important;
   text-transform: uppercase;
-  padding: 30px 0;
+  padding: 0 0 30px 0;
   ;
 }
 
@@ -1773,8 +1773,12 @@ li.sidebar-signout a {
   background-color: #c5c5c5;
 }
 
-body {
+/* body {
   background: url('/public/img/background-header.jpg') left top repeat-x;
+} */
+.top-menu-custom {
+  background: url('/public/img/background-header.jpg') left top repeat-x;
+  min-height: 151px;
 }
 
 .terms-codition h6 {
@@ -2028,14 +2032,14 @@ h5 {
   color: #fff
 }
 
-.top-btn {
+.MuiDialog-container .top-btn {
   display: flex;
-  padding: 15px 0;
-  column-gap: 10px;
-  justify-content: flex-end;
+  padding: 5px 0;
+  column-gap: 5px;
+  justify-content: center;
 }
 
-.top-btn a {
+.MuiDialog-container .top-btn a {
   background: #5F259E;
   border: #5F259E;
   border-radius: 25px;
@@ -2045,7 +2049,7 @@ h5 {
   font-weight: 600
 }
 
-.top-btn a:hover {
+.MuiDialog-container .top-btn a:hover {
   background: #EFE4FB;
   border: #EFE4FB;
   color: #5F259E
@@ -2207,7 +2211,7 @@ h5 {
     flex-wrap: wrap;
   }
 
-  .why-us h33 {
+  .why-us h3 {
     font-size: 24px;
   }
 
