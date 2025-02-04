@@ -251,12 +251,12 @@ const HomePage = () => {
                             <div className="logo-landing mb-5">
                                 <div className="top-logo">
                                     <a href="https://wavesbazaar.com/">
-                                        <img src="public/image/waves-logo.png" alt="Waves Logo" /></a>
+                                        <img src="image/waves-logo.png" alt="Waves Logo" /></a>
                                     <a href="https://www.mib.gov.in/" target="_blank" rel="noopener noreferrer">
-                                        <img src="public/image/mib.png" alt="MIB Logo" />
+                                        <img src="image/mib.png" alt="MIB Logo" />
                                     </a>
                                     <a href="https://nfdcindia.com/" target="_blank" rel="noopener noreferrer">
-                                        <img src="public/image/nfdc-logo.png" alt="NFDC Logo" />
+                                        <img src="image/nfdc-logo.png" alt="NFDC Logo" />
                                     </a>
                                     <button className="btn btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                                         <img src="https://www.iffigoa.org/public/images/menu.svg" alt="Menu" className="menu-link" />
@@ -468,7 +468,7 @@ const HomePage = () => {
                             <div className="col-md-4 col-sm-4 d-flex">
                                 <div className="card mt-4">
                                     <div className="card-body text-center">
-                                        <span><img src="public/image/icon1.png" alt="Icon" /></span>
+                                        <span><img src="image/icon1.png" alt="Icon" /></span>
                                         <h5>Access a Global Marketplace</h5>
                                         <p>Showcase your skills and projects to a worldwide audience within the media industry.</p>
                                     </div>
@@ -477,7 +477,7 @@ const HomePage = () => {
                             <div className="col-md-4 col-sm-4 d-flex">
                                 <div className="card mt-4">
                                     <div className="card-body text-center">
-                                        <span><img src="public/image/icon2.png" alt="Icon" /></span>
+                                        <span><img src="image/icon2.png" alt="Icon" /></span>
                                         <h5>Create and Collaborate</h5>
                                         <p>Develop multiple projects, build your profile, and network effectively.</p>
                                     </div>
@@ -486,7 +486,7 @@ const HomePage = () => {
                             <div className="col-md-4 col-sm-4 d-flex">
                                 <div className="card mt-4">
                                     <div className="card-body text-center">
-                                        <span><img src="public/image/icon3.png" alt="Icon" /></span>
+                                        <span><img src="image/icon3.png" alt="Icon" /></span>
                                         <h5>Expand Your Opportunities</h5>
                                         <p>Connect with buyers and showcase your unique talents effortlessly.</p>
                                     </div>
@@ -506,7 +506,7 @@ const HomePage = () => {
                             <div className="col-md-4 col-sm-4 d-flex">
                                 <div className="card mt-4">
                                     <div className="card-body text-center">
-                                        <span><img src="public/image/icon4.png" alt="Icon" /></span>
+                                        <span><img src="image/icon4.png" alt="Icon" /></span>
                                         <h5>Explore Quality Content</h5>
                                         <p>Browse through a vast range of industry-specific content tailored to your needs.</p>
                                     </div>
@@ -515,7 +515,7 @@ const HomePage = () => {
                             <div className="col-md-4 col-sm-4 d-flex">
                                 <div className="card mt-4">
                                     <div className="card-body text-center">
-                                        <span><img src="public/image/icon5.png" alt="Icon" /></span>
+                                        <span><img src="image/icon5.png" alt="Icon" /></span>
                                         <h5>Build Professional Relationships</h5>
                                         <p>Connect with sellers, creators, and industry professionals to make the right investments.</p>
                                     </div>
@@ -524,7 +524,7 @@ const HomePage = () => {
                             <div className="col-md-4 col-sm-4 d-flex">
                                 <div className="card mt-4">
                                     <div className="card-body text-center">
-                                        <span><img src="public/image/icon6.png" alt="Icon" /></span>
+                                        <span><img src="image/icon6.png" alt="Icon" /></span>
                                         <h5>Access Innovative Solutions</h5>
                                         <p>Get in touch with diverse creators, discover exclusive offerings, and shape your business.</p>
                                     </div>
