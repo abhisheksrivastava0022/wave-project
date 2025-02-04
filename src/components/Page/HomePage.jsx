@@ -9,10 +9,10 @@ import ApiClient from '../API/ApiClient';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import AlertMessage from '../AlertMessage';
-//const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
+const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 
 import "../../../src/assets/css/home.css"; // Import CSS file
-const dataurl = "https://wavesbazaar.com/api/waves-buyer";
+//const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
     const allCookies = document.cookie;
     const cookiesObj = allCookies.split('; ').reduce((acc, cookie) => {
