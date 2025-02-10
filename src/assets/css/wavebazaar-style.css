@@ -2291,3 +2291,21 @@ h5 {
     width: 40px !important
   }
 }
+
+
+.exploreall {
+  background: transparent;
+  padding: 10px 50px;
+  border-radius: 50px;
+  color: #5F259E;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: solid 2px #5F259E;
+}
+
+.exploreall:hover {
+  background: #5F259E;
+  color: #fff;
+  border: solid 2px #5F259E;
+}

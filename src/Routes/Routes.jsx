@@ -6,34 +6,33 @@ import TermsAndCondition from '../components/TermsAndCondition/TermsAndCondition
 import Footer from '../components/Footer/Footer';
 import HomePage from '../components/Page/HomePage';
 
-const basePrefix = '/project'; // Ensure this matches your Vite config
+const basePrefix = ''; // Ensure this matches your Vite config
 
 export const routes = [
   {
     path: basePrefix, // Adjust base path for the router
-    element: <Home />,
+    element: <HomePage />,
     children: [
       {
+
         path: '', // Use empty path for nested base route
-        element: <Home />,
+        element: <HomePage />,
       },
-      {
-        path: 'de', // Use empty path for nested base route
-        element: <Details />,
-      },
+
     ],
   },
+  // {
+  //   path: '/project',
+  //   element: <HomePage />,
+  // },
   {
-    path: '/project/home-page',
-    element: <HomePage />,
+
+    path: 'project', // Use empty path for nested base route
+    element: <Home />,
   },
   {
     path: 'project/terms-and-conditions',
     element: <TermsAndCondition />,
-  },
-  {
-    path: '/footer',
-    element: <Footer />,
   },
   {
     path: '*',

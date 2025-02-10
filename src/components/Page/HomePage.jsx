@@ -85,10 +85,11 @@ const HomePage = () => {
 
     useEffect(() => {
         preloading();
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        handleScroll()
+        // window.addEventListener("scroll", handleScroll);
+        // return () => {
+        //     window.removeEventListener("scroll", handleScroll);
+        // };
     }, []);
 
     const preloading = async () => {
@@ -127,8 +128,8 @@ const HomePage = () => {
             });
             const response = await getRequestApi("film", queryParams);
             if (response?.status) {
-                setData((prevData) => [...prevData, ...response.data]); // Append new data
-                if (!response.data.length) setHasMore(false); // Stop loading if no more data
+                setData(response.data); // Append new data
+                // if (!response.data.length) setHasMore(false); // Stop loading if no more data
             }
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -352,13 +353,9 @@ const HomePage = () => {
                 <div className="innerpage mt-3">
                     <div className="page-title list-name text-center mb-4">
                         <h2>Explore Projects</h2>
-
                     </div>
                     <div className="row">
-
-
                         {
-
                             data.map((row) => {
                                 const type2Document = row.FilmDocuments.find(doc => doc.type === 8);
 
@@ -418,6 +415,10 @@ const HomePage = () => {
 
                             })
                         }
+                        <div className=' exploreallcontainer text-center mt-3'>
+                            <Link to='/project' className='btn common-btn-div1 animated fadeInLeft exploreall'>Explore Projects</Link>
+                        </div>
+
                     </div>
 
                 </div>
