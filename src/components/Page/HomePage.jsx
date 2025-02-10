@@ -351,7 +351,7 @@ const HomePage = () => {
             )}
             <div className="container">
                 <div className="innerpage mt-3">
-                    <div className="page-title list-name text-center mb-4">
+                    <div className="page-title list-name text-center mb-4 mt-5">
                         <h2>Explore Projects</h2>
                     </div>
                     <div className="row">
