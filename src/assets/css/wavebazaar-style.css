@@ -2309,3 +2309,12 @@ h5 {
   color: #fff;
   border: solid 2px #5F259E;
 }
+
+.why-us span {
+  line-height: 140px;
+}
+
+.why-us span img {
+  width: 67px;
+  height: 67px;
+}

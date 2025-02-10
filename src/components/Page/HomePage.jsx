@@ -310,17 +310,26 @@ const HomePage = () => {
                         <h3 className="text-center mb-4">Why you should join Waves Bazaar?</h3>
                         <div className="row">
                             <div className="col-md-4 mt-3">
-                                <span><i className="bi bi-shop-window"></i></span>
+                                <span>
+                                    <img src="img/shop.png" alt="" />
+                                </span>
+                                {/* <span><i className="bi bi-shop-window"></i></span> */}
                                 <h5>Comprehensive E-Marketplace</h5>
                                 <p>Waves Bazaar offers a cross-vertical platform catering to various Media and Entertainment (M&E) sectors, including film, gaming, animation, AVGC-XR, and more</p>
                             </div>
                             <div className="col-md-4 mt-3">
-                                <span><i className="bi bi-arrow-down-up"></i></span>
+                                <span>
+                                    <img src="img/arrow-down-up.png" alt="" />
+                                </span>
+                                {/* <span><i className="bi bi-arrow-down-up"></i></span> */}
                                 <h5>Global Appeal and Scalability</h5>
                                 <p>Designed to connect buyers and sellers locally and globally, ensuring wide-reaching networking and business opportunities</p>
                             </div>
                             <div className="col-md-4 mt-3">
-                                <span><i className="bi bi-bullseye"></i></span>
+                                <span>
+                                    <img src="img/bullseye.png" alt="" />
+                                </span>
+                                {/* <span><i className="bi bi-bullseye"></i></span> */}
                                 <h5>Diverse Offerings</h5>
                                 <p>Provides features such as content showcases, buyer-seller meets, brand and product launches, pitching and funding opportunities, and an extensive networking hub</p>
                             </div>
@@ -328,12 +337,18 @@ const HomePage = () => {
                         <div className="col-md-8 mx-auto">
                             <div className="row">
                                 <div className="col-md-6 mt-3">
-                                    <span><i className="bi bi-brush-fill"></i></span>
+                                    <span>
+                                        <img src="img/brush-fill.png" alt="" />
+                                    </span>
+                                    {/* <span><i className="bi bi-brush-fill"></i></span> */}
                                     <h5>User-Friendly Interface</h5>
                                     <p>The platform ensures a seamless onboarding experience and intuitive navigation to enhance user satisfaction.</p>
                                 </div>
                                 <div className="col-md-6 mt-3">
-                                    <span><i className="bi bi-lightbulb"></i></span>
+                                    <span>
+                                        <img src="img/lightbulb.png" alt="" />
+                                    </span>
+                                    {/* <span><i className="bi bi-lightbulb"></i></span> */}
                                     <h5>Networking Opportunities</h5>
                                     <p>Fosters connections between industry professionals through virtual events, workshops, and community features.</p>
                                 </div>
@@ -370,7 +385,7 @@ const HomePage = () => {
                                             />
                                             :
                                             <div className='defaultimagecontainer text-center'>
-                                                <img src={`/project/img/category_${row.category}.jpg`} alt="user" className='defualtImage' />
+                                                <img src={`/img/category_${row.category}.jpg`} alt="user" className='defualtImage' />
                                             </div>
 
                                         }
