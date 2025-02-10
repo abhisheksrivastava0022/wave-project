@@ -182,7 +182,9 @@ const HomePage = () => {
             .filter(item => ids.includes(item.id)) // Ensure the item ID is in the provided IDs array
             .map(item => item.name); // Extract the names of matched countries
         // Join the country names with a comma and return
-        return countryNames.join(', ');
+        return countryNames.length > 3
+            ? countryNames.slice(0, 3).join(', ') + '...'
+            : countryNames.join(', ');
     }
 
     function getLanguageNamesByIds(ids) {
@@ -197,7 +199,9 @@ const HomePage = () => {
         const countryNames = language
             .filter(country => ids.includes(country.id)) // Filter countries with matching IDs
             .map(country => country.name); // Extract their names
-        return countryNames.join(', '); // Join the names with a comma
+        return countryNames.length > 3
+            ? countryNames.slice(0, 3).join(', ') + '...'
+            : countryNames.join(', ');
     }
     function getGenre(ids) {
         if (typeof ids === 'string') {
