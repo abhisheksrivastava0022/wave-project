@@ -14,11 +14,16 @@ const TermsAndCondition = () => {
                 <div className="container">
                     <div className="logo-landing-header">
                         <div className="top-logo">
-                            <a href="https://wavesbazaar.com/" ><img src="https://wavesbazaar.com/landing-page-img/waves-logo.png" /></a>
-                            <a href="https://www.mib.gov.in/" target='_blank'><img src="https://wavesbazaar.com/landing-page-img/mib.png" /></a>
-                            <a href="https://nfdcindia.com/" target='_blank'><img src="https://wavesbazaar.com/landing-page-img/nfdc-logo.png" /></a>
-                            <button className="btn btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                                <img src="https://www.iffigoa.org/public/images/menu.svg" alt="image" className="menu-link" />
+                            <a href="https://wavesbazaar.com/">
+                                <img src="image/waves-logo.png" alt="Waves Logo" /></a>
+                            <a href="https://www.mib.gov.in/" target="_blank" rel="noopener noreferrer">
+                                <img src="image/mib.png" alt="MIB Logo" />
+                            </a>
+                            <a href="https://nfdcindia.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="image/nfdc-logo.png" alt="NFDC Logo" />
+                            </a>
+                            <button class="btn btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                <img src="https://www.iffigoa.org/public/images/menu.svg" alt="image" class="menu-link" />
                                 Menu
                             </button>
                         </div>
