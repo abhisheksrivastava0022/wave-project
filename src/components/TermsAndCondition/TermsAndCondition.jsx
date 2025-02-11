@@ -15,12 +15,12 @@ const TermsAndCondition = () => {
                     <div className="logo-landing-header">
                         <div className="top-logo">
                             <a href="https://wavesbazaar.com/">
-                                <img src="image/waves-logo.png" alt="Waves Logo" /></a>
+                                <img src="/image/waves-logo.png" alt="Waves Logo" /></a>
                             <a href="https://www.mib.gov.in/" target="_blank" rel="noopener noreferrer">
-                                <img src="image/mib.png" alt="MIB Logo" />
+                                <img src="/image/mib.png" alt="MIB Logo" />
                             </a>
                             <a href="https://nfdcindia.com/" target="_blank" rel="noopener noreferrer">
-                                <img src="image/nfdc-logo.png" alt="NFDC Logo" />
+                                <img src="/image/nfdc-logo.png" alt="NFDC Logo" />
                             </a>
                             <button class="btn btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                                 <img src="https://www.iffigoa.org/public/images/menu.svg" alt="image" class="menu-link" />
