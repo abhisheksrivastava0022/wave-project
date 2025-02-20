@@ -48,33 +48,35 @@ const Faq = () => {
         <>
 
             <div className='container  mb-5'>
-                <h2 className='text-center mb-5'>Frequently Asked Questions</h2>
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    {faq.map((item, index) => (
-                        <div className="accordion-item" key={index}>
-                            <h2 className="accordion-header" id={`heading-${index}`}>
-                                <button
-                                    className="accordion-button collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target={`#collapse-${index}`}
-                                    aria-expanded="false"
-                                    aria-controls={`collapse-${index}`}
+                <h3 className='text-center mb-5'>Frequently Asked Questions</h3>
+                <div className='card'>
+                    <div class="accordion " id="accordionPanelsStayOpenExample">
+                        {faq.map((item, index) => (
+                            <div className="accordion-item" key={index}>
+                                <h2 className="accordion-header" id={`heading-${index}`}>
+                                    <button
+                                        className="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target={`#collapse-${index}`}
+                                        aria-expanded="false"
+                                        aria-controls={`collapse-${index}`}
+                                    >
+                                        {item.question}
+                                    </button>
+                                </h2>
+                                <div
+                                    id={`collapse-${index}`}
+                                    className="accordion-collapse collapse"
+                                    aria-labelledby={`heading-${index}`}
+                                    data-bs-parent="#faqAccordion"
                                 >
-                                    {item.question}
-                                </button>
-                            </h2>
-                            <div
-                                id={`collapse-${index}`}
-                                className="accordion-collapse collapse"
-                                aria-labelledby={`heading-${index}`}
-                                data-bs-parent="#faqAccordion"
-                            >
-                                <div className="accordion-body">{item.answer}</div>
+                                    <div className="accordion-body">{item.answer}</div>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
 
+                    </div>
                 </div>
             </div>
         </>
