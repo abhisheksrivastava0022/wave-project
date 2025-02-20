@@ -46,8 +46,9 @@ const Faq = () => {
 
     return (
         <>
-            <h2 className='text-center'>Frequently Asked Questions</h2>
+
             <div className='container  mb-5'>
+                <h2 className='text-center mb-5'>Frequently Asked Questions</h2>
                 <div class="accordion" id="accordionPanelsStayOpenExample">
                     {faq.map((item, index) => (
                         <div className="accordion-item" key={index}>
