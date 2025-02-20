@@ -2318,3 +2318,23 @@ h5 {
   width: 67px;
   height: 67px;
 }
+
+
+.accordion-button {
+  background-color: #f5f5f5 !important;
+  color: #000 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #cfcad3 !important;
+  color: #000 !important;
+}
+
+
+.accordion-collapse.show {
+  background-color: #fff !important;
+}
+
+.red-bg-buyer {
+  padding-bottom: 23px;
+}

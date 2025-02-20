@@ -5,6 +5,7 @@ import Details from '../components/Page/Details';
 import TermsAndCondition from '../components/TermsAndCondition/TermsAndCondition';
 import Footer from '../components/Footer/Footer';
 import HomePage from '../components/Page/HomePage';
+import Faq from '../components/Page/Faq';
 
 const basePrefix = ''; // Ensure this matches your Vite config
 
@@ -33,6 +34,10 @@ export const routes = [
   {
     path: 'project/terms-and-conditions',
     element: <TermsAndCondition />,
+  },
+  {
+    path: 'project/faq',
+    element: <Faq />,
   },
   {
     path: '*',

@@ -29,7 +29,7 @@ const ApiClient = () => {
             return data;
         } catch (error) {
 
-            alert("Please check your network")
+            //t("Please check your network")
 
             //throw error;
         }

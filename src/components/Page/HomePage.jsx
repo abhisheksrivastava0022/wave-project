@@ -12,6 +12,7 @@ import AlertMessage from '../AlertMessage';
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 
 import "../../../src/assets/css/home.css"; // Import CSS file
+import Faq from './Faq';
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
     const allCookies = document.cookie;
@@ -554,7 +555,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-
+            <Faq />
             {/* Footer */}
             <div class="footer text-center ">
                 <div class="container">
