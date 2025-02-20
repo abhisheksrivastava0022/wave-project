@@ -62,7 +62,7 @@ const Faq = () => {
                                         aria-expanded="false"
                                         aria-controls={`collapse-${index}`}
                                     >
-                                        <div dangerouslySetInnerHTML={{ __html: answer }} />
+                                        {item.question}
                                     </button>
                                 </h2>
                                 <div
@@ -71,7 +71,8 @@ const Faq = () => {
                                     aria-labelledby={`heading-${index}`}
                                     data-bs-parent="#faqAccordion"
                                 >
-                                    <div className="accordion-body">{item.answer}</div>
+                                    <div className="accordion-body"><div dangerouslySetInnerHTML={{ __html: item.answer }} />
+                                    </div>
                                 </div>
                             </div>
                         ))}
