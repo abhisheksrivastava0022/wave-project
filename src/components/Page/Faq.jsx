@@ -16,11 +16,11 @@ const Faq = () => {
         },
         {
             question: "How do I register as a seller on WAVES Bazaar?",
-            answer: "To register as a seller, visit the Wave Seller Signup page on the WAVES Bazaar website. Complete the registration form by providing the necessary information about yourself and your services. Once registered, you can create a profile to showcase your projects and connect with potential clients."
+            answer: "To register as a seller, visit the <a href='https://wavesbazaar.com/wave-seller/signup'>Wave Seller Signup</a> page on the WAVES Bazaar website. Complete the registration form by providing the necessary information about yourself and your services. Once registered, you can create a profile to showcase your projects and connect with potential clients."
         },
         {
             question: "How do I register as a buyer on WAVES Bazaar?",
-            answer: "To register as a buyer, go to the Wave Buyer Login page on the WAVES Bazaar website. Sign up by providing the required details. After registration, you'll gain access to a diverse range of creative projects and services, enabling you to connect directly with sellers."
+            answer: "To register as a buyer, go to the <a href='https://wavesbazaar.com/waves-buyer/signup'>Wave Buyer Signup</a> page on the WAVES Bazaar website. Sign up by providing the required details. After registration, you'll gain access to a diverse range of creative projects and services, enabling you to connect directly with sellers."
         },
         {
             question: "What types of projects are featured on WAVES Bazaar?",
@@ -40,7 +40,7 @@ const Faq = () => {
         },
         {
             question: "What should I do if I face issues while filling out the buyer or seller registration form?",
-            answer: "If you encounter any technical difficulties while completing the registration form, please reach out to us at info@wavesbazaar.com for assistance. Our support team will help resolve the issue promptly."
+            answer: `If you encounter any technical difficulties while completing the registration form, please reach out to us at <a href="mailto:info@wavesbazaar.com">info@wavesbazaar.com</a> for assistance. Our support team will help resolve the issue promptly.`
         }
     ];
 
@@ -62,7 +62,7 @@ const Faq = () => {
                                         aria-expanded="false"
                                         aria-controls={`collapse-${index}`}
                                     >
-                                        {item.question}
+                                        <div dangerouslySetInnerHTML={{ __html: answer }} />
                                     </button>
                                 </h2>
                                 <div
