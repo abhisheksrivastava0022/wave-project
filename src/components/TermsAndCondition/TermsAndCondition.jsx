@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 
 const TermsAndCondition = () => {
+    let countData = 0;
+    let countDataAdditional = 0;
     return (
 
         <>
@@ -60,16 +62,21 @@ const TermsAndCondition = () => {
                                 Welcome to Waves Bazaar!
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                                By accessing or using our platform, you
-                                agree to comply with the following terms and conditions. These terms
-                                govern your use of the Waves Bazaar website and services. Please
-                                read them carefully.
+                                By accessing or using our platform, you agree to comply with the following terms and conditions.
+                                These terms govern your use of the Waves Bazaar website and services. Please read them carefully.
                             </Typography>
                         </Grid>
 
                         {/* 1. Acceptance of Terms */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">1. Acceptance of Terms</Typography>
+                            <Typography variant="h6">{++countData}. Government Disclaimer</Typography>
+                            <p>
+                                Waves Bazaar is a government initiative aimed at facilitating direct communication between buyers and sellers.
+                                However, the Government shall not be responsible for guaranteeing the sale of any project, payment transactions, or any disputes arising between the users of the platform. All transactions are solely between the respective parties, and the Government disclaims any liability arising from non-performance, non-payment, or any related issues.
+                            </p>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography variant="h6">{++countData}. Acceptance of Terms</Typography>
                             <p>
                                 By registering on or using Waves Bazaar, you accept these Terms and
                                 Conditions in full. If you do not agree, you must refrain from using
@@ -83,12 +90,10 @@ const TermsAndCondition = () => {
 
                         {/* 2. Eligibility */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">2. Eligibility</Typography>
+                            <Typography variant="h6">{++countData}. Eligibility</Typography>
                             <ul>
-                                <li>You must be at least 18 years old to register and use Waves Bazaar
-                                    services.</li>
-                                <li>You agree to provide accurate and complete information during the
-                                    registration process.</li>
+                                <li>You must be at least 18 years old to register and use Waves Bazaar services.</li>
+                                <li>You agree to provide accurate and complete information during the registration process.</li>
 
                             </ul>
 
@@ -96,17 +101,12 @@ const TermsAndCondition = () => {
 
                         {/* 3. Seller Responsibilities */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">3. Seller Responsibilities</Typography>
+                            <Typography variant="h6">{++countData}. Seller Responsibilities</Typography>
                             <ul>
-                                <li>Sellers must ensure all uploaded content (e.g., profile picture,
-                                    project synopsis, preview links) complies with applicable laws and
-                                    does not infringe third-party rights.</li>
-                                <li>Sellers are responsible for maintaining the accuracy of their
-                                    project details.</li>
-                                <li>Projects uploaded must be original and relevant to the purpose of
-                                    Waves Bazaar.</li>
-                                <li>By submitting a project, Sellers agree to share their contact
-                                    details and project information with potential Buyers.</li>
+                                <li>Sellers must ensure all uploaded content (e.g., profile picture, project synopsis, preview links) complies with applicable laws and does not infringe third-party rights.</li>
+                                <li>Sellers are responsible for maintaining the accuracy of their project details.</li>
+                                <li>Projects uploaded must be original and relevant to the purpose of Waves Bazaar.</li>
+                                <li>By submitting a project, Sellers agree to share their contact details and project information with potential Buyers.</li>
 
                             </ul>
 
@@ -115,21 +115,15 @@ const TermsAndCondition = () => {
 
                         {/* 4. Buyer Responsibilities */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">4. Buyer Responsibilities</Typography>
+                            <Typography variant="h6">{++countData}. Buyer Responsibilities</Typography>
 
                             <ul>
-                                <li> Buyers must use the platform ethically and for legitimate purposes
-                                    only.</li>
-                                <li>Buyers are required to respect the intellectual property rights of
-                                    sellers.</li>
-                                <li>Any communication or transaction with sellers must comply with the
-                                    platform's policies and be conducted in good faith.</li>
-                                <li>Buyers agree not to distribute, reproduce, or misuse project
-                                    materials provided by sellers without prior authorization.</li>
-                                <li>Buyers must ensure timely payment for any purchases made through
-                                    the platform as per agreed terms.</li>
-                                <li>Buyers are prohibited from engaging in activities that may mislead
-                                    or harm sellers, including fraudulent claims or disputes.</li>
+                                <li>Buyers must use the platform ethically and for legitimate purposes only.</li>
+                                <li>Buyers are required to respect the intellectual property rights of sellers.</li>
+                                <li>Any communication or transaction with sellers must comply with the platform's policies and be conducted in good faith.</li>
+                                <li>Buyers agree not to distribute, reproduce, or misuse project materials provided by sellers without prior authorization.</li>
+                                <li>Buyers must ensure timely payment for any purchases made through the platform as per agreed terms.</li>
+                                <li>Buyers are prohibited from engaging in activities that may mislead or harm sellers, including fraudulent claims or disputes.</li>
                             </ul>
 
 
@@ -137,45 +131,33 @@ const TermsAndCondition = () => {
 
                         {/* 5. Content Guidelines */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">5. Content Guidelines</Typography>
+                            <Typography variant="h6">{++countData}. Content Guidelines</Typography>
                             <ul>
-                                <li>Sellers are required to upload a profile picture, a synopsis (50
-                                    words), a project preview link, and specify the language of the
-                                    project.</li>
-                                <li>The content you share must not include offensive, defamatory, or
-                                    illegal material.</li>
-                                <li>Whatever content the seller is uploading is not a part of IP
-                                    (intellectual property).</li>
-                                <li>Waves Bazaar reserves the right to remove or modify any content
-                                    deemed inappropriate or non-compliant with these terms.</li>
+                                <li>Sellers are required to upload a profile picture, a synopsis (50 words), a project preview link, and specify the language of the project.</li>
+                                <li>The content you share must not include offensive, defamatory, or illegal material.</li>
+                                <li>Whatever content the seller is uploading is not a part of IP (intellectual property).</li>
+                                <li>Waves Bazaar reserves the right to remove or modify any content deemed inappropriate or non-compliant with these terms.</li>
                             </ul>
                         </Grid>
 
                         {/* 6. Usage Restrictions */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">6. Usage Restrictions</Typography>
+                            <Typography variant="h6">{++countData}. Usage Restrictions</Typography>
 
                             Users agree not to :
 
                             <ul>
-                                <li> Use the platform for fraudulent activities.</li>
+                                <li>Use the platform for fraudulent activities.</li>
                                 <li>Share or promote unauthorized links, malware, or harmful content.</li>
-                                <li>Violate the intellectual property rights of Waves Bazaar or other
-                                    users.</li>
+                                <li>Violate the intellectual property rights of Waves Bazaar or other users.</li>
                             </ul>
 
                         </Grid>
 
                         {/* 7. Privacy and Data Protection */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">7. Privacy and Data Protection</Typography>
-                            <p>
-                                We respect your privacy. All user data is handled in accordance with
-                                our Privacy Policy. By using the platform, you consent to the
-                                collection, storage, and use of your data as outlined in our Privacy
-                                Policy.
-
-                            </p>
+                            <Typography variant="h6">{++countData}. Privacy and Data Protection</Typography>
+                            <p>We respect your privacy. All user data is handled in accordance with our Privacy Policy. By using the platform, you consent to the collection, storage, and use of your data as outlined in our Privacy Policy.</p>
 
 
 
@@ -183,20 +165,19 @@ const TermsAndCondition = () => {
 
                         {/* 8. Intellectual Property */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">8. Intellectual Property</Typography>
+                            <Typography variant="h6">{++countData}. Intellectual Property</Typography>
                             <ul>
-                                <li>Sellers retain rights to their projects but grant Waves Bazaar a
-                                    license to display and promote them on the platform.</li>
+                                <li>Sellers retain rights to their projects but grant Waves Bazaar a license to display and promote them on the platform.</li>
+                                <li>By uploading the project, the seller agrees that they are the sole owner of the intellectual property (IP) associated with the project. Waves Bazaar, NFDC, and any affiliated entities shall not be held liable for any legal claims, disputes, or actions related to the IP.</li>
                             </ul>
 
                         </Grid>
 
                         {/* 9. Limitation of Liability */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">9. Limitation of Liability</Typography>
+                            <Typography variant="h6">{++countData}. Limitation of Liability</Typography>
                             <ul>
-                                <li> Waves Bazaar is not liable for any direct, indirect, or
-                                    consequential damages arising from the use of the platform.</li>
+                                <li> Waves Bazaar is not liable for any direct, indirect, or consequential damages arising from the use of the platform.</li>
                                 <li>
                                     The platform is provided “as is,” without warranties of any kind.
                                 </li>
@@ -206,11 +187,9 @@ const TermsAndCondition = () => {
 
                         {/* 10. Termination of Account */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">10. Termination of Account</Typography>
+                            <Typography variant="h6">{++countData}. Termination of Account</Typography>
                             <p>
-                                Waves Bazaar reserves the right to terminate or suspend accounts for
-                                violating these terms, providing false information, or engaging in
-                                prohibited activities.
+                                Waves Bazaar reserves the right to terminate or suspend accounts for violating these terms, providing false information, or engaging in prohibited activities.
 
                             </p>
 
@@ -220,11 +199,18 @@ const TermsAndCondition = () => {
 
                         {/* 11. Changes to Terms and Conditions */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">11. Changes to Terms and Conditions</Typography>
+                            <Typography variant="h6">{++countData}. Transaction and Payments</Typography>
                             <p>
-                                We may update these Terms and Conditions from time to time. Users
-                                will be notified of any significant changes, and continued use of
-                                the platform constitutes acceptance of the revised terms.
+                                Waves Bazaar serves solely as a platform for buyers and sellers to interact and engage in transactions. It is not responsible for facilitating or managing payments, which shall be handled directly between the buyer and seller.
+
+                            </p>
+
+
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography variant="h6">{++countData}. Changes to Terms and Conditions</Typography>
+                            <p>
+                                We may update these Terms and Conditions from time to time. Users will be notified of any significant changes, and continued use of the platform constitutes acceptance of the revised terms.
 
                             </p>
 
@@ -233,7 +219,7 @@ const TermsAndCondition = () => {
 
                         {/* 12. Contact Us */}
                         <Grid item xs={12}>
-                            <Typography variant="h6">12. Contact Us</Typography>
+                            <Typography variant="h6">{++countData}. Contact Us</Typography>
                             <Typography variant="body1">
                                 For any questions or concerns regarding these terms, please contact
                                 us at:{" "}
@@ -244,7 +230,45 @@ const TermsAndCondition = () => {
                         </Grid>
                     </Grid>
                 </Box>
-            </div>
+
+                <Box sx={{ padding: 2 }}>
+                    <Grid spacing={2}>
+                        <Grid item xs={12}>
+                            <Typography variant="h4" component="h1" gutterBottom>
+                                Additional Points
+                            </Typography>
+                        </Grid>
+
+                        <Grid item xs={12}>
+                            <Typography variant="h6">{++countDataAdditional}.	Dispute Resolution & Governing Law</Typography>
+                            <p>
+                                Any disputes or claims arising from the use of Waves Bazaar shall be governed by and construed in accordance with the laws of India. The parties irrevocably agree that the courts of Delhi shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with this Agreement or its subject matter.
+
+                            </p>
+                        </Grid>
+
+                        <Grid item xs={12}>
+                            <Typography variant="h6">{++countDataAdditional}.	Refund & Cancellation Policy</Typography>
+                            <p>
+                                Refunds and cancellations are subject to the policies set by the seller, and Waves Bazaar does not facilitate or manage these processes. Any disputes regarding refunds or cancellations must be resolved directly between the buyer and seller.
+                            </p>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography variant="h6">{++countDataAdditional}.	Account Security and Password Protection</Typography>
+                            <p>
+                                The buyers and sellers are solely responsible for maintaining the confidentiality of respective account credentials and agree to notify us immediately of any unauthorized access to respective accounts
+                            </p>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography variant="h6">{++countDataAdditional}.	Force Majeure</Typography>
+                            <p>
+                                Waves Bazaar or any of its team members shall not be held liable for any failure or delay in the performance of its services due to events outside of its reasonable control, including, but not limited to, natural disasters, strikes, or technological disruptions.
+                            </p>
+                        </Grid>
+                    </Grid>
+
+                </Box>
+            </div >
             <Footer />
         </>
     )
