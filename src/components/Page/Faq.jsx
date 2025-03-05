@@ -158,11 +158,11 @@ const Faq = () => {
         }, 
         {
             question: "What are the categories of advertising services I can list?",
-            answer: "Waves Bazaar offers three major categories for listings: <br/> 1. Print Advertising <br/> 2. Digital Advertising <br/> 3. Out-of-Home (OOH) Advertising"
+            answer: "Waves Bazaar offers three major categories for listings: <br/><br/> 1. Print Advertising <br/> 2. Digital Advertising <br/> 3. Out-of-Home (OOH) Advertising"
         },
         {
             question: "Who can buy advertising services on Waves Bazaar?",
-            answer: "Buyers include businesses, brands, organizations, and anyone looking for advertising partners. This includes: <br/> 1. Advertising Agencies & Media Buying Firms <br/> 2. Corporate Brands & Product Manufacturers <br/> 3. Film Production Houses & Entertainment Companies <br/> 4. Event Organizers & Public Sector Organizations"
+            answer: "Buyers include businesses, brands, organizations, and anyone looking for advertising partners. This includes: <br/><br/> 1. Advertising Agencies & Media Buying Firms <br/> 2. Corporate Brands & Product Manufacturers <br/> 3. Film Production Houses & Entertainment Companies <br/> 4. Event Organizers & Public Sector Organizations"
         },
         {
             question: "How do I find the right advertising service provider?",
