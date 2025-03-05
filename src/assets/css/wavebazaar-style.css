@@ -2338,3 +2338,6 @@ h5 {
 .red-bg-buyer {
   padding-bottom: 23px;
 }
+
+           .customTabs .nav-link{ color:#000}
+           .customTabs .active{ color: #fff !important; background: #5f259e !important}
