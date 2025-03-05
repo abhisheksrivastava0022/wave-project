@@ -154,8 +154,8 @@ const Faq = () => {
     const advertising = [
         {
             question: "Who can list their services on Waves Bazaar in Advertising segment?",
-            answer: "A wide range of advertising service providers can register as sellers, including: <br/> 1. Print Media Companies <br/> 2. Advertising Agencies <br/> 3. Digital Marketers <br/> 4. Influencer Marketing Agencies <br/> 5. Billboard & OOH Advertising Vendors <br/> 6. Email & Mobile Marketing Service Providers <br/> Many more!"
-        },
+            answer: "A wide range of advertising service providers can register as sellers, including: <br/><br/> 1. Print Media Companies <br/> 2. Advertising Agencies <br/> 3. Digital Marketers <br/> 4. Influencer Marketing Agencies <br/> 5. Billboard & OOH Advertising Vendors <br/> 6. Email & Mobile Marketing Service Providers <br/> Many more!"
+        }, 
         {
             question: "What are the categories of advertising services I can list?",
             answer: "Waves Bazaar offers three major categories for listings: <br/> 1. Print Advertising <br/> 2. Digital Advertising <br/> 3. Out-of-Home (OOH) Advertising"
@@ -198,11 +198,10 @@ const Faq = () => {
                   <li className="nav-item" role="presentation">
                      <a className="nav-link" id="advertising-tab" data-bs-toggle="tab" href="#advertising" role="tab" aria-controls="advertising" aria-selected="false">Advertising</a>
                   </li>
-                 
                </ul>
                <div className="tab-content mt-2" id="myTabsContent">
                   <div className="tab-pane fade show active" id="generic" role="tabpanel" aria-labelledby="generic-tab" data-aos="fade-up-right">
-                  <div className="accordion " id="accordionPanelsStayOpenExample">
+                  <div className="accordion " id="faqAccordion">
                         {faq.map((item, index) => (
                             <div className="accordion-item" key={index}>
                                 <h2 className="accordion-header" id={`heading-${index}`}>
@@ -232,26 +231,26 @@ const Faq = () => {
                     </div>
                   </div>
                   <div className="tab-pane fade" id="film" role="tabpanel" aria-labelledby="film-tab"  data-aos="fade-up-left">
-                  <div className="accordion">
+                  <div className="accordion" id="filmAccordion">
                         {film.map((item, index) => (
                             <div className="accordion-item" key={index}>
-                                <h2 className="accordion-header" id={`heading-${index}`}>
+                                <h2 className="accordion-header" id={`film-heading-${index}`}>
                                     <button
                                         className="accordion-button collapsed"
                                         type="button"
                                         data-bs-toggle="collapse"
-                                        data-bs-target={`#collapse-${index}`}
+                                        data-bs-target={`#film-collapse-${index}`}
                                         aria-expanded="false"
-                                        aria-controls={`collapse-${index}`}
+                                        aria-controls={`film-collapse-${index}`}
                                     >
                                         {item.question}
                                     </button>
                                 </h2>
                                 <div
-                                    id={`collapse-${index}`}
+                                    id={`film-collapse-${index}`}
                                     className="accordion-collapse collapse"
-                                    aria-labelledby={`heading-${index}`}
-                                    data-bs-parent="#faqAccordion"
+                                    aria-labelledby={`film-heading-${index}`}
+                                    data-bs-parent="#filmAccordion"
                                 >
                                     <div className="accordion-body"><div dangerouslySetInnerHTML={{ __html: item.answer }} />
                                     </div>
@@ -262,26 +261,26 @@ const Faq = () => {
                     </div>
                   </div>
                   <div className="tab-pane fade" id="advertising" role="tabpanel" aria-labelledby="advertising-tab"  data-aos="fade-up-right">
-                  <div className="accordion " id="accordionPanelsStayOpenExample">
+                  <div className="accordion " id="advertisingAccordion">
                         {advertising.map((item, index) => (
                             <div className="accordion-item" key={index}>
-                                <h2 className="accordion-header" id={`heading-${index}`}>
+                                <h2 className="accordion-header" id={`advertising-heading-${index}`}>
                                     <button
                                         className="accordion-button collapsed"
                                         type="button"
                                         data-bs-toggle="collapse"
-                                        data-bs-target={`#collapse-${index}`}
+                                        data-bs-target={`#advertising-collapse-${index}`}
                                         aria-expanded="false"
-                                        aria-controls={`collapse-${index}`}
+                                        aria-controls={`advertising-collapse-${index}`}
                                     >
                                         {item.question}
                                     </button>
                                 </h2>
                                 <div
-                                    id={`collapse-${index}`}
+                                    id={`advertising-collapse-${index}`}
                                     className="accordion-collapse collapse"
-                                    aria-labelledby={`heading-${index}`}
-                                    data-bs-parent="#faqAccordion"
+                                    aria-labelledby={`advertising-heading-${index}`}
+                                    data-bs-parent="#advertisingAccordion"
                                 >
                                     <div className="accordion-body"><div dangerouslySetInnerHTML={{ __html: item.answer }} />
                                     </div>
@@ -291,7 +290,6 @@ const Faq = () => {
 
                     </div>
                   </div>
-                
                </div>
             </div>
 
