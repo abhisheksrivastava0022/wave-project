@@ -6,6 +6,7 @@ import TermsAndCondition from '../components/TermsAndCondition/TermsAndCondition
 import Footer from '../components/Footer/Footer';
 import HomePage from '../components/Page/HomePage';
 import Faq from '../components/Page/Faq';
+import DownloadPDF from '../components/DownloadPDF/DownloadPDF';
 
 const basePrefix = ''; // Ensure this matches your Vite config
 
@@ -38,6 +39,10 @@ export const routes = [
   {
     path: 'project/faq',
     element: <Faq />,
+  },
+  {
+    path: '/download',
+    element: <DownloadPDF/>,
   },
   {
     path: '*',
