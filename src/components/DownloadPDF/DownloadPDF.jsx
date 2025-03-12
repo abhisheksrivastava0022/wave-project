@@ -364,7 +364,7 @@ const DownloadPDF = () => {
         <div className="innerpage mt-0">
           <div className="row">
             <div className="page-title list-name text-center mb-4 ">
-              <h2 className="animated fadeInRight">Download Projects</h2>
+              <h2 className="animated fadeInRight">Download Brochure</h2>
             </div>
 
             <div className="col-md-3 col-sm-3 animated fadeInUp">
