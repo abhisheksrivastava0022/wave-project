@@ -23,6 +23,7 @@ import W10 from "../../assets/img/w10.PNG";
 import p1 from "../../assets/img/What is WAVES Bazaar.pdf";
 // import W1 from "../../assets/img/image.png"
 import Project from "../../assets/img/Project.png";
+import Footer from "../Footer/Footer";
 // import w1 from "../../assets/img/w1.PNG";
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
@@ -78,18 +79,18 @@ const DownloadPDF = () => {
   const [segmentTypes, setSegmentTypes] = useState([]);
 
   const handleScroll = () => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop + 1 >=
-      document.documentElement.scrollHeight
-    ) {
-      if (!loading && hasMore) {
-        setPage((prevPage) => {
-          const nextPage = prevPage + 1;
-          loadPreLoadData(nextPage);
-          return nextPage;
-        });
-      }
-    }
+    // if (
+    //   window.innerHeight + document.documentElement.scrollTop + 1 >=
+    //   document.documentElement.scrollHeight
+    // ) {
+    //   if (!loading && hasMore) {
+    //     setPage((prevPage) => {
+    //       const nextPage = prevPage + 1;
+    //       loadPreLoadData(nextPage);
+    //       return nextPage;
+    //     });
+    //   }
+    // }
   };
 
   useEffect(() => {
@@ -404,8 +405,8 @@ const DownloadPDF = () => {
                   <ul className="ProjectType-list"></ul>
 
                  
-                  <a href="/pdf/Web Series_Waves Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/Web Series_Waves Bazaar.pdf"  target="_blank" className="btn btn-primary">
+                    View & Download
                   </a>
                 </div>
               </div>
@@ -424,8 +425,8 @@ const DownloadPDF = () => {
                   <ul className="ProjectType-list"></ul>
 
                 
-                  <a href="/pdf/VFX_Waves Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/VFX_Waves Bazaar.pdf" target="_blank"  className="btn btn-primary">
+                  View & Download
                   </a>
                 </div>
               </div>
@@ -445,8 +446,8 @@ const DownloadPDF = () => {
 
                  
                   
-                  <a href="/pdf/Podcast.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/Podcast.pdf" target="_blank"  className="btn btn-primary">
+                  View & Download
                   </a>
                 </div>
               </div>
@@ -465,8 +466,8 @@ const DownloadPDF = () => {
                   <ul className="ProjectType-list"></ul>
 
                 
-                  <a href="/pdf/Music and Sound_Waves Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/Music and Sound_Waves Bazaar.pdf" target="_blank"  className="btn btn-primary">
+                  View & Download
                   </a>
                 </div>
               </div>
@@ -484,8 +485,8 @@ const DownloadPDF = () => {
                   <h5 className="card-title">GameMakers_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                  <a href="/pdf/GameMakers_Waves Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/GameMakers_Waves Bazaar.pdf" target="_blank" className="btn btn-primary">
+                  View & Download
                   </a>
                 </div>
               </div>
@@ -505,8 +506,8 @@ const DownloadPDF = () => {
 
                 
                   
-                  <a href="/pdf/Films_Waves Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/Films_Waves Bazaar.pdf" target="_blank" className="btn btn-primary">
+                  View & Download
                   </a>
                 </div>
               </div>
@@ -524,8 +525,8 @@ const DownloadPDF = () => {
                   <h5 className="card-title">Events_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                  <a href="/pdf/Events_Waves Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/Events_Waves Bazaar.pdf" target="_blank" className="btn btn-primary">
+                  View & Download
                   </a>
                 </div>
               </div>
@@ -543,8 +544,8 @@ const DownloadPDF = () => {
                   <h5 className="card-title">Comic and eBook_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                  <a href="/pdf/Comic and eBook_Waves Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/Comic and eBook_Waves Bazaar.pdf" target="_blank"  className="btn btn-primary">
+                  View & Download
                   </a>
                 </div>
               </div>
@@ -562,29 +563,18 @@ const DownloadPDF = () => {
                   <h5 className="card-title">AR_VR_XR_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                  <a href="/pdf/AR_VR_XR_Waves Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a href="/pdf/AR_VR_XR_Waves Bazaar.pdf" target="_blank" className="btn btn-primary">
+                  View & Download
                   </a>
                 </div>
               </div>
             </div>
 
-            {loading && (
-              <div className="text-center loader">
-                <img src={WAVESLoader} />
-              </div>
-            )}
           </div>
         </div>
       </div>
+            <Footer />
 
-      <AlertMessage
-        handleClickOpen={handleClickOpen}
-        setOpen={setOpen}
-        open={open}
-        handleClose={handleClose}
-        data={alertData}
-      />
     </>
   );
 };
