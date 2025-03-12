@@ -384,10 +384,13 @@ const DownloadPDF = () => {
                   {/* <Link onClick={handleClickOpen} className="btn btn-primary">
                     Download
                   </Link> */}
-                  <a href="/pdf/What is WAVES Bazaar.pdf"  className="btn btn-primary">
-                    Download
+                  <a
+                    href="/pdf/What is WAVES Bazaar.pdf"
+                    className="btn btn-primary"
+                    target="_blank"
+                  >
+                    View & Download
                   </a>
-                  
                 </div>
               </div>
             </div>
@@ -404,8 +407,11 @@ const DownloadPDF = () => {
                   <h5 className="card-title">Web Series_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                 
-                  <a href="/pdf/Web Series_Waves Bazaar.pdf"  target="_blank" className="btn btn-primary">
+                  <a
+                    href="/pdf/Web Series_Waves Bazaar.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
                     View & Download
                   </a>
                 </div>
@@ -424,9 +430,12 @@ const DownloadPDF = () => {
                   <h5 className="card-title">VFX_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                
-                  <a href="/pdf/VFX_Waves Bazaar.pdf" target="_blank"  className="btn btn-primary">
-                  View & Download
+                  <a
+                    href="/pdf/VFX_Waves Bazaar.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    View & Download
                   </a>
                 </div>
               </div>
@@ -444,10 +453,12 @@ const DownloadPDF = () => {
                   <h5 className="card-title">Podcast</h5>
                   <ul className="ProjectType-list"></ul>
 
-                 
-                  
-                  <a href="/pdf/Podcast.pdf" target="_blank"  className="btn btn-primary">
-                  View & Download
+                  <a
+                    href="/pdf/Podcast.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    View & Download
                   </a>
                 </div>
               </div>
@@ -465,9 +476,12 @@ const DownloadPDF = () => {
                   <h5 className="card-title">Music and Sound_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                
-                  <a href="/pdf/Music and Sound_Waves Bazaar.pdf" target="_blank"  className="btn btn-primary">
-                  View & Download
+                  <a
+                    href="/pdf/Music and Sound_Waves Bazaar.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    View & Download
                   </a>
                 </div>
               </div>
@@ -485,8 +499,12 @@ const DownloadPDF = () => {
                   <h5 className="card-title">GameMakers_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                  <a href="/pdf/GameMakers_Waves Bazaar.pdf" target="_blank" className="btn btn-primary">
-                  View & Download
+                  <a
+                    href="/pdf/GameMakers_Waves Bazaar.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    View & Download
                   </a>
                 </div>
               </div>
@@ -504,10 +522,12 @@ const DownloadPDF = () => {
                   <h5 className="card-title">Films_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                
-                  
-                  <a href="/pdf/Films_Waves Bazaar.pdf" target="_blank" className="btn btn-primary">
-                  View & Download
+                  <a
+                    href="/pdf/Films_Waves Bazaar.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    View & Download
                   </a>
                 </div>
               </div>
@@ -525,8 +545,12 @@ const DownloadPDF = () => {
                   <h5 className="card-title">Events_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                  <a href="/pdf/Events_Waves Bazaar.pdf" target="_blank" className="btn btn-primary">
-                  View & Download
+                  <a
+                    href="/pdf/Events_Waves Bazaar.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    View & Download
                   </a>
                 </div>
               </div>
@@ -544,8 +568,12 @@ const DownloadPDF = () => {
                   <h5 className="card-title">Comic and eBook_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                  <a href="/pdf/Comic and eBook_Waves Bazaar.pdf" target="_blank"  className="btn btn-primary">
-                  View & Download
+                  <a
+                    href="/pdf/Comic and eBook_Waves Bazaar.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    View & Download
                   </a>
                 </div>
               </div>
@@ -563,18 +591,20 @@ const DownloadPDF = () => {
                   <h5 className="card-title">AR_VR_XR_Waves Bazaar</h5>
                   <ul className="ProjectType-list"></ul>
 
-                  <a href="/pdf/AR_VR_XR_Waves Bazaar.pdf" target="_blank" className="btn btn-primary">
-                  View & Download
+                  <a
+                    href="/pdf/AR_VR_XR_Waves Bazaar.pdf"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    View & Download
                   </a>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-            <Footer />
-
+      <Footer />
     </>
   );
 };
