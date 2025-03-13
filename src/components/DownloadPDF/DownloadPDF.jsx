@@ -430,7 +430,7 @@ const DownloadPDF = () => {
                             href={c1}
                             className="btn btn-primary"
                             target="_blank"
-                            download
+
                           >
                             View & Download
                           </a>
