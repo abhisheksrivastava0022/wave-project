@@ -10,9 +10,12 @@
 } */
 
 body {
-  background: #F8F9FA;
+  background: #fcfcfc;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  overflow-y: inherit!important;
+  padding: 0!important;
+  margin: 0!important;
 }
 
 h6,
@@ -2253,7 +2256,7 @@ h5 {
 }
 
 #offcanvasExample .navigation-menu li {
-  padding: 30px;
+  padding: 15px 30px;
 }
 
 #offcanvasExample .navigation-menu a {

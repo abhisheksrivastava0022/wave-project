@@ -83,7 +83,7 @@ const TermsAndCondition = () => {
                     </a>
                   </li>
                   <li>
-                    <Link to="/download">Download</Link>
+                    <Link to="/download">Downloads</Link>
                   </li>
                   <li>
                     <a href="https://wavesindia.org/" target="_blank">

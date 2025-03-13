@@ -274,6 +274,9 @@ const Home = () => {
                                     <li>  <a href="https://wavesbazaar.com/wave-seller/login">Seller Login</a> </li>
                                     <li>  <a href="https://wavesbazaar.com/waves-buyer/login">Buyer Login</a></li>
                                     <li>  <a href="https://wavesbazaar.com/project">Explore Projects</a></li>
+                                      <li>
+                                                              <Link to="/download">Downloads</Link>
+                                                            </li>
                                     <li><a href="https://wavesindia.org/" target="_blank">WAVES India</a></li>
                                 </ul>
                             </div>

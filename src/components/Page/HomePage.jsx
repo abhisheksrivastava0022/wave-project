@@ -335,7 +335,7 @@ const HomePage = () => {
                         </li>
                         {/* <li><a href="https://wavesbazaar.com/project">Download</a></li> */}
                         <li>
-                          <Link to="/download">Download</Link>
+                          <Link to="/download">Downloads</Link>
                         </li>
 
                         <li>
