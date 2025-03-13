@@ -426,7 +426,14 @@ const DownloadPDF = () => {
                         <div className="hover-content">
                           {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
                           <ul className="ProjectType-list"></ul>
-                        
+                          <a
+                            href={c1}
+                            className="btn btn-primary"
+                            target="_blank"
+                            download
+                          >
+                            View & Download
+                          </a>
                         </div>
                       </div>
                     </div>
