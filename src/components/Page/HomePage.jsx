@@ -329,6 +329,11 @@ const HomePage = () => {
                           </a>
                         </li>
                         <li>
+                          <a href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com">
+                            Viewing Room
+                          </a>
+                        </li>
+                        <li>
                           <a href="https://wavesbazaar.com/project">
                             Explore Projects
                           </a>
@@ -378,6 +383,14 @@ const HomePage = () => {
                     className="btn common-btn-div animated fadeInRight"
                   >
                     Buyer’s Signup
+                  </a>
+                </div>
+                <div className="btn-landing">
+                  <a
+                    href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com"
+                    className="btn common-btn-div1 animated fadeInLeft"
+                  >
+                    Viewing Room
                   </a>
                 </div>
               </div>
