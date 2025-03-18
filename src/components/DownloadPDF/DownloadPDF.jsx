@@ -27,6 +27,8 @@ import c11 from "../../assets/img/11.jpeg";
 import c12 from "../../assets/img/12.jpeg";
 import c13 from "../../assets/img/13.jpeg";
 import c14 from "../../assets/img/14.jpeg";
+import Animation_Buyer from "../../assets/img/Film & TV Live Action & Animation Buyer.jpg";
+import Animation_Seller from "../../assets/img/Film & TV Live Action & Animation Seller.jpg";
 import Footer from "../Footer/Footer";
 
 const DownloadPDF = () => {
@@ -152,9 +154,7 @@ const DownloadPDF = () => {
                     Brochure
                   </a>
                 </li>
-                {/* <li className="nav-item" role="presentation">
-                     <a className="nav-link" id="videos-tab" data-bs-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Videos</a>
-                  </li> */}
+                
                 <li className="nav-item" role="presentation">
                   <a
                     className="nav-link"
@@ -168,6 +168,9 @@ const DownloadPDF = () => {
                     Creatives
                   </a>
                 </li>
+                <li className="nav-item" role="presentation">
+                     <a className="nav-link" id="videos-tab" data-bs-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Videos</a>
+                  </li>
               </ul>
               <div className="tab-content mt-2" id="myTabsContent">
                 <div
@@ -457,9 +460,7 @@ const DownloadPDF = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab"  data-aos="fade-up-left">
-                   videos
-                  </div> */}
+               
                 <div
                   className="tab-pane fade"
                   id="creatives"
@@ -476,10 +477,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5> */}
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5>
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c1}
@@ -780,6 +781,55 @@ const DownloadPDF = () => {
                     </div>
                   </div>
                 </div>
+                <div className="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab"  data-aos="fade-up-left">
+                   {/* videos */}
+                   <div className="row mt-3">
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Animation_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Film & TV Live Action & Animation Buyer</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Buyer</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="https://drive.google.com/file/d/1g48nvfp8WCUFOwAfvtCFb6JVopfpY-Jc/view"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Animation_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Film & TV Live Action & Animation Seller</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="https://drive.google.com/file/d/1F-gWY-dvO0L-4vt6Qb8-HURJyRjmWvqT/view"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
