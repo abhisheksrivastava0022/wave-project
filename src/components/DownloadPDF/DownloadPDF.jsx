@@ -11,6 +11,8 @@ import W7 from "../../assets/img/Films_Waves_Bazaar.jpg";
 import W8 from "../../assets/img/Events_Waves_Bazaar.jpg";
 import W9 from "../../assets/img/Comic and eBook_Waves_Bazaar.jpg";
 import W10 from "../../assets/img/AR_VR.jpg";
+import influencer from "../../assets/img/influencer-markerting.png";
+import advertising from "../../assets/img/advertising.png";
 import c1 from "../../assets/img/1.jpeg";
 import c2 from "../../assets/img/2.jpeg";
 import c3 from "../../assets/img/3.jpg";
@@ -99,6 +101,11 @@ const DownloadPDF = () => {
                     </a>
                   </li>
                   <li>
+                          <a href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com">
+                            Viewing Room
+                          </a>
+                        </li>
+                  <li>
                     {" "}
                     <a href="https://wavesbazaar.com/project">
                       Explore Projects
@@ -170,6 +177,7 @@ const DownloadPDF = () => {
                   aria-labelledby="brochure-tab"
                   data-aos="fade-up-right"
                 >
+                    {/* brochure */}
                   <div className="row mt-3">
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
@@ -392,6 +400,53 @@ const DownloadPDF = () => {
 
                           <a
                             href="/pdf/AR_VR_XR_Waves Bazaar.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={influencer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Influencer Marketing</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">Influencer Marketing</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/Influencer marketing.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={advertising} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Advertising</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title"> Advertising</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/Advertising.pdf"
                             target="_blank"
                             className="btn btn-primary"
                           >
@@ -711,7 +766,7 @@ const DownloadPDF = () => {
                           {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
                         </div>
                         <div className="hover-content">
-                          <h5 className="card-title">What is WAVES Bazaar</h5>
+                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c14}

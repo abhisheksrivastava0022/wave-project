@@ -77,6 +77,11 @@ const TermsAndCondition = () => {
                     </a>
                   </li>
                   <li>
+                          <a href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com">
+                            Viewing Room
+                          </a>
+                        </li>
+                  <li>
                     {" "}
                     <a href="https://wavesbazaar.com/project">
                       Explore Projects
