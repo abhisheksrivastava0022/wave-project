@@ -29,6 +29,31 @@ import c13 from "../../assets/img/13.jpeg";
 import c14 from "../../assets/img/14.jpeg";
 import Animation_Buyer from "../../assets/img/Film & TV Live Action & Animation Buyer.jpg";
 import Animation_Seller from "../../assets/img/Film & TV Live Action & Animation Seller.jpg";
+import Advertising_buyer from "../../assets/img/Advertising Buyer.jpg";
+import Advertising_seller from "../../assets/img/Advertising seller.jpg";
+import VFX_Services_Buyer from "../../assets/img/Animation & VFX Services Buyer.jpg";
+import VFX_Services_seller from "../../assets/img/Animation & VFX Services Seller.jpg";
+import Comics_Buyer from "../../assets/img/Comics and E-books Buyer.jpg";
+import Comics_Seller from "../../assets/img/Comics and E-books Seller.jpg";
+import Gaming_Buyer from "../../assets/img/Gaming & Esports Buyer.jpg";
+import Gaming_Seller from "../../assets/img/Gaming & Esports Seller.jpg";
+import Influencer_Buyer from "../../assets/img/Influencer Marketing Buyer.jpg";
+import Influencer_Seller from "../../assets/img/Influencer Marketing Seller.jpg";
+import Live_Events_Buyer from "../../assets/img/Live Events Buyer.jpg";
+import Live_Events_Seller from "../../assets/img/Live Events Seller.jpg";
+import Music_Buyer from "../../assets/img/Music and Sound Buyer.jpg";
+import Music_Seller from "../../assets/img/Music and Sound Seller.jpg";
+import Radio_Buyer from "../../assets/img/Radio & Podcast Buyer.jpg";
+import Radio_Seller from "../../assets/img/Radio & Podcast Seller.jpg";
+import Web_Series_Buyer from "../../assets/img/Web Series Live action & Animation Buyer.jpg";
+import Web_Series_Seller from "../../assets/img/Web Series Live action & Animation Seller.jpg";
+import XR_Buyer from "../../assets/img/XR,-VR-&-AR-Buyer.jpg";
+import XR_Seller from "../../assets/img/XR, VR & AR Sellerf.jpg";
+
+
+
+
+
 import Footer from "../Footer/Footer";
 
 const DownloadPDF = () => {
@@ -791,13 +816,13 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Film & TV Live Action & Animation Buyer</h5>
+                          <h5 className="card-title">Film & TV Live Action & Animation (Buyer)</h5>
                         </div>
                         <div className="hover-content">
                           {/* <h5 className="card-title">Film & TV Live Action & Animation Buyer</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
-                            href="https://drive.google.com/file/d/1g48nvfp8WCUFOwAfvtCFb6JVopfpY-Jc/view"
+                            href="/assets/videos/Film & TV Live Action & Animation Buyer.mp4"
                             className="btn btn-primary"
                             target="_blank"
                           >
@@ -813,13 +838,453 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Film & TV Live Action & Animation Seller</h5>
+                          <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5>
                         </div>
                         <div className="hover-content">
                           {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
-                            href="https://drive.google.com/file/d/1F-gWY-dvO0L-4vt6Qb8-HURJyRjmWvqT/view"
+                            href="/assets/videos/Film & TV Live Action & Animation Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Advertising_buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Advertising (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Advertising Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Advertising_seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Advertising (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Advertising Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={VFX_Services_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Animation & VFX Services (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Animation & VFX Services Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={VFX_Services_seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Animation & VFX Services (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Animation & VFX Services Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Comics_Buyer } alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Comics and E-books (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Comics & E-books Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Comics_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Comics and E-books (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Comics & E-books Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Gaming_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Gaming & Esports (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Gaming & Esports Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Gaming_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Gaming & Esports (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Gaming & Esports Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Influencer_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Influencer Marketing (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Influencer Marketing Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Influencer_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Influencer Marketing (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Influencer Marketing Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Live_Events_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Live Events (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Live Events Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Live_Events_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Live Events (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Live Events Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Music_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Music and Sound (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Music & Sound Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Music_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Music and Sound (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Music & Sound Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Radio_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Radio & Podcast (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Radio & Podcast Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Radio_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Radio & Podcast (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Radio & Podcast Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Web_Series_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Web Series Live action & Animation (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Web Series Live action & Animation Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={Web_Series_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Web Series Live action & Animation (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/Web Series Live action & Animation Seller.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={XR_Buyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">XR,-VR-&-AR (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/XR, VR & AR Buyer.mp4"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            Click to View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={XR_Seller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">XR,-VR-&-AR (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/assets/videos/XR, VR & AR Seller.mp4"
                             className="btn btn-primary"
                             target="_blank"
                           >
