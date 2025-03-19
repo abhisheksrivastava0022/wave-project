@@ -13,20 +13,28 @@ import W9 from "../../assets/img/Comic and eBook_Waves_Bazaar.jpg";
 import W10 from "../../assets/img/AR_VR.jpg";
 import influencer from "../../assets/img/influencer-markerting.png";
 import advertising from "../../assets/img/advertising.png";
-import c1 from "../../assets/img/1.jpeg";
-import c2 from "../../assets/img/2.jpeg";
-import c3 from "../../assets/img/3.jpg";
-import c4 from "../../assets/img/4.jpg";
-import c5 from "../../assets/img/5.jpeg";
-import c6 from "../../assets/img/6.jpeg";
-import c7 from "../../assets/img/7.jpeg";
-import c8 from "../../assets/img/8.jpeg";
-import c9 from "../../assets/img/9.jpeg";
-import c10 from "../../assets/img/10.jpeg";
-import c11 from "../../assets/img/11.jpeg";
-import c12 from "../../assets/img/12.jpeg";
-import c13 from "../../assets/img/13.jpeg";
-import c14 from "../../assets/img/14.jpeg";
+import c1 from "../../assets/img/creatives/Advertising Buyer.jpeg";
+import c2 from "../../assets/img/creatives/Advertising Seller.jpeg";
+import c3 from "../../assets/img/creatives/Animation & VFX Services Buyer.jpeg";
+import c4 from "../../assets/img/creatives/Animation & VFX Services Seller.jpeg";
+import c5 from "../../assets/img/creatives/Comics E books Buyer.jpeg";
+import c6 from "../../assets/img/creatives/Comics E books Seller.jpeg";
+import c7 from "../../assets/img/creatives/Film & TV Live Action & Animation Buyer.jpeg";
+import c8 from "../../assets/img/creatives/Film & TV Live Action & Animation Seller.jpeg";
+import c9 from "../../assets/img/creatives/Gaming & Esports Buyer.jpeg";
+import c10 from "../../assets/img/creatives/Gaming & Esports Seller.jpeg";
+import c11 from "../../assets/img/creatives/Influencer Marketing Buyer.jpeg";
+import c12 from "../../assets/img/creatives/Influencer Marketing Seller.jpeg";
+import c13 from "../../assets/img/creatives/Live Events Buyer.jpeg";
+import c14 from "../../assets/img/creatives/Live Events Seller.jpeg";
+import c15 from "../../assets/img/creatives/Music & Sound Buyer.jpg";
+import c16 from "../../assets/img/creatives/Music & Sound Seller.jpg";
+import c17 from "../../assets/img/creatives/Radio & Podcast Buyer.jpeg";
+import c18 from "../../assets/img/creatives/Radio & Podcast Seller.jpeg";
+import c19 from "../../assets/img/creatives/Web Series Live action & Animation Buyer.jpeg";
+import c20 from "../../assets/img/creatives/Web Series Live action & Animation Seller.jpeg";
+import c21 from "../../assets/img/creatives/XR, VR & AR Buyer.jpeg";
+import c22 from "../../assets/img/creatives/XR, VR & AR Seller.jpeg";
 import Animation_Buyer from "../../assets/img/Film & TV Live Action & Animation Buyer.jpg";
 import Animation_Seller from "../../assets/img/Film & TV Live Action & Animation Seller.jpg";
 import Advertising_buyer from "../../assets/img/Advertising Buyer.jpg";
@@ -198,13 +206,7 @@ const DownloadPDF = () => {
                   </li>
               </ul>
               <div className="tab-content mt-2" id="myTabsContent">
-                <div
-                  className="tab-pane fade show active"
-                  id="brochure"
-                  role="tabpanel"
-                  aria-labelledby="brochure-tab"
-                  data-aos="fade-up-right"
-                >
+                <div className="tab-pane fade show active" id="brochure" role="tabpanel" aria-labelledby="brochure-tab" data-aos="fade-up-right">
                     {/* brochure */}
                   <div className="row mt-3">
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
@@ -486,13 +488,7 @@ const DownloadPDF = () => {
                   </div>
                 </div>
                
-                <div
-                  className="tab-pane fade"
-                  id="creatives"
-                  role="tabpanel"
-                  aria-labelledby="creatives-tab"
-                  data-aos="fade-up-right"
-                >
+                <div className="tab-pane fade" id="creatives" role="tabpanel" aria-labelledby="creatives-tab" data-aos="fade-up-right">
                   {/* creatives */}
                   <div className="row mt-3">
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
@@ -502,10 +498,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5> */}
+                          <h5 className="card-title">Advertising (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                          <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5>
+                          {/* <h5 className="card-title">Advertising (Buyer)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c1}
@@ -525,10 +521,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Advertising (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          {/* <h5 className="card-title">Advertising (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c2}
@@ -547,10 +543,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Animation & VFX Services (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Animation & VFX Services (Buyer)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c3}
@@ -569,10 +565,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Animation & VFX Services (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Animation & VFX Services (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c4}
@@ -591,10 +587,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Comics  E books (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Comics  E books (Buyer)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c5}
@@ -613,10 +609,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Comics E books (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Comics E books (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c6}
@@ -635,10 +631,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Film & TV Live Action & Animation (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation (Buyer)</h5> */}
+                       
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c7}
@@ -657,10 +654,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5> */}
+                       
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c8}
@@ -679,10 +677,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Gaming & Esports (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Gaming & Esports (Buyer)</h5> */}
+                         
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c9}
@@ -701,10 +700,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Gaming & Esports (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Gaming & Esports (Seller)</h5> */}
+                         
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c10}
@@ -723,10 +723,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Influencer Marketing (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Influencer Marketing (Buyer)</h5> */}
+                     
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c11}
@@ -745,10 +746,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Influencer Marketing (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Influencer Marketing (Seller)</h5> */}
+                        
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c12}
@@ -767,10 +769,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Live Events (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
+                          
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c13}
@@ -789,10 +792,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                          <h5 className="card-title">Live Events (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">What is WAVES Bazaar</h5> */}
+                        {/* <h5 className="card-title">Live Events (Seller)</h5> */}
+                         
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c14}
@@ -804,8 +808,194 @@ const DownloadPDF = () => {
                         </div>
                       </div>
                     </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={c15} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Music & Sound (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Music & Sound (Buyer)</h5> */}
+                          
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={c15}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={c16} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Music & Sound (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Music & Sound (Seller)</h5> */}
+                          
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={c16}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={c17} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                        <h5 className="card-title">Radio & Podcast (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Radio & Podcast (Buyer)</h5> */}
+                          
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={c17}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={c18} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Radio & Podcast (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Radio & Podcast (Seller)</h5> */}
+                          
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={c18}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={c19} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Web Series Live action & Animation (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Web Series Live action & Animation (Buyer)</h5> */}
+                        
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={c19}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={c20} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Web Series Live action & Animation (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Web Series Live action & Animation (Seller)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={c20}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={c21} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">XR, VR & AR (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
+                        
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={c21}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={c22} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                        <h5 className="card-title">XR, VR & AR (Seller)</h5>
+                        
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">XR, VR & AR (Seller)</h5> */}
+                      
+                        
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={c22}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+             
                 <div className="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab"  data-aos="fade-up-left">
                    {/* videos */}
                    <div className="row mt-3">
@@ -1294,12 +1484,13 @@ const DownloadPDF = () => {
                       </div>
                     </div>
                     </div>
-                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      
       <Footer />
     </>
   );
