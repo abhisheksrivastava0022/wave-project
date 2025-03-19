@@ -13,12 +13,20 @@ import W9 from "../../assets/img/Comic and eBook_Waves_Bazaar.jpg";
 import W10 from "../../assets/img/AR_VR.jpg";
 import influencer from "../../assets/img/influencer-markerting.png";
 import advertising from "../../assets/img/advertising.png";
+import FilmBuyer from "../../assets/img/creatives/FilmBuyer.jpeg";
+import FilmSeller from "../../assets/img/creatives/FilmSeller.jpeg";
 import c1 from "../../assets/img/creatives/Advertising Buyer.jpeg";
+import AdvertisingBuyer2 from "../../assets/img/creatives/AdvertisingBuyer2.jpeg";
 import c2 from "../../assets/img/creatives/Advertising Seller.jpeg";
+import AdvertisingSeller2 from "../../assets/img/creatives/AdvertisingSeller2.jpeg";
 import c3 from "../../assets/img/creatives/Animation & VFX Services Buyer.jpeg";
+import AnimationVFXServicesBuyer2 from "../../assets/img/creatives/AnimationVFXServicesBuyer2.jpeg";
 import c4 from "../../assets/img/creatives/Animation & VFX Services Seller.jpeg";
+import AnimationVFXServicesSeller2 from "../../assets/img/creatives/AnimationVFXServicesSeller2.jpeg";
 import c5 from "../../assets/img/creatives/Comics E books Buyer.jpeg";
+import ComicsEbooksBuyer2 from "../../assets/img/creatives/ComicsEbooksBuyer2.jpeg";
 import c6 from "../../assets/img/creatives/Comics E books Seller.jpeg";
+import ComicsEbooksSeller2 from "../../assets/img/creatives/ComicsEbooksSeller2.jpeg";
 import c7 from "../../assets/img/creatives/Film & TV Live Action & Animation Buyer.jpeg";
 import c8 from "../../assets/img/creatives/Film & TV Live Action & Animation Seller.jpeg";
 import c9 from "../../assets/img/creatives/Gaming & Esports Buyer.jpeg";
@@ -26,15 +34,23 @@ import c10 from "../../assets/img/creatives/Gaming & Esports Seller.jpeg";
 import c11 from "../../assets/img/creatives/Influencer Marketing Buyer.jpeg";
 import c12 from "../../assets/img/creatives/Influencer Marketing Seller.jpeg";
 import c13 from "../../assets/img/creatives/Live Events Buyer.jpeg";
+import LiveEventsBuyer2 from "../../assets/img/creatives/LiveEventsBuyer2.jpeg";
+import LiveEventsBuyer1 from "../../assets/img/creatives/LiveEventsBuyer1.jpeg";
 import c14 from "../../assets/img/creatives/Live Events Seller.jpeg";
+import LiveEventsSeller2 from "../../assets/img/creatives/LiveEventsSeller2.jpeg";
+import LiveEventsSeller1 from "../../assets/img/creatives/LiveEventsSeller1.jpeg";
 import c15 from "../../assets/img/creatives/Music & Sound Buyer.jpg";
+import MusicandSoundBuyer from "../../assets/img/creatives/MusicandSoundBuyer.jpeg";
 import c16 from "../../assets/img/creatives/Music & Sound Seller.jpg";
+import MusicandSoundSeller from "../../assets/img/creatives/MusicandSoundSeller.jpeg";
 import c17 from "../../assets/img/creatives/Radio & Podcast Buyer.jpeg";
 import c18 from "../../assets/img/creatives/Radio & Podcast Seller.jpeg";
 import c19 from "../../assets/img/creatives/Web Series Live action & Animation Buyer.jpeg";
 import c20 from "../../assets/img/creatives/Web Series Live action & Animation Seller.jpeg";
 import c21 from "../../assets/img/creatives/XR, VR & AR Buyer.jpeg";
+import XRVRBuyer from "../../assets/img/creatives/XRVRBuyer.jpeg";
 import c22 from "../../assets/img/creatives/XR, VR & AR Seller.jpeg";
+import XRVRSeller from "../../assets/img/creatives/XRVRSeller.jpeg";
 import Animation_Buyer from "../../assets/img/Film & TV Live Action & Animation Buyer.jpg";
 import Animation_Seller from "../../assets/img/Film & TV Live Action & Animation Seller.jpg";
 import Advertising_buyer from "../../assets/img/Advertising Buyer.jpg";
@@ -491,6 +507,8 @@ const DownloadPDF = () => {
                 <div className="tab-pane fade" id="creatives" role="tabpanel" aria-labelledby="creatives-tab" data-aos="fade-up-right">
                   {/* creatives */}
                   <div className="row mt-3">
+                 
+                   
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
@@ -505,6 +523,29 @@ const DownloadPDF = () => {
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c1}
+                            className="btn btn-primary"
+                            target="_blank"
+
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={AdvertisingBuyer2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Advertising (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Advertising (Buyer)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={AdvertisingBuyer2}
                             className="btn btn-primary"
                             target="_blank"
 
@@ -539,6 +580,28 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={AdvertisingSeller2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Advertising (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Advertising (Seller)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={AdvertisingSeller2}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={c3} alt="user" className="defualtImage" />
                         </div>
 
@@ -550,6 +613,28 @@ const DownloadPDF = () => {
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c3}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={AnimationVFXServicesBuyer2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Animation & VFX Services (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Animation & VFX Services (Buyer)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={AnimationVFXServicesBuyer2}
                             className="btn btn-primary"
                             target="_blank"
                           >
@@ -583,6 +668,28 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={AnimationVFXServicesSeller2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Animation & VFX Services (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Animation & VFX Services (Seller)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={AnimationVFXServicesSeller2}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={c5} alt="user" className="defualtImage" />
                         </div>
 
@@ -605,6 +712,28 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={ComicsEbooksBuyer2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Comics  E books (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Comics  E books (Buyer)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={ComicsEbooksBuyer2}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={c6} alt="user" className="defualtImage" />
                         </div>
 
@@ -616,6 +745,28 @@ const DownloadPDF = () => {
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c6}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={ComicsEbooksSeller2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Comics E books (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Comics E books (Seller)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={ComicsEbooksSeller2}
                             className="btn btn-primary"
                             target="_blank"
                           >
@@ -650,6 +801,29 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={FilmBuyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Film (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Advertising (Buyer)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={FilmBuyer}
+                            className="btn btn-primary"
+                            target="_blank"
+
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={c8} alt="user" className="defualtImage" />
                         </div>
 
@@ -664,6 +838,29 @@ const DownloadPDF = () => {
                             href={c8}
                             className="btn btn-primary"
                             target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={FilmSeller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Film (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                          {/* <h5 className="card-title">Advertising (Buyer)</h5> */}
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={FilmSeller}
+                            className="btn btn-primary"
+                            target="_blank"
+
                           >
                             View & Download
                           </a>
@@ -788,6 +985,52 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={LiveEventsBuyer1} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Live Events (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
+                          
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={LiveEventsBuyer1}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={LiveEventsBuyer2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Live Events (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
+                          
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={LiveEventsBuyer2}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={c14} alt="user" className="defualtImage" />
                         </div>
 
@@ -800,6 +1043,52 @@ const DownloadPDF = () => {
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c14}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={LiveEventsSeller1} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Live Events (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Live Events (Seller)</h5> */}
+                         
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={LiveEventsSeller1}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={LiveEventsSeller2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Live Events (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Live Events (Seller)</h5> */}
+                         
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={LiveEventsSeller2}
                             className="btn btn-primary"
                             target="_blank"
                           >
@@ -834,6 +1123,29 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={MusicandSoundBuyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Music & Sound (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Music & Sound (Buyer)</h5> */}
+                          
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={MusicandSoundBuyer}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={c16} alt="user" className="defualtImage" />
                         </div>
 
@@ -846,6 +1158,29 @@ const DownloadPDF = () => {
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c16}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={MusicandSoundSeller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">Music & Sound (Seller)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">Music & Sound (Seller)</h5> */}
+                          
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={MusicandSoundSeller}
                             className="btn btn-primary"
                             target="_blank"
                           >
@@ -952,7 +1287,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">XR, VR & AR (Buyer)</h5>
+                          <h5 className="card-title">XR VR & AR (Buyer)</h5>
                         </div>
                         <div className="hover-content">
                         {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
@@ -971,11 +1306,34 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={XRVRBuyer} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">XR VR & AR (Buyer)</h5>
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
+                        
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={XRVRBuyer}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={c22} alt="user" className="defualtImage" />
                         </div>
 
                         <div className="project-title-name text-center">
-                        <h5 className="card-title">XR, VR & AR (Seller)</h5>
+                        <h5 className="card-title">XR VR & AR (Seller)</h5>
                         
                         </div>
                         <div className="hover-content">
@@ -985,6 +1343,31 @@ const DownloadPDF = () => {
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c22}
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={XRVRSeller} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                        <h5 className="card-title">XR VR & AR (Seller)</h5>
+                        
+                        </div>
+                        <div className="hover-content">
+                        {/* <h5 className="card-title">XR, VR & AR (Seller)</h5> */}
+                      
+                        
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href={XRVRSeller}
                             className="btn btn-primary"
                             target="_blank"
                           >
@@ -1446,10 +1829,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">XR, VR & AR (Buyer)</h5>
+                          <h5 className="card-title">XR VR & AR (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
+                        <h5 className="card-title">XR VR & AR (Buyer)</h5>
                           <ul className="ProjectType-list"></ul>
                           <a
                             href="/assets/videos/XR, VR & AR Buyer.mp4"
@@ -1468,10 +1851,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">XR, VR & AR (Seller)</h5>
+                          <h5 className="card-title">XR VR & AR (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">XR, VR & AR (Seller)</h5> */}
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href="/assets/videos/XR, VR & AR Seller.mp4"
