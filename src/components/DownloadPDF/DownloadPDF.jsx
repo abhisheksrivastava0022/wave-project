@@ -631,7 +631,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Film & TV Live Action & Animation (Buyer)</h5>
+                          <h5 className="card-title">Film (Buyer)</h5>
                         </div>
                         <div className="hover-content">
                           {/* <h5 className="card-title">Film & TV Live Action & Animation (Buyer)</h5> */}
@@ -654,7 +654,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5>
+                          <h5 className="card-title">Film (Seller)</h5>
                         </div>
                         <div className="hover-content">
                         {/* <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5> */}
@@ -907,7 +907,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Web Series Live action & Animation (Buyer)</h5>
+                          <h5 className="card-title">Web Series (Buyer)</h5>
                         </div>
                         <div className="hover-content">
                         {/* <h5 className="card-title">Web Series Live action & Animation (Buyer)</h5> */}
@@ -930,7 +930,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Web Series Live action & Animation (Seller)</h5>
+                          <h5 className="card-title">Web Series (Seller)</h5>
                         </div>
                         <div className="hover-content">
                         {/* <h5 className="card-title">Web Series Live action & Animation (Seller)</h5> */}
@@ -1006,7 +1006,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Film & TV Live Action & Animation (Buyer)</h5>
+                          <h5 className="card-title">Film (Buyer)</h5>
                         </div>
                         <div className="hover-content">
                           {/* <h5 className="card-title">Film & TV Live Action & Animation Buyer</h5> */}
@@ -1028,7 +1028,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5>
+                          <h5 className="card-title">Film (Seller)</h5>
                         </div>
                         <div className="hover-content">
                           {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
@@ -1402,7 +1402,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Web Series Live action & Animation (Buyer)</h5>
+                          <h5 className="card-title">Web Series (Buyer)</h5>
                         </div>
                         <div className="hover-content">
                           {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
@@ -1424,7 +1424,7 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Web Series Live action & Animation (Seller)</h5>
+                          <h5 className="card-title">Web Series (Seller)</h5>
                         </div>
                         <div className="hover-content">
                           {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
@@ -1446,10 +1446,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">XR,-VR-&-AR (Buyer)</h5>
+                          <h5 className="card-title">XR, VR & AR (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                        {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href="/assets/videos/XR, VR & AR Buyer.mp4"
@@ -1468,10 +1468,10 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">XR,-VR-&-AR (Seller)</h5>
+                          <h5 className="card-title">XR, VR & AR (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                          {/* <h5 className="card-title">Film & TV Live Action & Animation Seller</h5> */}
+                        {/* <h5 className="card-title">XR, VR & AR (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href="/assets/videos/XR, VR & AR Seller.mp4"
