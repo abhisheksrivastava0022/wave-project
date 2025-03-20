@@ -8,11 +8,14 @@ import WAVESLoader from "../../assets/img/spinner.gif";
 import ApiClient from "../API/ApiClient";
 import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
+import c1 from "../../assets/img/creatives/Advertising Buyer.jpeg";
+
 import AlertMessage from "../AlertMessage";
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 
 import "../../../src/assets/css/home.css"; // Import CSS file
 import Faq from "./Faq";
+import CarouselComponent from "./CarouselComponent";
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
   const allCookies = document.cookie;
@@ -472,6 +475,22 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      <div className="container">
+        <div className="innerpage mt-3">
+          <div className="page-title list-name text-center mb-4 mt-5">
+           
+             <h2 className="text-center">Companies on board </h2>
+          </div>
+          </div>
+          </div>
+          
+
+      <CarouselComponent/>
+
+
+
+
       {/* explore project */}
       {data && data.length > 0 ? (
         <></>
@@ -482,6 +501,7 @@ const HomePage = () => {
           </div>
         </div>
       )}
+
       <div className="container">
         <div className="innerpage mt-3">
           <div className="page-title list-name text-center mb-4 mt-5">
@@ -767,9 +787,9 @@ const HomePage = () => {
       </div>
       <Faq />
       {/* Footer */}
-      <div class="footer text-center ">
-        <div class="container">
-          <div class="footer-landing-page">
+      <div className="footer text-center ">
+        <div className="container">
+          <div className="footer-landing-page">
             <a href="https://wavesindia.org/" target="_blank">
               Waves India
             </a>
