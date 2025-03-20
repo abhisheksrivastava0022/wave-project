@@ -2,6 +2,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Header from "../Page/Header";
 
 const TermsAndCondition = () => {
   let countData = 0;
@@ -29,7 +30,7 @@ const TermsAndCondition = () => {
               >
                 <img src="/image/nfdc-logo.png" alt="NFDC Logo" />
               </a>
-              <button
+              {/* <button
                 className="btn btn-menu"
                 type="button"
                 data-bs-toggle="offcanvas"
@@ -42,7 +43,8 @@ const TermsAndCondition = () => {
                   className="menu-link"
                 />
                 Menu
-              </button>
+              </button> */}
+              <Header/>
             </div>
             <div
               className="offcanvas offcanvas-end text-bg-dark sidemenu"

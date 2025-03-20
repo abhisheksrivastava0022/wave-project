@@ -47,6 +47,7 @@ import Logo40 from "../../assets/img/ProductionHouseLogos/In10Media.png";
 import Logo41 from "../../assets/img/ProductionHouseLogos/Annapurna_Studios.jpg";
 import Logo42 from "../../assets/img/ProductionHouseLogos/Shortstv.jpg";
 import Logo43 from "../../assets/img/ProductionHouseLogos/FilmSharks.png";
+import Companies from "../Page/Companies";
 
 // Store all image imports in an array
 const images = [
@@ -88,7 +89,7 @@ const FeaturedCompany = () => {
       </div>
 
       {/* Featured Companies Section */}
-      <div className="container terms-codition mt-5">
+      {/* <div className="container terms-codition mt-5">
         <Box sx={{ padding: 2 }}>
 
 
@@ -111,7 +112,9 @@ const FeaturedCompany = () => {
             ))}
           </Grid>
         </Box>
-      </div>
+      </div> */}
+
+      <Companies/>
 
       <Footer />
     </>

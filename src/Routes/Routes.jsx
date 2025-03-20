@@ -8,6 +8,7 @@ import HomePage from '../components/Page/HomePage';
 import Faq from '../components/Page/Faq';
 import DownloadPDF from '../components/DownloadPDF/DownloadPDF';
 import FeaturedCompany from '../components/FeaturedCompany/FeaturedCompany';
+import Companies from '../components/Page/Companies';
 
 const basePrefix = ''; // Ensure this matches your Vite config
 
@@ -44,6 +45,10 @@ export const routes = [
   {
     path: 'project/faq',
     element: <Faq />,
+  },
+  {
+    path: 'project/companies',
+    element: <Companies/>,
   },
   {
     path: '/download',

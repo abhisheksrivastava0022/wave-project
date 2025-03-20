@@ -410,7 +410,7 @@ const HomePage = () => {
 
 
 
-      <CarouselComponent />
+      {/* <CarouselComponent /> */}
 
 
 
