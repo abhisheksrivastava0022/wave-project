@@ -77,7 +77,7 @@ const Companies = () => {
       <div className="container  mb-5">
         <h3 className="text-center mb-5">Featured Companies</h3>
         <div className="card">
-          <div className="mt-5">
+          <div className="">
            
 
             <div className="tab-content mt-2" id="myTabsContent">
