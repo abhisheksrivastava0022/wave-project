@@ -79,6 +79,7 @@ import XR_Seller from "../../assets/img/XR, VR & AR Sellerf.jpg";
 
 
 import Footer from "../Footer/Footer";
+import Header from "../Page/Header";
 
 const DownloadPDF = () => {
   return (
@@ -104,7 +105,8 @@ const DownloadPDF = () => {
               >
                 <img src="image/nfdc-logo.png" alt="NFDC Logo" />
               </a>
-              <button
+              <Header/>
+              {/* <button
                 className="btn btn-menu"
                 type="button"
                 data-bs-toggle="offcanvas"
@@ -117,9 +119,9 @@ const DownloadPDF = () => {
                   className="menu-link"
                 />
                 Menu
-              </button>
+              </button> */}
             </div>
-            <div
+            {/* <div
               className="offcanvas offcanvas-end text-bg-dark sidemenu"
               tabIndex="-1"
               id="offcanvasExample"
@@ -173,7 +175,7 @@ const DownloadPDF = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
