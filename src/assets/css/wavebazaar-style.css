@@ -120,8 +120,7 @@ h1,
   color: #777;
 }
 
-.topbox {
-}
+.topbox {}
 
 .topbox .col-xxl-3 {
   width: 20%;
@@ -297,7 +296,7 @@ h1,
   padding-bottom: 10px;
 }
 
-.active > .page-link,
+.active>.page-link,
 .page-link.active {
   border-color: #581c87 !important;
   background-color: #581c87 !important;
@@ -1685,8 +1684,7 @@ li.sidebar-signout a {
   padding-top: 10px;
 }
 
-.logo-landing-header {
-}
+.logo-landing-header {}
 
 .logo-landing-header .top-logo {
   display: flex;
@@ -2304,6 +2302,7 @@ h5 {
 .customTabs .nav-link {
   color: #000;
 }
+
 .customTabs .active {
   color: #fff !important;
   background: #5f259e !important;
@@ -2338,21 +2337,30 @@ h5 {
 /* Style for the Owl Carousel container */
 .owl-carousel .owl-item {
   display: flex;
-  justify-content: center; /* Ensures the items are centered in the carousel */
-  align-items: center;     /* Vertically centers the items */
+  justify-content: center;
+  /* Ensures the items are centered in the carousel */
+  align-items: center;
+  /* Vertically centers the items */
 }
 
 /* Custom class for each item */
 .custom-item {
   position: relative;
-  width: 100%; /* Ensures the item takes full width of the carousel */
-  height: 250px; /* Set a fixed height to ensure equal height for all items */
-  border-radius: 15px; /* Optional: Adds rounded corners to each item */
-  overflow: hidden; /* Ensures any overflowing content (like images) doesn't spill outside the box */
-  background-color: #f0f0f0; /* Optional: Set a background color for the items */
+  width: 100%;
+  /* Ensures the item takes full width of the carousel */
+  height: 250px;
+  /* Set a fixed height to ensure equal height for all items */
+  border-radius: 15px;
+  /* Optional: Adds rounded corners to each item */
+  overflow: hidden;
+  /* Ensures any overflowing content (like images) doesn't spill outside the box */
+  background-color: #f0f0f0;
+  /* Optional: Set a background color for the items */
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center;     /* Centers the content vertically */
+  justify-content: center;
+  /* Centers the content horizontally */
+  align-items: center;
+  /* Centers the content vertically */
 }
 
 /* Style for images to fit within the container */
@@ -2380,7 +2388,7 @@ h5 {
 
 
 .custom-item img {
-  padding: 5px; 
+  padding: 5px;
 }
 
 
@@ -2391,7 +2399,92 @@ h5 {
   padding: 30px;
 }
 
-.owl-carousel .owl-item .img-logo{
+.owl-carousel .owl-item .img-logo {
   display: block;
   width: 100%;
+}
+
+
+.video-sectionDiv {
+  padding: 100px 0;
+  text-align: center;
+  background: #000 url(/public/image/video_11.jpg) left top no-repeat;
+  color: #fff;
+}
+
+.button-video {
+  min-width: 60px;
+  height: 60px;
+
+  display: inline-flex;
+
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #fff;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+.button-video::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(100px + 12px);
+  min-height: calc(100px + 12px);
+  border: 6px solid #fff;
+  box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+
+
+.button-video:hover::before,
+.button-video:focus::before {
+  opacity: 1;
+}
+
+.button-video::after {
+  content: '';
+  width: 60px;
+  height: 60px;
+  border-radius: 1000px;
+  border: 10px solid #fff;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite !important;
+}
+
+
+@keyframes ring {
+  0% {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
 }

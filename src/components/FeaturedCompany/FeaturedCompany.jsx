@@ -1,7 +1,9 @@
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import Footer from "../Footer/Footer";
+import Header from "../Page/Header";
+
+// Import all logos
 import Logo1 from "../../assets/img/ProductionHouseLogos/Netflixlogo.png";
 import Logo2 from "../../assets/img/ProductionHouseLogos/PrimeVideo.png";
 import Logo3 from "../../assets/img/ProductionHouseLogos/MXPlayer.png";
@@ -46,110 +48,74 @@ import Logo41 from "../../assets/img/ProductionHouseLogos/Annapurna_Studios.jpg"
 import Logo42 from "../../assets/img/ProductionHouseLogos/Shortstv.jpg";
 import Logo43 from "../../assets/img/ProductionHouseLogos/FilmSharks.png";
 
+// Store all image imports in an array
 const images = [
-  Logo1,
-  Logo2,
-  Logo3,
-  Logo4,
-  Logo5,
-  Logo6,
-  Logo7,
-  Logo8,
-  Logo9,
-  Logo10,
-  Logo11,
-  Logo12,
-  Logo13,
-  Logo14,
-  Logo15,
-  Logo16,
-  Logo17,
-  Logo18,
-  Logo19,
-  Logo20,
-  Logo21,
-  Logo22,
-  Logo23,
-  Logo24,
-  Logo25,
-  Logo26,
-  Logo27,
-  Logo28,
-  Logo29,
-  Logo30,
-  Logo31,
-  Logo31,
-  Logo32,
-  Logo33,
-  Logo34,
-  Logo35,
-  Logo36,
-  Logo37,
-  Logo38,
-  Logo39,
-  Logo40,
-  Logo41,
-  Logo42,
-  Logo43,
+  Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10,
+  Logo11, Logo12, Logo13, Logo14, Logo15, Logo16, Logo17, Logo18, Logo19, Logo20,
+  Logo21, Logo22, Logo23, Logo24, Logo25, Logo26, Logo27, Logo28, Logo29, Logo30,
+  Logo31, Logo32, Logo33, Logo34, Logo35, Logo36, Logo37, Logo38, Logo39, Logo40,
+  Logo41, Logo42, Logo43,
 ];
 
-const CarouselComponent = () => {
-  const options = {
-    loop: true,
-    items: 8,
-    margin: 5,
-    nav: true,
-    dots: false,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    responsive: {
-      0: {
-        items: 2,
-      },
-      600: {
-        items: 4,
-      },
-      1000: {
-        items: 4,
-      },
-    },
-  };
-
+const FeaturedCompany = () => {
   return (
     <>
-
-      <div className="feature col-lg-12">
+      <div className="col-lg-12 top-menu-custom">
         <div className="container">
-          <div class="p-4"><h3 class="text-center mb-4">Featured Companies</h3>
-          </div>
-          <OwlCarousel className="owl-theme" {...options}>
-            {images.map((image, index) => (
-              <div
-                // className="item"
-                key={index}
-              // style={{ width: "130.75px", marginRight: "10px" }}
-
+          <div className="logo-landing-header">
+            <div className="top-logo">
+              <a href="https://wavesbazaar.com/">
+                <img src="/image/waves-logo.png" alt="Waves Logo" />
+              </a>
+              <a
+                href="https://www.mib.gov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <div
-                  //  className="card"
-                  className="item custom-item"
-                >
-                  <img
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                  // className="img-logo img-fluid"
-
-                  />
-                </div>
-              </div>
-            ))}
-          </OwlCarousel>
+                <img src="/image/mib.png" alt="MIB Logo" />
+              </a>
+              <a
+                href="https://nfdcindia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/image/nfdc-logo.png" alt="NFDC Logo" />
+              </a>
+              <Header />
+            </div>
+          </div>
         </div>
       </div>
 
+      {/* Featured Companies Section */}
+      <div className="container terms-codition mt-5">
+        <Box sx={{ padding: 2 }}>
 
+
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Typography variant="h4" component="h1" gutterBottom>
+                Featured Companies
+              </Typography>
+            </Grid>
+            {images.map((logo, index) => (
+              <Grid className="card" item xs={12} sm={12} md={3} lg={3} key={index}>
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}>
+                  <img
+                    src={logo}
+                    alt={`Company Logo ${index + 1}`}
+                    style={{ width: "100%", maxHeight: "100px", objectFit: "contain" }}
+                  />
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </div>
+
+      <Footer />
     </>
   );
 };
 
-export default CarouselComponent;
+export default FeaturedCompany;

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import WavesLogo from "../../assets/img/Waves.png";
 
-import category_1 from "../../assets/img/category_1.jpg";
-import NFDCLogo from "../../assets/img/NFDC.png";
+import video_11 from "../../assets/img/video_11.jpg";
+
 import WAVESLoader from "../../assets/img/spinner.gif";
 import ApiClient from "../API/ApiClient";
 import { Link } from "react-router-dom";
@@ -16,6 +16,7 @@ const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 import "../../../src/assets/css/home.css"; // Import CSS file
 import Faq from "./Faq";
 import CarouselComponent from "./CarouselComponent";
+import Header from "./Header";
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
   const allCookies = document.cookie;
@@ -285,79 +286,10 @@ const HomePage = () => {
                   >
                     <img src="image/nfdc-logo.png" alt="NFDC Logo" />
                   </a>
-                  <button
-                    className="btn btn-menu"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasExample"
-                    aria-controls="offcanvasExample"
-                  >
-                    <img
-                      src="https://www.iffigoa.org/public/images/menu.svg"
-                      alt="Menu"
-                      className="menu-link"
-                    />
-                    Menu
-                  </button>
+
 
                   {/* Offcanvas Menu */}
-                  <div
-                    className="offcanvas offcanvas-end text-bg-dark"
-                    style={{ background: "#5F259E!important" }}
-                    tabIndex="-1"
-                    id="offcanvasExample"
-                    aria-labelledby="offcanvasExampleLabel"
-                  >
-                    <div className="offcanvas-header">
-                      <button
-                        type="button"
-                        className="btn-close btn-close-white"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div className="offcanvas-body">
-                      <ul className="navigation-menu">
-                        <li>
-                          <a href="https://wavesbazaar.com/">Home</a>
-                        </li>
-                        <li>
-                          <a href="https://wavesbazaar.com/wave-seller/login">
-                            Seller Login
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://wavesbazaar.com/waves-buyer/login">
-                            Buyer Login
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com">
-                            Viewing Room
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://wavesbazaar.com/project">
-                            Explore Projects
-                          </a>
-                        </li>
-                        {/* <li><a href="https://wavesbazaar.com/project">Download</a></li> */}
-                        <li>
-                          <Link to="/download">Downloads</Link>
-                        </li>
-
-                        <li>
-                          <a
-                            href="https://wavesindia.org/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            WAVES India
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <Header />
                 </div>
               </div>
             </div>
@@ -476,17 +408,9 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="container">
-        <div className="innerpage mt-3">
-          <div className="page-title list-name text-center mb-4 mt-5">
-           
-             <h2 className="text-center">Companies on board </h2>
-          </div>
-          </div>
-          </div>
-          
 
-      <CarouselComponent/>
+
+      <CarouselComponent />
 
 
 
@@ -674,6 +598,30 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* video section */}
+      <div class="col-lg-12">
+        <div class="video-sectionDiv">
+          <div class="container text-center">
+            <h3 class="text-center">Welcome to Waves Bazaar  </h3>
+            <p>The ultimate platform connecting filmmakers and buyers, making global film distribution seamless and effortless</p>
+            <div class="text-center mt-4"><a class="button-video" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-play-fill"></i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel"> Waves Bazaar Corporate Video</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/ao0ynKgsaps?si=p2URovd1KoC2baXJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
       {/* Benefits for Sellers */}
       <div className="col-lg-12">
         <div className="benifits red-bg-seller">
