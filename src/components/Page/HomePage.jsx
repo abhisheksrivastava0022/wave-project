@@ -319,11 +319,14 @@ const HomePage = () => {
                   >
                     Buyer’s Signup
                   </a>
+
+                </div>
+                <div className="btn-landing">
                   <a
                     href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com"
                     className="btn common-btn-div1 animated fadeInLeft"
                   >
-                    Viewing Room
+                    Viewing Room & Market Screenings
                   </a>
                 </div>
                 {/* <div className="btn-landing">

@@ -50,7 +50,7 @@ const Header = () => {
                         </li>
                         <li>
                             <a href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com">
-                                Viewing Room
+                                Viewing Room & Market Screnings
                             </a>
                         </li>
                         <li>
