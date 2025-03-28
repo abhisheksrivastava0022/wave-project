@@ -17,6 +17,7 @@ import "../../../src/assets/css/home.css"; // Import CSS file
 import Faq from "./Faq";
 import CarouselComponent from "./CarouselComponent";
 import Header from "./Header";
+import ScriptView from "./FilmVIew/FormDetails/ScriptView";
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
   const allCookies = document.cookie;
@@ -51,7 +52,7 @@ const HomePage = () => {
   const [filmtype, setFilmtype] = useState([]);
   const [language, setlanguage] = useState([]);
   const [country, setCountry] = useState([]);
-  const [datatoload, setDatatoload] = useState({});
+  const [datatoload, setDatatoload] = useState(null);
   const [film_status, setFilm_status] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -69,7 +70,7 @@ const HomePage = () => {
   const [formatTypes, setFormatTypes] = useState([]);
   const [stageTypes, setStageTypes] = useState([]);
   const [segmentTypes, setSegmentTypes] = useState([]);
-
+  const [datatobesend, setDatatobesend] = useState({});
   const handleScroll = () => {
     if (
       window.innerHeight + document.documentElement.scrollTop + 1 >=
@@ -228,23 +229,19 @@ const HomePage = () => {
     content: "",
   });
   const [open, setOpen] = useState(false);
-  const handleClickOpen = (data) => {
 
-    setDatatoload(datatobeload(data))
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };
   useEffect(() => {
     loadpopup();
-  }, []);
+  }, [datatobesend]);
   const loadpopup = () => {
     setAlertData({
       heading: "Signup Required",
       content: (
         <>
-          {datatoload}
+          {datatobeloadfunction()}
           <p className="text-center p-4 ">
             To view the Waves Bazaar project details, Please sign up as a Buyer
             or Seller.{" "}
@@ -270,11 +267,19 @@ const HomePage = () => {
     });
   }
 
-  const datatobeload = () => {
-    if (film?.stage_type == 1) {
+  const handleClickOpen = (data) => {
+    setDatatobesend(data)
+    loadpopup();
+    setOpen(true);
+  };
+
+  const datatobeloadfunction = () => {
+    alert("calling")
+    if (datatobesend?.stage_type == 1) {
+
       return (
         <>
-          <ScriptView />
+          <ScriptView film={datatobesend} />
         </>
       );
     } else if (film?.format_type == 4) {
@@ -282,13 +287,15 @@ const HomePage = () => {
       if (film?.stage_type == 4) {
         return (
           <>
-            <CPMFeatureView />
+
+            {/* <CPMFeatureView /> */}
           </>
         );
       } else {
         return (
           <>
-            <CPMWebSeriesView />
+
+            {/* <CPMWebSeriesView /> */}
           </>
         );
       }
@@ -296,13 +303,13 @@ const HomePage = () => {
       if (film?.stage_type == 4) {
         return (
           <>
-            <FilmView />
+            {/* <FilmView /> */}
           </>
         );
       } else {
         return (
           <>
-            <FilmNotCompletedView />
+            {/* <FilmNotCompletedView /> */}
           </>
         );
       }
@@ -555,12 +562,12 @@ const HomePage = () => {
                           View Details
                         </a>
                       ) : (
-                        <Link
-                          onClick={(e) => handleClickOpen(row)}
+                        <button
+                          onClick={() => handleClickOpen(row)}
                           className="btn btn-primary"
                         >
                           View Details
-                        </Link>
+                        </button>
                       )}
                     </div>
                   </div>
