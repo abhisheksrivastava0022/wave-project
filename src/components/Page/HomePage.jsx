@@ -235,31 +235,34 @@ const HomePage = () => {
   useEffect(() => {
     loadpopup();
   }, [datatobesend]);
+
   const loadpopup = () => {
     setAlertData({
-      heading: "Signup Required",
+      heading: datatobesend.title,
       content: (
         <>
-          {datatobeloadfunction()}
-          <p className="text-center p-4 ">
-            To view the Waves Bazaar project details, Please sign up as a Buyer
-            or Seller.{" "}
-          </p>
+          <div>
+            {datatobeloadfunction()}
+            <p className="text-center p-4 ">
+              To view the Waves Bazaar project details, Please sign up as a
+              Buyer or Seller.{" "}
+            </p>
 
-          <div className="top-btn text-center ">
-            <a
-              href="https://wavesbazaar.com/wave-seller/login"
-              className="btn btn-primary border-radius mb-3"
-            >
-              Seller Login
-            </a>
-            &nbsp;
-            <a
-              href="https://wavesbazaar.com/waves-buyer/login"
-              className="btn btn-primary border-radius  mb-3"
-            >
-              Buyer Login
-            </a>
+            <div className="top-btn text-center ">
+              <a
+                href="https://wavesbazaar.com/wave-seller/login"
+                className="btn btn-primary border-radius mb-3"
+              >
+                Seller Login
+              </a>
+              &nbsp;
+              <a
+                href="https://wavesbazaar.com/waves-buyer/login"
+                className="btn btn-primary border-radius  mb-3"
+              >
+                Buyer Login
+              </a>
+            </div>
           </div>
         </>
       ),
@@ -276,7 +279,13 @@ const HomePage = () => {
     if (datatobesend?.stage_type == 1) {
       return (
         <>
-          <ScriptView film={datatobesend} />
+          <ScriptView
+            film={datatobesend}
+            // segment={segmentName}
+            // videography={videographyName}
+            // formatType={formatTypeName}
+            // formatStageType={formatStageTypeName}
+          />
         </>
       );
     } else if (film?.format_type == 4) {
@@ -294,6 +303,7 @@ const HomePage = () => {
       }
     }
   };
+
   return (
     <div>
       <div className="col-lg-12 home-video">
@@ -654,7 +664,7 @@ const HomePage = () => {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -678,9 +688,9 @@ const HomePage = () => {
                 height="315"
                 src="https://www.youtube.com/embed/ao0ynKgsaps?si=p2URovd1KoC2baXJ"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowfullscreen=""
               ></iframe>
             </div>
