@@ -51,6 +51,7 @@ const HomePage = () => {
   const [filmtype, setFilmtype] = useState([]);
   const [language, setlanguage] = useState([]);
   const [country, setCountry] = useState([]);
+  const [datatoload, setDatatoload] = useState({});
   const [film_status, setFilm_status] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -227,18 +228,23 @@ const HomePage = () => {
     content: "",
   });
   const [open, setOpen] = useState(false);
-  const handleClickOpen = () => {
+  const handleClickOpen = (data) => {
+
+    setDatatoload(datatobeload(data))
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
   };
   useEffect(() => {
+    loadpopup();
+  }, []);
+  const loadpopup = () => {
     setAlertData({
       heading: "Signup Required",
       content: (
         <>
-          {datatobeload()}
+          {datatoload}
           <p className="text-center p-4 ">
             To view the Waves Bazaar project details, Please sign up as a Buyer
             or Seller.{" "}
@@ -262,7 +268,7 @@ const HomePage = () => {
         </>
       ),
     });
-  }, []);
+  }
 
   const datatobeload = () => {
     if (film?.stage_type == 1) {
@@ -550,7 +556,7 @@ const HomePage = () => {
                         </a>
                       ) : (
                         <Link
-                          onClick={handleClickOpen}
+                          onClick={(e) => handleClickOpen(row)}
                           className="btn btn-primary"
                         >
                           View Details
