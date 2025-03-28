@@ -238,10 +238,12 @@ const HomePage = () => {
       heading: "Signup Required",
       content: (
         <>
+          {datatobeload()}
           <p className="text-center p-4 ">
             To view the Waves Bazaar project details, Please sign up as a Buyer
             or Seller.{" "}
           </p>
+
           <div class="top-btn text-center ">
             <a
               href="https://wavesbazaar.com/wave-seller/login"
@@ -261,8 +263,48 @@ const HomePage = () => {
       ),
     });
   }, []);
+
+  const datatobeload = () => {
+    if (film?.stage_type == 1) {
+      return (
+        <>
+          <ScriptView />
+        </>
+      );
+    } else if (film?.format_type == 4) {
+      // Webs
+      if (film?.stage_type == 4) {
+        return (
+          <>
+            <CPMFeatureView />
+          </>
+        );
+      } else {
+        return (
+          <>
+            <CPMWebSeriesView />
+          </>
+        );
+      }
+    } else {
+      if (film?.stage_type == 4) {
+        return (
+          <>
+            <FilmView />
+          </>
+        );
+      } else {
+        return (
+          <>
+            <FilmNotCompletedView />
+          </>
+        );
+      }
+    }
+  }
   return (
     <div>
+
       <div className="col-lg-12 home-video">
         <div className="video-section">
           <div className="container">
