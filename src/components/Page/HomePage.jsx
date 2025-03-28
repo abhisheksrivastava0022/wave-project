@@ -18,6 +18,10 @@ import Faq from "./Faq";
 import CarouselComponent from "./CarouselComponent";
 import Header from "./Header";
 import ScriptView from "./FilmVIew/FormDetails/ScriptView";
+import CPMFeatureView from "./FilmVIew/FormDetails/CPMFeatureView";
+import CPMWebSeriesView from "./FilmVIew/FormDetails/CPMWebSeriesView";
+import FilmNotCompletedView from "./FilmVIew/FormDetails/FilmNotCompletedView";
+import FilmView from "./FilmVIew/FormDetails/FilmView";
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
   const allCookies = document.cookie;
@@ -288,18 +292,26 @@ const HomePage = () => {
           />
         </>
       );
-    } else if (film?.format_type == 4) {
+    } else if (datatobesend?.format_type == 4) {
       // Webs
-      if (film?.stage_type == 4) {
-        return <>{/* <CPMFeatureView /> */}</>;
+      if (datatobesend?.stage_type == 4) {
+        alert("yescpm")
+        return <>
+        <CPMFeatureView film={datatobesend}/> 
+        </>;
       } else {
-        return <>{/* <CPMWebSeriesView /> */}</>;
+        alert("yesnon")
+        return <> <CPMWebSeriesView
+        film={datatobesend}/></>;
       }
     } else {
-      if (film?.stage_type == 4) {
-        return <>{/* <FilmView /> */}</>;
+      if (datatobesend?.stage_type == 4) {
+        return <><FilmView
+        film={datatobesend}
+        /> </>;
       } else {
-        return <>{/* <FilmNotCompletedView /> */}</>;
+        return <><FilmNotCompletedView
+        film={datatobesend}/></>;
       }
     }
   };
