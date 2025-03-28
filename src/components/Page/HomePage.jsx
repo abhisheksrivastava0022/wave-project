@@ -178,10 +178,9 @@ const HomePage = () => {
       try {
         ids = JSON.parse(ids); // Convert stringified array to an actual array
       } catch (error) {
-        console.error("Invalid IDs format:", ids);
+        console.error("Invalid IDs format:", ids, error);
         return "";
       }
-    } else {
     }
 
     // Filter and map the country names based on IDs
@@ -199,7 +198,7 @@ const HomePage = () => {
       try {
         ids = JSON.parse(ids); // Convert stringified array to an actual array
       } catch (error) {
-        console.error("Invalid IDs format:", ids);
+        console.error("Invalid IDs format:", ids, error);
         return "";
       }
     }
@@ -215,7 +214,7 @@ const HomePage = () => {
       try {
         ids = JSON.parse(ids); // Convert stringified array to an actual array
       } catch (error) {
-        console.error("Invalid IDs format:", ids);
+        console.error("Invalid IDs format:", ids, error);
         return "";
       }
     }
@@ -247,17 +246,17 @@ const HomePage = () => {
             or Seller.{" "}
           </p>
 
-          <div class="top-btn text-center ">
+          <div className="top-btn text-center ">
             <a
               href="https://wavesbazaar.com/wave-seller/login"
-              class="btn btn-primary border-radius mb-3"
+              className="btn btn-primary border-radius mb-3"
             >
               Seller Login
             </a>
             &nbsp;
             <a
               href="https://wavesbazaar.com/waves-buyer/login"
-              class="btn btn-primary border-radius  mb-3"
+              className="btn btn-primary border-radius  mb-3"
             >
               Buyer Login
             </a>
@@ -265,18 +264,16 @@ const HomePage = () => {
         </>
       ),
     });
-  }
+  };
 
   const handleClickOpen = (data) => {
-    setDatatobesend(data)
+    setDatatobesend(data);
     loadpopup();
     setOpen(true);
   };
 
   const datatobeloadfunction = () => {
-    alert("calling")
     if (datatobesend?.stage_type == 1) {
-
       return (
         <>
           <ScriptView film={datatobesend} />
@@ -285,39 +282,20 @@ const HomePage = () => {
     } else if (film?.format_type == 4) {
       // Webs
       if (film?.stage_type == 4) {
-        return (
-          <>
-
-            {/* <CPMFeatureView /> */}
-          </>
-        );
+        return <>{/* <CPMFeatureView /> */}</>;
       } else {
-        return (
-          <>
-
-            {/* <CPMWebSeriesView /> */}
-          </>
-        );
+        return <>{/* <CPMWebSeriesView /> */}</>;
       }
     } else {
       if (film?.stage_type == 4) {
-        return (
-          <>
-            {/* <FilmView /> */}
-          </>
-        );
+        return <>{/* <FilmView /> */}</>;
       } else {
-        return (
-          <>
-            {/* <FilmNotCompletedView /> */}
-          </>
-        );
+        return <>{/* <FilmNotCompletedView /> */}</>;
       }
     }
-  }
+  };
   return (
     <div>
-
       <div className="col-lg-12 home-video">
         <div className="video-section">
           <div className="container">
@@ -341,7 +319,6 @@ const HomePage = () => {
                   >
                     <img src="image/nfdc-logo.png" alt="NFDC Logo" />
                   </a>
-
 
                   {/* Offcanvas Menu */}
                   <Header />
@@ -374,7 +351,6 @@ const HomePage = () => {
                   >
                     Buyer’s Signup
                   </a>
-
                 </div>
                 <div className="btn-landing">
                   <a
@@ -466,12 +442,7 @@ const HomePage = () => {
         </div>
       </div>
 
-
-
       {/* <CarouselComponent /> */}
-
-
-
 
       {/* explore project */}
       {data && data.length > 0 ? (
@@ -496,82 +467,85 @@ const HomePage = () => {
               );
 
               return (
-                <div className="col-md-3 col-sm-3">
-                  <div className="image-container">
-                    {type2Document ? (
-                      <img
-                        src={`${dataurl}/file/read/${type2Document.url}`}
-                        alt={type2Document.name}
-                      />
-                    ) : (
-                      <div className="defaultimagecontainer text-center">
+                <>
+                  <div className="col-md-3 col-sm-3">
+                    <div className="image-container">
+                      {type2Document ? (
                         <img
-                          src={`/img/category_${row.category}.jpg`}
-                          alt="user"
-                          className="defualtImage"
+                          src={`${dataurl}/file/read/${type2Document.url}`}
+                          alt={type2Document.name}
                         />
-                      </div>
-                    )}
-                    <div className="project-title-name">
-                      <h5 className="card-title"> {row.title}</h5>
-                    </div>
-                    <div className="hover-content">
-                      <h5 className="card-title">{row.title}</h5>
-                      <ul className="ProjectType-list">
-                        {row.category != null && row.category !== undefined ? (
-                          <li title="Category">{getSegment(row.category)}</li>
-                        ) : null}
-                        {row.videography_type ? (
-                          <li title="Videography">
-                            {getVideography(row.videography_type)}
-                          </li>
-                        ) : null}
-                        {row.format_type ? (
-                          <li title="Format Type">
-                            {getformattype(row.format_type)}
-                          </li>
-                        ) : null}
-                        {row.stage_type ? (
-                          <li title="Stage Type">
-                            {getformatstagetype(row.stage_type)}
-                          </li>
-                        ) : null}
-                        {row.country ? (
-                          <li title="Countries">
-                            {getCountryNamesByIds(row.country)}
-                          </li>
-                        ) : null}
-                        {row.language ? (
-                          <li title="Languages">
-                            {getLanguageNamesByIds(row.language)}
-                          </li>
-                        ) : null}
-                        {row.genre ? (
-                          <li title="Genre">{getGenre(row.genre)}</li>
-                        ) : null}
-                        {row.duration ? (
-                          <li title="Duration">{row.duration} min</li>
-                        ) : null}
-                      </ul>
-                      {loggedinData.buyerloggedin ? (
-                        <a
-                          href={"/waves-buyer/seller-projects/view/" + row.id}
-                          className="btn btn-primary"
-                        >
-                          {" "}
-                          View Details
-                        </a>
                       ) : (
-                        <button
-                          onClick={() => handleClickOpen(row)}
-                          className="btn btn-primary"
-                        >
-                          View Details
-                        </button>
+                        <div className="defaultimagecontainer text-center">
+                          <img
+                            src={`/img/category_${row.category}.jpg`}
+                            alt="user"
+                            className="defualtImage"
+                          />
+                        </div>
                       )}
+                      <div className="project-title-name">
+                        <h5 className="card-title"> {row.title}</h5>
+                      </div>
+                      <div className="hover-content">
+                        <h5 className="card-title">{row.title}</h5>
+                        <ul className="ProjectType-list">
+                          {row.category != null &&
+                          row.category !== undefined ? (
+                            <li title="Category">{getSegment(row.category)}</li>
+                          ) : null}
+                          {row.videography_type ? (
+                            <li title="Videography">
+                              {getVideography(row.videography_type)}
+                            </li>
+                          ) : null}
+                          {row.format_type ? (
+                            <li title="Format Type">
+                              {getformattype(row.format_type)}
+                            </li>
+                          ) : null}
+                          {row.stage_type ? (
+                            <li title="Stage Type">
+                              {getformatstagetype(row.stage_type)}
+                            </li>
+                          ) : null}
+                          {row.country ? (
+                            <li title="Countries">
+                              {getCountryNamesByIds(row.country)}
+                            </li>
+                          ) : null}
+                          {row.language ? (
+                            <li title="Languages">
+                              {getLanguageNamesByIds(row.language)}
+                            </li>
+                          ) : null}
+                          {row.genre ? (
+                            <li title="Genre">{getGenre(row.genre)}</li>
+                          ) : null}
+                          {row.duration ? (
+                            <li title="Duration">{row.duration} min</li>
+                          ) : null}
+                        </ul>
+                        {loggedinData.buyerloggedin ? (
+                          <a
+                            href={"/waves-buyer/seller-projects/view/" + row.id}
+                            className="btn btn-primary"
+                          >
+                            {" "}
+                            View Details
+                          </a>
+                        ) : (
+                          <button
+                            onClick={() => handleClickOpen(row)}
+                            className="btn btn-primary"
+                          >
+                            View Details
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </>
               );
             })}
             <div className=" exploreallcontainer text-center mt-3">
@@ -657,26 +631,59 @@ const HomePage = () => {
       </div>
 
       {/* video section */}
-      <div class="col-lg-12">
-        <div class="video-sectionDiv">
-          <div class="container text-center">
-            <h3 class="text-center">Welcome to Waves Bazaar  </h3>
-            <p>The ultimate platform connecting filmmakers and buyers, making global film distribution seamless and effortless</p>
-            <div class="text-center mt-4"><a class="button-video" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-play-fill"></i></a></div>
+      <div className="col-lg-12">
+        <div className="video-sectionDiv">
+          <div className="container text-center">
+            <h3 className="text-center">Welcome to Waves Bazaar </h3>
+            <p>
+              The ultimate platform connecting filmmakers and buyers, making
+              global film distribution seamless and effortless
+            </p>
+            <div className="text-center mt-4">
+              <a
+                className="button-video"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i className="bi bi-play-fill"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel"> Waves Bazaar Corporate Video</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-lg">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">
+                {" "}
+                Waves Bazaar Corporate Video
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
-            <div class="modal-body">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/ao0ynKgsaps?si=p2URovd1KoC2baXJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+            <div className="modal-body">
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/ao0ynKgsaps?si=p2URovd1KoC2baXJ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen=""
+              ></iframe>
             </div>
-
           </div>
         </div>
       </div>
