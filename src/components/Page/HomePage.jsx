@@ -281,37 +281,54 @@ const HomePage = () => {
 
   const datatobeloadfunction = () => {
     if (datatobesend?.stage_type == 1) {
+      const segmentName = getSegment(datatobesend.category);
+      const videographyName = getVideography(datatobesend.videography_type);
+      const formatTypeName = getformattype(datatobesend.format_type);
+      const formatStageTypeName = getformatstagetype(datatobesend.stage_type);
+      const languageName = getLanguageNamesByIds(datatobesend.language);
       return (
         <>
           <ScriptView
             film={datatobesend}
-            // segment={segmentName}
-            // videography={videographyName}
-            // formatType={formatTypeName}
-            // formatStageType={formatStageTypeName}
+            segment={segmentName}
+            videography={videographyName}
+            formatType={formatTypeName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
           />
         </>
       );
     } else if (datatobesend?.format_type == 4) {
       // Webs
       if (datatobesend?.stage_type == 4) {
-        alert("yescpm")
-        return <>
-        <CPMFeatureView film={datatobesend}/> 
-        </>;
+        alert("yescpm");
+        return (
+          <>
+            <CPMFeatureView film={datatobesend} />
+          </>
+        );
       } else {
-        alert("yesnon")
-        return <> <CPMWebSeriesView
-        film={datatobesend}/></>;
+        alert("yesnon");
+        return (
+          <>
+            {" "}
+            <CPMWebSeriesView film={datatobesend} />
+          </>
+        );
       }
     } else {
       if (datatobesend?.stage_type == 4) {
-        return <><FilmView
-        film={datatobesend}
-        /> </>;
+        return (
+          <>
+            <FilmView film={datatobesend} />{" "}
+          </>
+        );
       } else {
-        return <><FilmNotCompletedView
-        film={datatobesend}/></>;
+        return (
+          <>
+            <FilmNotCompletedView film={datatobesend} />
+          </>
+        );
       }
     }
   };
