@@ -1,27 +1,14 @@
 import React, { useEffect, useState } from "react";
-
-import WavesLogo from "../../assets/img/Waves.png";
-
-import video_11 from "../../assets/img/video_11.jpg";
-
 import WAVESLoader from "../../assets/img/spinner.gif";
 import ApiClient from "../API/ApiClient";
 import { Link } from "react-router-dom";
-import Typography from "@mui/material/Typography";
-import c1 from "../../assets/img/creatives/Advertising Buyer.jpeg";
-
 import AlertMessage from "../AlertMessage";
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
-
 import "../../../src/assets/css/home.css"; // Import CSS file
 import Faq from "./Faq";
-import CarouselComponent from "./CarouselComponent";
 import Header from "./Header";
-import ScriptView from "./FilmVIew/FormDetails/ScriptView";
-import CPMFeatureView from "./FilmVIew/FormDetails/CPMFeatureView";
-import CPMWebSeriesView from "./FilmVIew/FormDetails/CPMWebSeriesView";
-import FilmNotCompletedView from "./FilmVIew/FormDetails/FilmNotCompletedView";
 import FilmView from "./FilmVIew/FormDetails/FilmView";
+
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
   const allCookies = document.cookie;
@@ -42,33 +29,12 @@ const HomePage = () => {
   }, []);
 
   const { getRequestApi } = ApiClient();
-  const [pagination, setPagination] = useState({
-    totalPosts: 0,
-    totalPages: 0,
-    currentPage: 1,
-    limit: 12,
-  });
-
-  const [searchForm, setSearchForm] = useState({ title: "", category: "" });
-
   const [data, setData] = useState([]);
   const [genre, setGenre] = useState([]);
   const [filmtype, setFilmtype] = useState([]);
   const [language, setlanguage] = useState([]);
   const [country, setCountry] = useState([]);
-  const [datatoload, setDatatoload] = useState(null);
-  const [film_status, setFilm_status] = useState({});
   const [loading, setLoading] = useState(false);
-
-  const [hasMore, setHasMore] = useState(true); // Track if more data is available
-
-  const [formData, setFormData] = useState({
-    title: "",
-    videography_type: "",
-    format_type: "",
-    stage_type: "",
-    segment: "",
-  });
 
   const [formDataDetails, setFormDataDetails] = useState([]);
   const [formatTypes, setFormatTypes] = useState([]);
@@ -80,7 +46,7 @@ const HomePage = () => {
       window.innerHeight + document.documentElement.scrollTop + 1 >=
       document.documentElement.scrollHeight
     ) {
-      if (!loading && hasMore) {
+      if (!loading) {
         setPage((prevPage) => {
           const nextPage = prevPage + 1;
           loadPreLoadData(nextPage);
@@ -93,10 +59,6 @@ const HomePage = () => {
   useEffect(() => {
     preloading();
     handleScroll();
-    // window.addEventListener("scroll", handleScroll);
-    // return () => {
-    //     window.removeEventListener("scroll", handleScroll);
-    // };
   }, []);
 
   const preloading = async () => {
@@ -142,8 +104,7 @@ const HomePage = () => {
       });
       const response = await getRequestApi("film", queryParams);
       if (response?.status) {
-        setData(response.data); // Append new data
-        // if (!response.data.length) setHasMore(false); // Stop loading if no more data
+        setData(response.data);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -285,77 +246,18 @@ const HomePage = () => {
     const formatTypeName = getformattype(datatobesend.format_type);
     const formatStageTypeName = getformatstagetype(datatobesend.stage_type);
     const languageName = getLanguageNamesByIds(datatobesend.language);
-    if (datatobesend?.stage_type == 1) {
-      return (
-        <>
-          <ScriptView
-            film={datatobesend}
-            segment={segmentName}
-            videography={videographyName}
-            formatType={formatTypeName}
-            formatStageType={formatStageTypeName}
-            languageName={languageName}
-          />
-        </>
-      );
-    } else if (datatobesend?.format_type == 4) {
-      // Webs
-      if (datatobesend?.stage_type == 4) {
-        return (
-          <>
-            <ScriptView
-              film={datatobesend}
-              segment={segmentName}
-              videography={videographyName}
-              formatType={formatTypeName}
-              formatStageType={formatStageTypeName}
-              languageName={languageName}
-            />
-          </>
-        );
-      } else {
-        return (
-          <>
-            <ScriptView
-              film={datatobesend}
-              segment={segmentName}
-              videography={videographyName}
-              formatType={formatTypeName}
-              formatStageType={formatStageTypeName}
-              languageName={languageName}
-            />
-          </>
-        );
-      }
-    } else {
-      if (datatobesend?.stage_type == 4) {
-        return (
-          <>
-            <ScriptView
-              film={datatobesend}
-              segment={segmentName}
-              videography={videographyName}
-              formatType={formatTypeName}
-              formatStageType={formatStageTypeName}
-              languageName={languageName}
-            />
-          </>
-        );
-      } else {
-        return (
-          <>
-            <ScriptView
-              film={datatobesend}
-              segment={segmentName}
-              videography={videographyName}
-              formatType={formatTypeName}
-              formatStageType={formatStageTypeName}
-              languageName={languageName}
-            />
-          </>
-        );
-      }
-    }
+    return (
+      <>
+        <FilmView
+          film={datatobesend}
+          segment={segmentName}
+          videography={videographyName}
+          formatType={formatTypeName}
+          formatStageType={formatStageTypeName}
+          languageName={languageName}
+        />
+      </>
+    );
   };
 
   return (

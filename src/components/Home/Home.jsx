@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-import WavesLogo from "../../assets/img/Waves.png";
 import {
   FormControl,
   TextField,
   InputLabel,
   Select,
   MenuItem,
+  Alert,
 } from "@mui/material";
 
-import category_1 from "../../assets/img/category_1.jpg";
-import NFDCLogo from "../../assets/img/NFDC.png";
 import WAVESLoader from "../../assets/img/spinner.gif";
 import ApiClient from "../API/ApiClient";
 import { Link } from "react-router-dom";
-import Typography from "@mui/material/Typography";
+
 import AlertMessage from "../AlertMessage";
-import ScriptView from "../Page/FilmVIew/FormDetails/ScriptView";
+import FilmView from "../Page/FilmVIew/FormDetails/FilmView";
+import GameEsports from "../Page/FilmVIew/FormDetails/GameEsports";
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
@@ -138,7 +137,7 @@ const Home = () => {
       const queryParams = new URLSearchParams({
         limit: 12, // Number of items per page
         page: pageNumber ?? 1,
-        ...formData
+        ...formData,
       });
       const response = await getRequestApi("film", queryParams);
       if (response?.status) {
@@ -284,19 +283,49 @@ const Home = () => {
     const videographyName = getVideography(datatobesend.videography_type);
     const formatTypeName = getformattype(datatobesend.format_type);
     const formatStageTypeName = getformatstagetype(datatobesend.stage_type);
+    const countryName = getCountryNamesByIds(datatobesend.country);
     const languageName = getLanguageNamesByIds(datatobesend.language);
-    return (
-      <>
-        <ScriptView
-          film={datatobesend}
-          segment={segmentName}
-          videography={videographyName}
-          formatType={formatTypeName}
-          formatStageType={formatStageTypeName}
-          languageName={languageName}
-        />
-      </>
-    );
+    if (datatobesend.category === 1 || datatobesend.category === 2) {
+      return (
+        <>
+          <FilmView
+            film={datatobesend}
+            segment={segmentName}
+            videography={videographyName}
+            formatType={formatTypeName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 3) {
+      return (
+        <>
+          <GameEsports
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    } else {
+      alert(segmentName);
+      return (
+        <>
+          <FilmView
+            film={datatobesend}
+            segment={segmentName}
+            videography={videographyName}
+            formatType={formatTypeName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -489,7 +518,7 @@ const Home = () => {
                         <h5 className="card-title">{row.title}</h5>
                         <ul className="ProjectType-list">
                           {row.category != null &&
-                            row.category !== undefined ? (
+                          row.category !== undefined ? (
                             <li title="Category">{getSegment(row.category)}</li>
                           ) : null}
                           {row.videography_type ? (
