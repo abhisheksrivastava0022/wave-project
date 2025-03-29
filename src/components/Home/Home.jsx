@@ -431,7 +431,7 @@ const Home = () => {
                 Explore Projects
               </h2>
               <button
-                className="btn text-primary text-dark fw-bold px-4 py-2 rounded-pill shadow-sm"
+                className="btn btn-pre text-dark fw-bold px-4 py-2 rounded-pill shadow-sm"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#filterSearch"

@@ -2494,3 +2494,21 @@ h5 {
     opacity: 0;
   }
 }
+
+.btn-pre {
+  /* background: linear-gradient(45deg, #ffcc00, #ff8800); Gold gradient */
+  /* color: #fff !important; */
+  color: black !important;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 29%) !important;
+}
+
+.btn-pre:hover {
+  /* background: linear-gradient(45deg, #ff8800, #ff6600); */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
