@@ -300,6 +300,7 @@ const Home = () => {
   };
 
   const handleSubmit = async (e) => {
+    setData([]);
     e.preventDefault();
     loadPreLoadData();
   };
