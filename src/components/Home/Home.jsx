@@ -137,7 +137,8 @@ const Home = () => {
 
       const queryParams = new URLSearchParams({
         limit: 12, // Number of items per page
-        page: pageNumber,
+        page: pageNumber ?? 1,
+        ...formData
       });
       const response = await getRequestApi("film", queryParams);
       if (response?.status) {
@@ -305,13 +306,7 @@ const Home = () => {
 
   const handleDropdownDataSegment = async (event) => {
     const { name, value } = event.target;
-    setLoading(true);
-    if (value == 1) {
-      await loadStageTypes();
-    } else {
-      await loadGenreStageTypes();
-    }
-    setLoading(false);
+
     const selectedValue = value === "" ? null : value;
 
     setFormData((prevFormData) => ({
@@ -323,6 +318,19 @@ const Home = () => {
     //   ...errors,
     //   [name]: "",
     // });
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+
+    setErrors({
+      ...errors,
+      [name]: "",
+    });
   };
 
   return (
@@ -480,7 +488,7 @@ const Home = () => {
                         <h5 className="card-title">{row.title}</h5>
                         <ul className="ProjectType-list">
                           {row.category != null &&
-                          row.category !== undefined ? (
+                            row.category !== undefined ? (
                             <li title="Category">{getSegment(row.category)}</li>
                           ) : null}
                           {row.videography_type ? (
@@ -573,7 +581,7 @@ const Home = () => {
               className="form-control"
               name="title"
               value={formData.title}
-              // onChange={handleChange}
+              onChange={handleChange}
             />
           </div>
           <div className="mb-3">
