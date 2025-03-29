@@ -33,44 +33,62 @@ const ScriptView = ({
                   style={{ maxWidth: "100%", height: "auto" }}
                 />
               ) : (
-                <></>
+                <>
+                  <img
+                    src={`/img/category_${film.category}.jpg`}
+                    alt={type2Document.name || "Film document"}
+                    className="document-image"
+                    loading="lazy"
+                    style={{ maxWidth: "100%", height: "auto" }}
+                  />
+                </>
               )}
             </Grid>
 
             <Grid item md={9}>
               <div className="view-heading">
-                <h6>Basic Information</h6>
+                <h6>Basic Information {film.id}</h6>
               </div>
 
               <table className="table table-striped table-sm">
                 <tbody>
-                  <tr>
-                    <th scope="row">Languages :</th>
-                    <td>{languageName}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Videography :</th>
-                    <td>{videography}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Segment :</th>
-                    <td>{segment}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Format Type :</th>
-                    <td>{formatType}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Stage Type :</th>
-                    <td>{formatStageType}</td>
-                  </tr>
+                  {languageName && (
+                    <tr>
+                      <th scope="row">Languages :</th>
+                      <td>{languageName}</td>
+                    </tr>
+                  )}
+                  {videography && (
+                    <tr>
+                      <th scope="row">Videography :</th>
+                      <td>{videography}</td>
+                    </tr>
+                  )}
+                  {segment && (
+                    <tr>
+                      <th scope="row">Segment :</th>
+                      <td>{segment}</td>
+                    </tr>
+                  )}
+                  {formatType && (
+                    <tr>
+                      <th scope="row">Format Type :</th>
+                      <td>{formatType}</td>
+                    </tr>
+                  )}
+                  {formatStageType && (
+                    <tr>
+                      <th scope="row">Stage Type :</th>
+                      <td>{formatStageType}</td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             </Grid>
 
             <Grid item md={12}>
               <div className="view-heading">
-                <h6>Project Information</h6>
+                <h6>Project Information </h6>
               </div>
 
               <table className="table table-striped table-sm">

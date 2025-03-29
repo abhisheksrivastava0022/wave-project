@@ -1,16 +1,16 @@
-import React from 'react';
-import NotFound from '../components/NotFound/NotFound';
-import Home from '../components/Home/Home';
-import Details from '../components/Page/Details';
-import TermsAndCondition from '../components/TermsAndCondition/TermsAndCondition';
-import Footer from '../components/Footer/Footer';
-import HomePage from '../components/Page/HomePage';
-import Faq from '../components/Page/Faq';
-import DownloadPDF from '../components/DownloadPDF/DownloadPDF';
-import FeaturedCompany from '../components/FeaturedCompany/FeaturedCompany';
-import Companies from '../components/Page/Companies';
+import React from "react";
+import NotFound from "../components/NotFound/NotFound";
+import Home from "../components/Home/Home";
+import Details from "../components/Page/Details";
+import TermsAndCondition from "../components/TermsAndCondition/TermsAndCondition";
+import Footer from "../components/Footer/Footer";
+import HomePage from "../components/Page/HomePage";
+import Faq from "../components/Page/Faq";
+import DownloadPDF from "../components/DownloadPDF/DownloadPDF";
+import FeaturedCompany from "../components/FeaturedCompany/FeaturedCompany";
+import Companies from "../components/Page/Companies";
 
-const basePrefix = ''; // Ensure this matches your Vite config
+const basePrefix = ""; // Ensure this matches your Vite config
 
 export const routes = [
   {
@@ -18,11 +18,9 @@ export const routes = [
     element: <HomePage />,
     children: [
       {
-
-        path: '', // Use empty path for nested base route
+        path: "", // Use empty path for nested base route
         element: <HomePage />,
       },
-
     ],
   },
   // {
@@ -30,32 +28,31 @@ export const routes = [
   //   element: <HomePage />,
   // },
   {
-
-    path: 'project', // Use empty path for nested base route
+    path: "project", // Use empty path for nested base route
     element: <Home />,
   },
   {
-    path: 'project/terms-and-conditions',
+    path: "project/terms-and-conditions",
     element: <TermsAndCondition />,
   },
   {
-    path: 'featured-companies',
+    path: "featured-companies",
     element: <FeaturedCompany />,
   },
   {
-    path: 'project/faq',
+    path: "project/faq",
     element: <Faq />,
   },
   {
-    path: 'project/companies',
-    element: <Companies/>,
+    path: "project/companies",
+    element: <Companies />,
   },
   {
-    path: '/download',
+    path: "/download",
     element: <DownloadPDF />,
   },
   {
-    path: '*',
+    path: "*",
     element: <NotFound />,
   },
 ];

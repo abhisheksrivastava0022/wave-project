@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import WavesLogo from "../../assets/img/Waves.png";
+import {
+  FormControl,
+  TextField,
+  InputLabel,
+  Select,
+  MenuItem,
+} from "@mui/material";
 
 import category_1 from "../../assets/img/category_1.jpg";
 import NFDCLogo from "../../assets/img/NFDC.png";
@@ -9,6 +16,7 @@ import ApiClient from "../API/ApiClient";
 import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import AlertMessage from "../AlertMessage";
+import ScriptView from "../Page/FilmVIew/FormDetails/ScriptView";
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
@@ -61,6 +69,10 @@ const Home = () => {
   const [formatTypes, setFormatTypes] = useState([]);
   const [stageTypes, setStageTypes] = useState([]);
   const [segmentTypes, setSegmentTypes] = useState([]);
+  const [datatobesend, setDatatobesend] = useState({});
+
+  console.log("datatobesend", datatobesend);
+  console.log("Data", data);
 
   const handleScroll = () => {
     if (
@@ -172,7 +184,6 @@ const Home = () => {
         console.error("Invalid IDs format:", ids);
         return "";
       }
-    } else {
     }
 
     // Filter and map the country names based on IDs
@@ -190,7 +201,7 @@ const Home = () => {
       try {
         ids = JSON.parse(ids); // Convert stringified array to an actual array
       } catch (error) {
-        console.error("Invalid IDs format:", ids);
+        console.error("Invalid IDs format:", ids, error);
         return "";
       }
     }
@@ -206,7 +217,7 @@ const Home = () => {
       try {
         ids = JSON.parse(ids); // Convert stringified array to an actual array
       } catch (error) {
-        console.error("Invalid IDs format:", ids);
+        console.error("Invalid IDs format:", ids, error);
         return "";
       }
     }
@@ -220,46 +231,106 @@ const Home = () => {
     content: "",
   });
   const [open, setOpen] = useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+
   const handleClose = () => {
     setOpen(false);
   };
   useEffect(() => {
+    loadpopup();
+  }, [datatobesend]);
+
+  const loadpopup = () => {
     setAlertData({
-      heading: "Signup Required",
+      heading: datatobesend.title,
       content: (
         <>
-          <p className="text-center p-4">
-            To view the Waves Bazaar project details, Please sign up as a Buyer
-            or Seller.{" "}
-          </p>
-          <div class="top-btn text-center ">
-            <a
-              href="https://wavesbazaar.com/wave-seller/login"
-              class="btn btn-primary border-radius mb-3"
-            >
-              Seller Login
-            </a>
-            &nbsp;
-            <a
-              href="https://wavesbazaar.com/waves-buyer/login"
-              class="btn btn-primary border-radius  mb-3"
-            >
-              Buyer Login
-            </a>
+          <div>
+            {datatobeloadfunction()}
+            <p className="text-center p-4 ">
+              To view the Waves Bazaar project details, Please sign up as a
+              Buyer or Seller.{" "}
+            </p>
+
+            <div className="top-btn text-center ">
+              <a
+                href="https://wavesbazaar.com/wave-seller/login"
+                className="btn btn-primary border-radius mb-3"
+              >
+                Seller Login
+              </a>
+              &nbsp;
+              <a
+                href="https://wavesbazaar.com/waves-buyer/login"
+                className="btn btn-primary border-radius  mb-3"
+              >
+                Buyer Login
+              </a>
+            </div>
           </div>
         </>
       ),
     });
-  }, []);
+  };
+
+  const handleClickOpen = (data) => {
+    setDatatobesend(data);
+    loadpopup();
+    setOpen(true);
+  };
+
+  const datatobeloadfunction = () => {
+    const segmentName = getSegment(datatobesend.category);
+    const videographyName = getVideography(datatobesend.videography_type);
+    const formatTypeName = getformattype(datatobesend.format_type);
+    const formatStageTypeName = getformatstagetype(datatobesend.stage_type);
+    const languageName = getLanguageNamesByIds(datatobesend.language);
+    return (
+      <>
+        <ScriptView
+          film={datatobesend}
+          segment={segmentName}
+          videography={videographyName}
+          formatType={formatTypeName}
+          formatStageType={formatStageTypeName}
+          languageName={languageName}
+        />
+      </>
+    );
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    loadPreLoadData();
+  };
+
+  const handleDropdownDataSegment = async (event) => {
+    const { name, value } = event.target;
+    setLoading(true);
+    if (value == 1) {
+      await loadStageTypes();
+    } else {
+      await loadGenreStageTypes();
+    }
+    setLoading(false);
+    const selectedValue = value === "" ? null : value;
+
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: selectedValue,
+    }));
+
+    // setErrors({
+    //   ...errors,
+    //   [name]: "",
+    // });
+  };
+
   return (
     <>
-      <div class="col-lg-12 top-menu-custom">
-        <div class="container">
-          <div class="logo-landing-header">
-            <div class="top-logo">
+      <div className="col-lg-12 top-menu-custom">
+        <div className="container">
+          <div className="logo-landing-header">
+            <div className="top-logo">
               <a href="https://wavesbazaar.com/">
                 <img src="image/waves-logo.png" alt="Waves Logo" />
               </a>
@@ -278,7 +349,7 @@ const Home = () => {
                 <img src="image/nfdc-logo.png" alt="NFDC Logo" />
               </a>
               <button
-                class="btn btn-menu"
+                className="btn btn-menu"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasExample"
@@ -287,28 +358,28 @@ const Home = () => {
                 <img
                   src="https://www.iffigoa.org/public/images/menu.svg"
                   alt="image"
-                  class="menu-link"
+                  className="menu-link"
                 />
                 Menu
               </button>
             </div>
             <div
-              class="offcanvas offcanvas-end text-bg-dark sidemenu"
-              tabindex="-1"
+              className="offcanvas offcanvas-end text-bg-dark sidemenu"
+              tabIndex="-1"
               id="offcanvasExample"
               aria-labelledby="offcanvasExampleLabel"
             >
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+              <div className="offcanvas-header">
+                <h5 className="offcanvas-title" id="offcanvasExampleLabel"></h5>
                 <button
                   type="button"
-                  class="btn-close btn-close-white"
+                  className="btn-close btn-close-white"
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="offcanvas-body">
-                <ul class="navigation-menu">
+              <div className="offcanvas-body">
+                <ul className="navigation-menu">
                   <li>
                     <a href="https://wavesbazaar.com/">Home</a>
                   </li>
@@ -348,7 +419,6 @@ const Home = () => {
                   </li>
                 </ul>
               </div>
-
             </div>
           </div>
         </div>
@@ -356,9 +426,21 @@ const Home = () => {
       <div className="container">
         <div className="innerpage mt-0">
           <div className="row">
-            <div className="page-title list-name text-center mb-4 ">
-              <h2 className="animated fadeInRight">Explore Projects</h2>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <h2 className="text-center flex-grow-1 mb-0 animated fadeInRight">
+                Explore Projects
+              </h2>
+              <button
+                className="btn text-primary text-dark fw-bold px-4 py-2 rounded-pill shadow-sm"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#filterSearch"
+                aria-controls="filterSearch"
+              >
+                🔍 Search
+              </button>
             </div>
+
             {data && data.length > 0 ? (
               <></>
             ) : (
@@ -374,82 +456,84 @@ const Home = () => {
               );
 
               return (
-                <div className="col-md-3 col-sm-3 animated fadeInUp">
-                  <div className="image-container">
-                    {type2Document ? (
-                      <img
-                        src={`${dataurl}/file/read/${type2Document.url}`}
-                        alt={type2Document.name}
-                      />
-                    ) : (
-                      <div className="defaultimagecontainer text-center">
+                <>
+                  <div className="col-md-3 col-sm-3 animated fadeInUp">
+                    <div className="image-container">
+                      {type2Document ? (
                         <img
-                          src={`/img/category_${row.category}.jpg`}
-                          alt="user"
-                          className="defualtImage"
+                          src={`${dataurl}/file/read/${type2Document.url}`}
+                          alt={type2Document.name}
                         />
-                      </div>
-                    )}
-                    <div className="project-title-name">
-                      <h5 className="card-title"> {row.title}</h5>
-                    </div>
-                    <div className="hover-content">
-                      <h5 className="card-title">{row.title}</h5>
-                      <ul className="ProjectType-list">
-                        {row.category != null && row.category !== undefined ? (
-                          <li title="Category">{getSegment(row.category)}</li>
-                        ) : null}
-                        {row.videography_type ? (
-                          <li title="Videography">
-                            {getVideography(row.videography_type)}
-                          </li>
-                        ) : null}
-                        {row.format_type ? (
-                          <li title="Format Type">
-                            {getformattype(row.format_type)}
-                          </li>
-                        ) : null}
-                        {row.stage_type ? (
-                          <li title="Stage Type">
-                            {getformatstagetype(row.stage_type)}
-                          </li>
-                        ) : null}
-                        {row.country ? (
-                          <li title="Countries">
-                            {getCountryNamesByIds(row.country)}
-                          </li>
-                        ) : null}
-                        {row.language ? (
-                          <li title="Languages">
-                            {getLanguageNamesByIds(row.language)}
-                          </li>
-                        ) : null}
-                        {row.genre ? (
-                          <li title="Genre">{getGenre(row.genre)}</li>
-                        ) : null}
-                        {row.duration ? (
-                          <li title="Duration">{row.duration} min</li>
-                        ) : null}
-                      </ul>
-                      {loggedinData.buyerloggedin ? (
-                        <a
-                          href={"/waves-buyer/seller-projects/view/" + row.id}
-                          className="btn btn-primary"
-                        >
-                          {" "}
-                          View Details
-                        </a>
                       ) : (
-                        <Link
-                          onClick={handleClickOpen}
-                          className="btn btn-primary"
-                        >
-                          View Details
-                        </Link>
+                        <div className="defaultimagecontainer text-center">
+                          <img
+                            src={`/img/category_${row.category}.jpg`}
+                            alt="user"
+                            className="defualtImage"
+                          />
+                        </div>
                       )}
+                      <div className="project-title-name">
+                        <h5 className="card-title"> {row.title}</h5>
+                      </div>
+                      <div className="hover-content">
+                        <h5 className="card-title">{row.title}</h5>
+                        <ul className="ProjectType-list">
+                          {row.category != null &&
+                          row.category !== undefined ? (
+                            <li title="Category">{getSegment(row.category)}</li>
+                          ) : null}
+                          {row.videography_type ? (
+                            <li title="Videography">
+                              {getVideography(row.videography_type)}
+                            </li>
+                          ) : null}
+                          {row.format_type ? (
+                            <li title="Format Type">
+                              {getformattype(row.format_type)}
+                            </li>
+                          ) : null}
+                          {row.stage_type ? (
+                            <li title="Stage Type">
+                              {getformatstagetype(row.stage_type)}
+                            </li>
+                          ) : null}
+                          {row.country ? (
+                            <li title="Countries">
+                              {getCountryNamesByIds(row.country)}
+                            </li>
+                          ) : null}
+                          {row.language ? (
+                            <li title="Languages">
+                              {getLanguageNamesByIds(row.language)}
+                            </li>
+                          ) : null}
+                          {row.genre ? (
+                            <li title="Genre">{getGenre(row.genre)}</li>
+                          ) : null}
+                          {row.duration ? (
+                            <li title="Duration">{row.duration} min</li>
+                          ) : null}
+                        </ul>
+                        {loggedinData.buyerloggedin ? (
+                          <a
+                            href={"/waves-buyer/seller-projects/view/" + row.id}
+                            className="btn btn-primary"
+                          >
+                            View Details
+                          </a>
+                        ) : (
+                          <button
+                            onClick={() => handleClickOpen(row)}
+                            className="btn btn-primary"
+                          >
+                            View Details
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </>
               );
             })}
             {loading && (
@@ -457,6 +541,86 @@ const Home = () => {
                 <img src={WAVESLoader} />
               </div>
             )}
+          </div>
+        </div>
+      </div>
+      <div
+        className="offcanvas offcanvas-end p-4"
+        tabIndex="-1"
+        id="filterSearch"
+        aria-labelledby="filterSearchLabel"
+      >
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="filterSearchLabel">
+            {" "}
+            <i className="bi bi-search"></i> Search
+          </h5>
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div className="offcanvas-body">
+          <div className="mb-3">
+            {/* <label for="ProjectTitle" className="form-label">Project Title</label> */}
+            <TextField
+              variant="outlined"
+              fullWidth
+              type="text"
+              label="Project Title"
+              className="form-control"
+              name="title"
+              value={formData.title}
+              // onChange={handleChange}
+            />
+          </div>
+          <div className="mb-3">
+            <FormControl fullWidth>
+              <InputLabel id="category-label">Select Segment </InputLabel>
+              <Select
+                labelId="category-label"
+                name="category"
+                value={formData.category || ""}
+                onChange={handleDropdownDataSegment}
+                renderValue={(selected) => {
+                  if (!selected || selected == 0 || selected == "null")
+                    return "please select";
+
+                  const selectedCategory = segmentTypes.find(
+                    (item) => item.id === selected
+                  );
+                  return selectedCategory
+                    ? selectedCategory.name
+                    : "Select category";
+                }}
+              >
+                <MenuItem value={0}>Please select</MenuItem>
+
+                {segmentTypes.map((item) => (
+                  <MenuItem key={item.id} value={item.id}>
+                    {item.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
+
+          <div className="mb-3 text-end">
+            {/* <button
+                      className="btn btn-primary border-radius"
+                      onClick={handleSubmit}
+                    >
+                      Search
+                    </button> */}
+            <button
+              className="btn btn-primary border-radius"
+              data-bs-dismiss="offcanvas"
+              onClick={handleSubmit}
+            >
+              Search
+            </button>
           </div>
         </div>
       </div>

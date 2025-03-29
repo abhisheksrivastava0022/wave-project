@@ -280,12 +280,12 @@ const HomePage = () => {
   };
 
   const datatobeloadfunction = () => {
+    const segmentName = getSegment(datatobesend.category);
+    const videographyName = getVideography(datatobesend.videography_type);
+    const formatTypeName = getformattype(datatobesend.format_type);
+    const formatStageTypeName = getformatstagetype(datatobesend.stage_type);
+    const languageName = getLanguageNamesByIds(datatobesend.language);
     if (datatobesend?.stage_type == 1) {
-      const segmentName = getSegment(datatobesend.category);
-      const videographyName = getVideography(datatobesend.videography_type);
-      const formatTypeName = getformattype(datatobesend.format_type);
-      const formatStageTypeName = getformatstagetype(datatobesend.stage_type);
-      const languageName = getLanguageNamesByIds(datatobesend.language);
       return (
         <>
           <ScriptView
@@ -301,18 +301,29 @@ const HomePage = () => {
     } else if (datatobesend?.format_type == 4) {
       // Webs
       if (datatobesend?.stage_type == 4) {
-        alert("yescpm");
         return (
           <>
-            <CPMFeatureView film={datatobesend} />
+            <ScriptView
+              film={datatobesend}
+              segment={segmentName}
+              videography={videographyName}
+              formatType={formatTypeName}
+              formatStageType={formatStageTypeName}
+              languageName={languageName}
+            />
           </>
         );
       } else {
-        alert("yesnon");
         return (
           <>
-            {" "}
-            <CPMWebSeriesView film={datatobesend} />
+            <ScriptView
+              film={datatobesend}
+              segment={segmentName}
+              videography={videographyName}
+              formatType={formatTypeName}
+              formatStageType={formatStageTypeName}
+              languageName={languageName}
+            />
           </>
         );
       }
@@ -320,13 +331,27 @@ const HomePage = () => {
       if (datatobesend?.stage_type == 4) {
         return (
           <>
-            <FilmView film={datatobesend} />{" "}
+            <ScriptView
+              film={datatobesend}
+              segment={segmentName}
+              videography={videographyName}
+              formatType={formatTypeName}
+              formatStageType={formatStageTypeName}
+              languageName={languageName}
+            />
           </>
         );
       } else {
         return (
           <>
-            <FilmNotCompletedView film={datatobesend} />
+            <ScriptView
+              film={datatobesend}
+              segment={segmentName}
+              videography={videographyName}
+              formatType={formatTypeName}
+              formatStageType={formatStageTypeName}
+              languageName={languageName}
+            />
           </>
         );
       }
