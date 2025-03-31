@@ -312,7 +312,7 @@ const Home = () => {
         </>
       );
     } else {
-      alert(segmentName);
+
       return (
         <>
           <FilmView
@@ -518,7 +518,7 @@ const Home = () => {
                         <h5 className="card-title">{row.title}</h5>
                         <ul className="ProjectType-list">
                           {row.category != null &&
-                          row.category !== undefined ? (
+                            row.category !== undefined ? (
                             <li title="Category">{getSegment(row.category)}</li>
                           ) : null}
                           {row.videography_type ? (
