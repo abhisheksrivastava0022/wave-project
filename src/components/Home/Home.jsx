@@ -467,6 +467,10 @@ const Home = () => {
         </>
       );
     } else {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80a1d98ee7a1bfdd9fb02e1baebeaaff9a346db3
       return (
         <>
           <FilmView
@@ -672,7 +676,7 @@ const Home = () => {
                         <h5 className="card-title">{row.title}</h5>
                         <ul className="ProjectType-list">
                           {row.category != null &&
-                          row.category !== undefined ? (
+                            row.category !== undefined ? (
                             <li title="Category">{getSegment(row.category)}</li>
                           ) : null}
                           {row.videography_type ? (
