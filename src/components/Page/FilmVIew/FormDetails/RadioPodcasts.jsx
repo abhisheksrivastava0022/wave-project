@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 
-const GameEsports = ({
+const RadioPodcasts = ({
   film,
   countryName,
   languageName,
@@ -19,35 +19,13 @@ const GameEsports = ({
   };
 
   const stageTypes = [
-    { id: 1, name: "Development" },
-    { id: 2, name: "Work In Progress" },
-    { id: 3, name: "Ready for Release" },
+    { id: 1, name: "Work In Progress" },
+    { id: 2, name: "Completed" },
   ];
-
-  const formatType = [
-    { id: 1, name: "Single Player" },
-    { id: 2, name: "Multiplayer" },
-    { id: 3, name: "Educational" },
-    { id: 4, name: "Real-time Strategy" },
-  ];
-
-  const platformType = [
-    { id: 1, name: "PC" },
-    { id: 2, name: "Console" },
-    { id: 3, name: "Mobile" },
-    { id: 4, name: "AR / VR" },
-  ];
-  const targetGroup = [
-    { id: 1, name: "PreSchool" },
-    { id: 2, name: "Kids" },
-    { id: 3, name: "PreTeen" },
-    { id: 4, name: "Young Adults" },
-    { id: 5, name: "Adults" },
-  ];
-
-  const concepts = [
-    { id: 1, name: "Original" },
-    { id: 2, name: "Adapted" },
+  const contentOriginal = [
+    { id: 1, name: "Original Content" },
+    { id: 2, name: "Adapted Content" },
+    { id: 3, name: "Public Domain" },
   ];
 
   return (
@@ -84,6 +62,13 @@ const GameEsports = ({
 
               <table className="table table-striped table-sm">
                 <tbody>
+                  {segment && (
+                    <tr>
+                      <th scope="row">Segment Type :</th>
+                      <td>{segment}</td>
+                    </tr>
+                  )}
+
                   {film.other_details && (
                     <tr>
                       <th scope="row">Stage :</th>
@@ -96,45 +81,17 @@ const GameEsports = ({
                       </td>
                     </tr>
                   )}
-                  {film.other_details && (
+                  {film.other_details.expected_date && (
                     <tr>
-                      <th scope="row">Format Type :</th>
-                      <td>
-                        {fetchBy(
-                          formatType,
-                          "name",
-                          film.other_details.type_format
-                        )}
-                      </td>
+                      <th scope="row">Expected date :</th>
+
+                      <td> {film.other_details.expected_date}</td>
                     </tr>
                   )}
-                  {film.other_details && (
-                    <tr>
-                      <th scope="row">Platform :</th>
-                      <td>
-                        {fetchBy(
-                          platformType,
-                          "name",
-                          film.other_details.type_platform
-                        )}
-                      </td>
-                    </tr>
-                  )}
-                  {film.other_details && (
-                    <tr>
-                      <th scope="row">Target Group :</th>
-                      <td>
-                        {fetchBy(
-                          targetGroup,
-                          "name",
-                          film.other_details.targetGroup
-                        )}
-                      </td>
-                    </tr>
-                  )}
+
                   {countryName && (
                     <tr>
-                      <th scope="row">Country :</th>
+                      <th scope="row">Countries of Production :</th>
                       <td>{countryName}</td>
                     </tr>
                   )}
@@ -144,10 +101,22 @@ const GameEsports = ({
                       <td>{languageName}</td>
                     </tr>
                   )}
+                  {film?.other_details.type_of_content && (
+                    <tr>
+                      <th scope="row">Type of Content :</th>
+                      <td> {film.other_details.type_of_content}</td>
+                    </tr>
+                  )}
                   {film.other_details && (
                     <tr>
-                      <th scope="row">Date of Completion :</th>
-                      <td>{film.other_details.completion_date}</td>
+                      <th scope="row">Content Original :</th>
+                      <td>
+                        {fetchBy(
+                          contentOriginal,
+                          "name",
+                          film.other_details.content_original
+                        )}
+                      </td>
                     </tr>
                   )}
                 </tbody>
@@ -161,28 +130,16 @@ const GameEsports = ({
 
               <table className="table table-striped table-sm">
                 <tbody>
-                  {/* {film.english_title && (
+                  {film.other_details.synopsis_of_content && (
                     <tr>
-                      <td>
-                        {selectedGenres.length > 0
-                          ? selectedGenres.join(" , ")
-                          : "No options selected"}
-                      </td>
-                    </tr>
-                  )} */}
-
-                  {film.synopsis && (
-                    <tr>
-                      <th scope="row">Synopsis:</th>
-                      <td>{film.synopsis}</td>
+                      <th scope="row">Synopsis of Content :</th>
+                      <td>{film.other_details.synopsis_of_content}</td>
                     </tr>
                   )}
-                  {film.other_details && (
+                  {film.other_details.creator_notes && (
                     <tr>
-                      <th scope="row">Target Group :</th>
-                      <td>
-                        {fetchBy(concepts, "name", film.other_details.concept)}
-                      </td>
+                      <th scope="row">Creator's Note :</th>
+                      <td>{film.other_details.creator_notes}</td>
                     </tr>
                   )}
                 </tbody>
@@ -195,4 +152,4 @@ const GameEsports = ({
   );
 };
 
-export default GameEsports;
+export default RadioPodcasts;
