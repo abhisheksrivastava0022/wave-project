@@ -11,6 +11,18 @@ import W7 from "../../assets/img/Films_Waves_Bazaar.jpg";
 import W8 from "../../assets/img/Events_Waves_Bazaar.jpg";
 import W9 from "../../assets/img/Comic and eBook_Waves_Bazaar.jpg";
 import W10 from "../../assets/img/AR_VR.jpg";
+import h1 from "../../assets/img/BrochureHindi/1 वेव्स बाज़ार क्या है.jpg";
+import h2 from "../../assets/img/BrochureHindi/2 वेब सीरीज.jpg";
+import h3 from "../../assets/img/BrochureHindi/3 वी एफ एक्स.jpg";
+import h4 from "../../assets/img/BrochureHindi/4 पॉडकास्ट.jpg";
+import h5 from "../../assets/img/BrochureHindi/5 संगीत एवं ध्वनि.jpg";
+import h6 from "../../assets/img/BrochureHindi/6 गमेमकेर्स.jpg";
+import h7 from "../../assets/img/BrochureHindi/7 फिल्म्स.jpg";
+import h8 from "../../assets/img/BrochureHindi/8 इवेंट्स.jpg";
+import h9 from "../../assets/img/BrochureHindi/1 वेव्स बाज़ार क्या है.jpg";
+import h10 from "../../assets/img/BrochureHindi/10 XR, VR & AR.jpg";
+import h11 from "../../assets/img/BrochureHindi/1 वेव्स बाज़ार क्या है.jpg";
+import h12 from "../../assets/img/BrochureHindi/12 विज्ञापन.jpg";
 import influencer from "../../assets/img/influencer-markerting.png";
 import advertising from "../../assets/img/advertising.png";
 import FilmBuyer from "../../assets/img/creatives/FilmBuyer.jpeg";
@@ -252,6 +264,28 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={h1} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">वेव्स बाज़ार क्या है</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">वेव्स बाज़ार क्या है</h5>
+                          <ul className="ProjectType-list"></ul>
+                          <a
+                            href="/pdf/BrochureHindiPdf/1 What is WAVES Bazaar_Hindi ls.pdf"
+                            className="btn btn-primary"
+                            target="_blank"
+                          >
+                            देखें और डाउनलोड करें
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={W2} alt="user" className="defualtImage" />
                         </div>
 
@@ -268,6 +302,29 @@ const DownloadPDF = () => {
                             className="btn btn-primary"
                           >
                             View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={h2} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">वेब सीरीज</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">वेब सीरीज</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/2 Web-Series_Hindi ls.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                           देखें और डाउनलोड करें
                           </a>
                         </div>
                       </div>
@@ -298,14 +355,37 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={h3} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">वी एफ एक्स</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">वी एफ एक्स</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/3 VFX_Hindi ls.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                          देखें और डाउनलोड करें
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={W4} alt="user" className="defualtImage" />
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Podcast</h5>
+                          <h5 className="card-title">Radio & Podcast</h5>
                         </div>
                         <div className="hover-content">
-                          <h5 className="card-title">Podcast</h5>
+                          <h5 className="card-title">Radio & Podcast</h5>
                           <ul className="ProjectType-list"></ul>
 
                           <a
@@ -314,6 +394,29 @@ const DownloadPDF = () => {
                             className="btn btn-primary"
                           >
                             View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={h4} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">रेडियो एवं पॉडकास्ट</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title"> रेडियो एवं पॉडकास्ट</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/Podcast.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                            देखें और डाउनलोड करें
                           </a>
                         </div>
                       </div>
@@ -344,6 +447,29 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={h5} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">संगीत एवं ध्वनि</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">संगीत एवं ध्वनि</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/5 Sound and Music_Hindi ls.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                            देखें और डाउनलोड करें
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={W6} alt="user" className="defualtImage" />
                         </div>
 
@@ -367,14 +493,37 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={h6} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">गेम मेकर्स</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">गेम मेकर्स</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/6 Games_Hindi ls.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                            देखें और डाउनलोड करें
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={W7} alt="user" className="defualtImage" />
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Films Waves Bazaar</h5>
+                          <h5 className="card-title">Films</h5>
                         </div>
                         <div className="hover-content">
-                          <h5 className="card-title">Films Waves Bazaar</h5>
+                          <h5 className="card-title">Films</h5>
                           <ul className="ProjectType-list"></ul>
 
                           <a
@@ -390,14 +539,37 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
+                          <img src={h7} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">फिल्म्स</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">फिल्म्स</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/7 Films_Hindi ls.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                            देखें और डाउनलोड करें
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
                           <img src={W8} alt="user" className="defualtImage" />
                         </div>
 
                         <div className="project-title-name text-center">
-                          <h5 className="card-title">Events Waves Bazaar</h5>
+                          <h5 className="card-title">Events</h5>
                         </div>
                         <div className="hover-content">
-                          <h5 className="card-title">Events Waves Bazaar</h5>
+                          <h5 className="card-title">Events</h5>
                           <ul className="ProjectType-list"></ul>
 
                           <a
@@ -406,6 +578,29 @@ const DownloadPDF = () => {
                             className="btn btn-primary"
                           >
                             View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={h8} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">इवेंट्स</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">इवेंट्स</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/8 Events_Hindi ls.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                            देखें और डाउनलोड करें
                           </a>
                         </div>
                       </div>
@@ -456,6 +651,29 @@ const DownloadPDF = () => {
                         </div>
                       </div>
                     </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={h10} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">ए आर - वी आर - एक्स आर</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">ए आर - वी आर - एक्स आर</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/10 XR, VR & AR_Hindi ls.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                            देखें और डाउनलोड करें
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                    
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
@@ -499,6 +717,29 @@ const DownloadPDF = () => {
                             className="btn btn-primary"
                           >
                             View & Download
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-3 col-sm-3 animated fadeInUp">
+                      <div className="image-container">
+                        <div className="defaultimagecontainer text-center">
+                          <img src={h12} alt="user" className="defualtImage" />
+                        </div>
+
+                        <div className="project-title-name text-center">
+                          <h5 className="card-title">विज्ञापन</h5>
+                        </div>
+                        <div className="hover-content">
+                          <h5 className="card-title">विज्ञापन</h5>
+                          <ul className="ProjectType-list"></ul>
+
+                          <a
+                            href="/pdf/BrochureHindiPdf/12 Advertising_Hindi ls.pdf"
+                            target="_blank"
+                            className="btn btn-primary"
+                          >
+                         देखें और डाउनलोड करें
                           </a>
                         </div>
                       </div>
