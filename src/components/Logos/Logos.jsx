@@ -25,7 +25,7 @@ const Logos = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src="image/ficci-white.png" alt="FICCI Logo" />
+                    <img src="/image/ficci-white.png" alt="FICCI Logo" />
                   </a>
     </>
   )
