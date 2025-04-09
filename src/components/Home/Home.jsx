@@ -25,6 +25,7 @@ import AnimationVFX from "../Page/FilmVIew/FormDetails/AnimationVFX";
 import Print from "../Page/FilmVIew/FormDetails/Print";
 import LiveEvent from "../Page/FilmVIew/FormDetails/LiveEvent";
 import ArVr from "../Page/FilmVIew/FormDetails/ArVr";
+import Logos from "../Logos/Logos";
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
@@ -523,7 +524,7 @@ const Home = () => {
         <div className="container">
           <div className="logo-landing-header">
             <div className="top-logo">
-              <a href="https://wavesbazaar.com/">
+              {/* <a href="https://wavesbazaar.com/">
                 <img src="image/waves-logo.png" alt="Waves Logo" />
               </a>
               <a
@@ -540,6 +541,14 @@ const Home = () => {
               >
                 <img src="image/nfdc-logo.png" alt="NFDC Logo" />
               </a>
+              <a
+                    href="https://ficci.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="image/ficci-white.png" alt="FICCI Logo" />
+                  </a> */}
+                  <Logos/>
               <button
                 className="btn btn-menu"
                 type="button"

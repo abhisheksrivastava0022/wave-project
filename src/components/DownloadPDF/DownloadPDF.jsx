@@ -92,6 +92,7 @@ import XR_Seller from "../../assets/img/XR, VR & AR Sellerf.jpg";
 
 import Footer from "../Footer/Footer";
 import Header from "../Page/Header";
+import Logos from "../Logos/Logos";
 
 const DownloadPDF = () => {
   return (
@@ -100,7 +101,7 @@ const DownloadPDF = () => {
         <div className="container">
           <div className="logo-landing-header">
             <div className="top-logo">
-              <a href="https://wavesbazaar.com/">
+              {/* <a href="https://wavesbazaar.com/">
                 <img src="image/waves-logo.png" alt="Waves Logo" />
               </a>
               <a
@@ -117,6 +118,14 @@ const DownloadPDF = () => {
               >
                 <img src="image/nfdc-logo.png" alt="NFDC Logo" />
               </a>
+              <a
+                    href="https://ficci.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="image/ficci-white.png" alt="FICCI Logo" />
+                  </a> */}
+                  <Logos/>
               <Header/>
               {/* <button
                 className="btn btn-menu"

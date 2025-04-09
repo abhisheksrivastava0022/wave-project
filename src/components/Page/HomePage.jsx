@@ -18,6 +18,7 @@ import Advertising from "./FilmVIew/FormDetails/Advertising";
 import MusicSound from "./FilmVIew/FormDetails/MusicSound";
 import RadioPodcasts from "./FilmVIew/FormDetails/RadioPodcasts";
 import GameEsports from "./FilmVIew/FormDetails/GameEsports";
+import Logos from "../Logos/Logos";
 
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
@@ -432,7 +433,7 @@ const HomePage = () => {
             <div className="col-md-12" style={{ position: "relative" }}>
               <div className="logo-landing mb-5">
                 <div className="top-logo">
-                  <a href="https://wavesbazaar.com/">
+                  {/* <a href="https://wavesbazaar.com/">
                     <img src="image/waves-logo.png" alt="Waves Logo" />
                   </a>
                   <a
@@ -449,6 +450,14 @@ const HomePage = () => {
                   >
                     <img src="image/nfdc-logo.png" alt="NFDC Logo" />
                   </a>
+                  <a
+                    href="https://ficci.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="image/ficci-white.png" alt="FICCI Logo" />
+                  </a> */}
+                  <Logos/>
 
                   {/* Offcanvas Menu */}
                   <Header />
