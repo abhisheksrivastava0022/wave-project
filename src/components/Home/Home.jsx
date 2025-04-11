@@ -11,7 +11,7 @@ import {
 
 import WAVESLoader from "../../assets/img/spinner.gif";
 import ApiClient from "../API/ApiClient";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import AlertMessage from "../AlertMessage";
 import FilmView from "../Page/FilmVIew/FormDetails/FilmView";
@@ -28,6 +28,9 @@ function getCookie() {
   return cookiesObj;
 }
 const Home = () => {
+  const { email = null } = useParams();
+  const decode_email = email ? atob(email) : null;
+
   const [loggedinData, setLoggedinData] = useState({});
   React.useEffect(() => {
     const myCookieValue = getCookie();
@@ -137,6 +140,7 @@ const Home = () => {
       const queryParams = new URLSearchParams({
         limit: 12, // Number of items per page
         page: pageNumber ?? 1,
+        decode_email,
         ...formData,
       });
       const response = await getRequestApi("film", queryParams);
@@ -370,21 +374,21 @@ const Home = () => {
           <div className="logo-landing-header">
             <div className="top-logo">
               <a href="https://wavesbazaar.com/">
-                <img src="image/waves-logo.png" alt="Waves Logo" />
+                <img src="/image/waves-logo.png" alt="Waves Logo" />
               </a>
               <a
                 href="https://www.mib.gov.in/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="image/mib.png" alt="MIB Logo" />
+                <img src="/image/mib.png" alt="MIB Logo" />
               </a>
               <a
                 href="https://nfdcindia.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="image/nfdc-logo.png" alt="NFDC Logo" />
+                <img src="/image/nfdc-logo.png" alt="NFDC Logo" />
               </a>
               <button
                 className="btn btn-menu"

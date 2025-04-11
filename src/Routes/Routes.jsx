@@ -32,6 +32,10 @@ export const routes = [
     element: <Home />,
   },
   {
+    path: "project/:email", // Use empty path for nested base route
+    element: <Home />,
+  },
+  {
     path: "project/terms-and-conditions",
     element: <TermsAndCondition />,
   },
