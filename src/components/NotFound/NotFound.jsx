@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../Footer/Footer';
 // import NotFoundPage from '../../assets/img/notfound.png'
 import NotFoundPage from "../../assets/img/notfound.png";
+import Logos from '../Logos/Logos';
 
 
 const NotFound = () => {
@@ -12,9 +13,17 @@ const NotFound = () => {
                 <div className="container">
                     <div className="logo-landing-header">
                         <div className="top-logo">
-                            <a href="https://wavesbazaar.com/" ><img src="https://wavesbazaar.com/landing-page-img/waves-logo.png" /></a>
+                            {/* <a href="https://wavesbazaar.com/" ><img src="https://wavesbazaar.com/landing-page-img/waves-logo.png" /></a>
                             <a href="https://www.mib.gov.in/" target='_blank'><img src="https://wavesbazaar.com/landing-page-img/mib.png" /></a>
                             <a href="https://nfdcindia.com/" target='_blank'><img src="https://wavesbazaar.com/landing-page-img/nfdc-logo.png" /></a>
+                            <a
+                    href="https://ficci.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="image/ficci-white.png" alt="FICCI Logo" />
+                  </a> */}
+                  <Logos/>
                             <button className="btn btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                                 <img src="https://www.iffigoa.org/public/images/menu.svg" alt="image" className="menu-link" />
                                 Menu

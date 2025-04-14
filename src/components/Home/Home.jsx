@@ -16,6 +16,16 @@ import { Link, useParams } from "react-router-dom";
 import AlertMessage from "../AlertMessage";
 import FilmView from "../Page/FilmVIew/FormDetails/FilmView";
 import GameEsports from "../Page/FilmVIew/FormDetails/GameEsports";
+import RadioPodcasts from "../Page/FilmVIew/FormDetails/RadioPodcasts";
+import MusicSound from "../Page/FilmVIew/FormDetails/MusicSound";
+import Advertising from "../Page/FilmVIew/FormDetails/Advertising";
+import InfluencerMarketing from "../Page/FilmVIew/FormDetails/InfluencerMarketing";
+import ComicsGraphics from "../Page/FilmVIew/FormDetails/ComicsGraphics";
+import AnimationVFX from "../Page/FilmVIew/FormDetails/AnimationVFX";
+import Print from "../Page/FilmVIew/FormDetails/Print";
+import LiveEvent from "../Page/FilmVIew/FormDetails/LiveEvent";
+import ArVr from "../Page/FilmVIew/FormDetails/ArVr";
+import Logos from "../Logos/Logos";
 const dataurl = import.meta.env.VITE_REACT_APP_BASE_API;
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
@@ -35,7 +45,7 @@ const Home = () => {
   React.useEffect(() => {
     const myCookieValue = getCookie();
     setLoggedinData(myCookieValue);
-    console.log({ myCookieValue });
+    loadPreLoadData(1);
     //console.log('Cookie Value:', myCookieValue);
   }, []);
 
@@ -54,6 +64,7 @@ const Home = () => {
   const [filmtype, setFilmtype] = useState([]);
   const [language, setlanguage] = useState([]);
   const [country, setCountry] = useState([]);
+  const [city, setCity] = useState([]);
   const [film_status, setFilm_status] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -124,6 +135,7 @@ const Home = () => {
       setStageTypes(results[5].data);
       setFormatTypes(results[6].data);
       setFormDataDetails(results[7].data);
+      setCity(results[8].data);
     } else {
       console.error("Error fetching preloading data");
     }
@@ -136,7 +148,7 @@ const Home = () => {
   const loadPreLoadData = async (pageNumber) => {
     try {
       setLoading(true);
-
+      //  alert(pageNumber)
       const queryParams = new URLSearchParams({
         limit: 12, // Number of items per page
         page: pageNumber ?? 1,
@@ -192,9 +204,27 @@ const Home = () => {
 
     // Filter and map the country names based on IDs
     const countryNames = country
-      .filter((item) => ids.includes(item.id)) // Ensure the item ID is in the provided IDs array
+      .filter((item) => ids?.includes(item.id)) // Ensure the item ID is in the provided IDs array
       .map((item) => item.name); // Extract the names of matched countries
     // Join the country names with a comma and return
+    return countryNames.length > 3
+      ? countryNames.slice(0, 3).join(", ") + "..."
+      : countryNames.join(", ");
+  }
+
+  function getCityNamesByIds(ids) {
+    if (typeof ids === "string") {
+      try {
+        ids = JSON.parse(ids); // Convert stringified array to an actual array
+      } catch (error) {
+        console.error("Invalid IDs format:", ids, error);
+        return "";
+      }
+    }
+    const countryNames = city
+      .filter((item) => ids?.includes(item.id))
+      .map((item) => item.name);
+
     return countryNames.length > 3
       ? countryNames.slice(0, 3).join(", ") + "..."
       : countryNames.join(", ");
@@ -210,12 +240,13 @@ const Home = () => {
       }
     }
     const countryNames = language
-      .filter((country) => ids.includes(country.id)) // Filter countries with matching IDs
+      .filter((country) => ids?.includes(country.id)) // Filter countries with matching IDs
       .map((country) => country.name); // Extract their names
     return countryNames.length > 3
       ? countryNames.slice(0, 3).join(", ") + "..."
       : countryNames.join(", ");
   }
+
   function getGenre(ids) {
     if (typeof ids === "string") {
       try {
@@ -226,7 +257,7 @@ const Home = () => {
       }
     }
     const countryNames = genre
-      .filter((country) => ids.includes(country.id)) // Filter countries with matching IDs
+      .filter((country) => ids?.includes(country.id)) // Filter countries with matching IDs
       .map((country) => country.name); // Extract their names
     return countryNames.join(", "); // Join the names with a comma
   }
@@ -288,6 +319,7 @@ const Home = () => {
     const formatTypeName = getformattype(datatobesend.format_type);
     const formatStageTypeName = getformatstagetype(datatobesend.stage_type);
     const countryName = getCountryNamesByIds(datatobesend.country);
+    // const cityName = getCityNamesByIds(datatobesend.country);
     const languageName = getLanguageNamesByIds(datatobesend.language);
     if (datatobesend.category === 1 || datatobesend.category === 2) {
       return (
@@ -315,8 +347,131 @@ const Home = () => {
           />
         </>
       );
+    } else if (datatobesend.category === 4) {
+      return (
+        <>
+          <RadioPodcasts
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 5) {
+      return (
+        <>
+          <MusicSound
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 6) {
+      return (
+        <>
+          <Advertising
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          // cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 7) {
+      return (
+        <>
+          <InfluencerMarketing
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          // cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 8) {
+      return (
+        <>
+          <ComicsGraphics
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          // cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 9) {
+      return (
+        <>
+          <AnimationVFX
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          // cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 10) {
+      return (
+        <>
+          <Print
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          // cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 11) {
+      return (
+        <>
+          <LiveEvent
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          // cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 13) {
+      return (
+        <>
+          <ArVr
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          // cityName={cityName}
+          />
+        </>
+      );
     } else {
-
       return (
         <>
           <FilmView
@@ -373,23 +528,8 @@ const Home = () => {
         <div className="container">
           <div className="logo-landing-header">
             <div className="top-logo">
-              <a href="https://wavesbazaar.com/">
-                <img src="/image/waves-logo.png" alt="Waves Logo" />
-              </a>
-              <a
-                href="https://www.mib.gov.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/image/mib.png" alt="MIB Logo" />
-              </a>
-              <a
-                href="https://nfdcindia.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/image/nfdc-logo.png" alt="NFDC Logo" />
-              </a>
+
+              <Logos />
               <button
                 className="btn btn-menu"
                 type="button"

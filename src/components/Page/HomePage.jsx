@@ -8,6 +8,17 @@ import "../../../src/assets/css/home.css"; // Import CSS file
 import Faq from "./Faq";
 import Header from "./Header";
 import FilmView from "./FilmVIew/FormDetails/FilmView";
+import ArVr from "./FilmVIew/FormDetails/ArVr";
+import LiveEvent from "./FilmVIew/FormDetails/LiveEvent";
+import Print from "./FilmVIew/FormDetails/Print";
+import AnimationVFX from "./FilmVIew/FormDetails/AnimationVFX";
+import ComicsGraphics from "./FilmVIew/FormDetails/ComicsGraphics";
+import InfluencerMarketing from "./FilmVIew/FormDetails/InfluencerMarketing";
+import Advertising from "./FilmVIew/FormDetails/Advertising";
+import MusicSound from "./FilmVIew/FormDetails/MusicSound";
+import RadioPodcasts from "./FilmVIew/FormDetails/RadioPodcasts";
+import GameEsports from "./FilmVIew/FormDetails/GameEsports";
+import Logos from "../Logos/Logos";
 
 //const dataurl = "https://wavesbazaar.com/api/waves-buyer";
 function getCookie() {
@@ -150,7 +161,7 @@ const HomePage = () => {
 
     // Filter and map the country names based on IDs
     const countryNames = country
-      .filter((item) => ids.includes(item.id)) // Ensure the item ID is in the provided IDs array
+      .filter((item) => ids?.includes(item.id)) // Ensure the item ID is in the provided IDs array
       .map((item) => item.name); // Extract the names of matched countries
     // Join the country names with a comma and return
     return countryNames.length > 3
@@ -168,7 +179,7 @@ const HomePage = () => {
       }
     }
     const countryNames = language
-      .filter((country) => ids.includes(country.id)) // Filter countries with matching IDs
+      .filter((country) => ids?.includes(country.id)) // Filter countries with matching IDs
       .map((country) => country.name); // Extract their names
     return countryNames.length > 3
       ? countryNames.slice(0, 3).join(", ") + "..."
@@ -184,7 +195,7 @@ const HomePage = () => {
       }
     }
     const countryNames = genre
-      .filter((country) => ids.includes(country.id)) // Filter countries with matching IDs
+      .filter((country) => ids?.includes(country.id)) // Filter countries with matching IDs
       .map((country) => country.name); // Extract their names
     return countryNames.join(", "); // Join the names with a comma
   }
@@ -245,19 +256,173 @@ const HomePage = () => {
     const videographyName = getVideography(datatobesend.videography_type);
     const formatTypeName = getformattype(datatobesend.format_type);
     const formatStageTypeName = getformatstagetype(datatobesend.stage_type);
+    const countryName = getCountryNamesByIds(datatobesend.country);
+    // const cityName = getCityNamesByIds(datatobesend.country);
     const languageName = getLanguageNamesByIds(datatobesend.language);
-    return (
-      <>
-        <FilmView
-          film={datatobesend}
-          segment={segmentName}
-          videography={videographyName}
-          formatType={formatTypeName}
-          formatStageType={formatStageTypeName}
-          languageName={languageName}
-        />
-      </>
-    );
+    if (datatobesend.category === 1 || datatobesend.category === 2) {
+      return (
+        <>
+          <FilmView
+            film={datatobesend}
+            segment={segmentName}
+            videography={videographyName}
+            formatType={formatTypeName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 3) {
+      return (
+        <>
+          <GameEsports
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 4) {
+      return (
+        <>
+          <RadioPodcasts
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 5) {
+      return (
+        <>
+          <MusicSound
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 6) {
+      return (
+        <>
+          <Advertising
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          // cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 7) {
+      return (
+        <>
+          <InfluencerMarketing
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+            cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 8) {
+      return (
+        <>
+          <ComicsGraphics
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+            cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 9) {
+      return (
+        <>
+          <AnimationVFX
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+            cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 10) {
+      return (
+        <>
+          <Print
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+            cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 11) {
+      return (
+        <>
+          <LiveEvent
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+            cityName={cityName}
+          />
+        </>
+      );
+    } else if (datatobesend.category === 13) {
+      return (
+        <>
+          <ArVr
+            film={datatobesend}
+            countryName={countryName}
+            segment={segmentName}
+            videography={videographyName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+            cityName={cityName}
+          />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <FilmView
+            film={datatobesend}
+            segment={segmentName}
+            videography={videographyName}
+            formatType={formatTypeName}
+            formatStageType={formatStageTypeName}
+            languageName={languageName}
+          />
+        </>
+      );
+    }
   };
 
   return (
@@ -268,7 +433,7 @@ const HomePage = () => {
             <div className="col-md-12" style={{ position: "relative" }}>
               <div className="logo-landing mb-5">
                 <div className="top-logo">
-                  <a href="https://wavesbazaar.com/">
+                  {/* <a href="https://wavesbazaar.com/">
                     <img src="image/waves-logo.png" alt="Waves Logo" />
                   </a>
                   <a
@@ -285,6 +450,14 @@ const HomePage = () => {
                   >
                     <img src="image/nfdc-logo.png" alt="NFDC Logo" />
                   </a>
+                  <a
+                    href="https://ficci.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="image/ficci-white.png" alt="FICCI Logo" />
+                  </a> */}
+                  <Logos />
 
                   {/* Offcanvas Menu */}
                   <Header />
@@ -317,15 +490,21 @@ const HomePage = () => {
                   >
                     Buyer’s Signup
                   </a>
-                </div>
-                <div className="btn-landing">
                   <a
                     href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com"
                     className="btn common-btn-div1 animated fadeInLeft"
                   >
-                    Viewing Room & Market Screenings
+                    Viewing Room
                   </a>
                 </div>
+                {/* <div className="btn-landing">
+                  <a
+                    href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com"
+                    className="btn common-btn-div1 animated fadeInLeft"
+                  >
+                    Viewing Room
+                  </a>
+                </div> */}
                 {/* <div className="btn-landing">
                 </div> */}
               </div>
@@ -457,7 +636,7 @@ const HomePage = () => {
                         <h5 className="card-title">{row.title}</h5>
                         <ul className="ProjectType-list">
                           {row.category != null &&
-                          row.category !== undefined ? (
+                            row.category !== undefined ? (
                             <li title="Category">{getSegment(row.category)}</li>
                           ) : null}
                           {row.videography_type ? (
