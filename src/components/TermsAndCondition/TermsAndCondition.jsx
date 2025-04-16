@@ -52,8 +52,8 @@ const TermsAndCondition = () => {
                 />
                 Menu
               </button> */}
-              <Logos/>
-              <Header/>
+              <Logos />
+              <Header />
             </div>
             <div
               className="offcanvas offcanvas-end text-bg-dark sidemenu"
@@ -87,11 +87,7 @@ const TermsAndCondition = () => {
                       Buyer Login
                     </a>
                   </li>
-                  <li>
-                          <a href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com">
-                            Viewing Room
-                          </a>
-                        </li>
+
                   <li>
                     {" "}
                     <a href="https://wavesbazaar.com/project">

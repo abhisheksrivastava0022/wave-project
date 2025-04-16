@@ -125,8 +125,8 @@ const DownloadPDF = () => {
                   >
                     <img src="image/ficci-white.png" alt="FICCI Logo" />
                   </a> */}
-                  <Logos/>
-              <Header/>
+              <Logos />
+              <Header />
               {/* <button
                 className="btn btn-menu"
                 type="button"
@@ -174,20 +174,7 @@ const DownloadPDF = () => {
                       Buyer Login
                     </a>
                   </li>
-                  <li>
-                          <a href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com">
-                            Viewing Room
-                          </a>
-                        </li>
-                  <li>
-                    {" "}
-                    <a href="https://wavesbazaar.com/project">
-                      Explore Projects
-                    </a>
-                  </li>
-                  <li>
-                    <Link to="/download">Downloads</Link>
-                  </li>
+                 
 
                   <li>
                     <a href="https://wavesindia.org/" target="_blank">
@@ -226,7 +213,7 @@ const DownloadPDF = () => {
                     Brochure
                   </a>
                 </li>
-                
+
                 <li className="nav-item" role="presentation">
                   <a
                     className="nav-link"
@@ -241,12 +228,12 @@ const DownloadPDF = () => {
                   </a>
                 </li>
                 <li className="nav-item" role="presentation">
-                     <a className="nav-link" id="videos-tab" data-bs-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Videos</a>
-                  </li>
+                  <a className="nav-link" id="videos-tab" data-bs-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Videos</a>
+                </li>
               </ul>
               <div className="tab-content mt-2" id="myTabsContent">
                 <div className="tab-pane fade show active" id="brochure" role="tabpanel" aria-labelledby="brochure-tab" data-aos="fade-up-right">
-                    {/* brochure */}
+                  {/* brochure */}
                   <div className="row mt-3">
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
@@ -333,7 +320,7 @@ const DownloadPDF = () => {
                             target="_blank"
                             className="btn btn-primary"
                           >
-                           देखें और डाउनलोड करें
+                            देखें और डाउनलोड करें
                           </a>
                         </div>
                       </div>
@@ -379,7 +366,7 @@ const DownloadPDF = () => {
                             target="_blank"
                             className="btn btn-primary"
                           >
-                          देखें और डाउनलोड करें
+                            देखें और डाउनलोड करें
                           </a>
                         </div>
                       </div>
@@ -706,7 +693,7 @@ const DownloadPDF = () => {
                         </div>
                       </div>
                     </div>
-                   
+
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
@@ -748,7 +735,7 @@ const DownloadPDF = () => {
                             target="_blank"
                             className="btn btn-primary"
                           >
-                                 देखें और डाउनलोड करें
+                            देखें और डाउनलोड करें
                           </a>
                         </div>
                       </div>
@@ -794,19 +781,19 @@ const DownloadPDF = () => {
                             target="_blank"
                             className="btn btn-primary"
                           >
-                         देखें और डाउनलोड करें
+                            देखें और डाउनलोड करें
                           </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-               
+
                 <div className="tab-pane fade" id="creatives" role="tabpanel" aria-labelledby="creatives-tab" data-aos="fade-up-right">
                   {/* creatives */}
                   <div className="row mt-3">
-                 
-                   
+
+
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
@@ -907,7 +894,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Animation & VFX Services (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Animation & VFX Services (Buyer)</h5> */}
+                          {/* <h5 className="card-title">Animation & VFX Services (Buyer)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c3}
@@ -929,7 +916,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Animation & VFX Services (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Animation & VFX Services (Buyer)</h5> */}
+                          {/* <h5 className="card-title">Animation & VFX Services (Buyer)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={AnimationVFXServicesBuyer2}
@@ -951,7 +938,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Animation & VFX Services (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Animation & VFX Services (Seller)</h5> */}
+                          {/* <h5 className="card-title">Animation & VFX Services (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c4}
@@ -973,7 +960,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Animation & VFX Services (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Animation & VFX Services (Seller)</h5> */}
+                          {/* <h5 className="card-title">Animation & VFX Services (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={AnimationVFXServicesSeller2}
@@ -995,7 +982,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Comics  E books (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Comics  E books (Buyer)</h5> */}
+                          {/* <h5 className="card-title">Comics  E books (Buyer)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c5}
@@ -1017,7 +1004,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Comics  E books (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Comics  E books (Buyer)</h5> */}
+                          {/* <h5 className="card-title">Comics  E books (Buyer)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={ComicsEbooksBuyer2}
@@ -1039,7 +1026,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Comics E books (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Comics E books (Seller)</h5> */}
+                          {/* <h5 className="card-title">Comics E books (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c6}
@@ -1061,7 +1048,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Comics E books (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Comics E books (Seller)</h5> */}
+                          {/* <h5 className="card-title">Comics E books (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={ComicsEbooksSeller2}
@@ -1084,7 +1071,7 @@ const DownloadPDF = () => {
                         </div>
                         <div className="hover-content">
                           {/* <h5 className="card-title">Film & TV Live Action & Animation (Buyer)</h5> */}
-                       
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c7}
@@ -1129,8 +1116,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Film (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5> */}
-                       
+                          {/* <h5 className="card-title">Film & TV Live Action & Animation (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c8}
@@ -1175,8 +1162,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Gaming & Esports (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Gaming & Esports (Buyer)</h5> */}
-                         
+                          {/* <h5 className="card-title">Gaming & Esports (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c9}
@@ -1198,8 +1185,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Gaming & Esports (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Gaming & Esports (Seller)</h5> */}
-                         
+                          {/* <h5 className="card-title">Gaming & Esports (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c10}
@@ -1221,8 +1208,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Influencer Marketing (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Influencer Marketing (Buyer)</h5> */}
-                     
+                          {/* <h5 className="card-title">Influencer Marketing (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c11}
@@ -1244,8 +1231,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Influencer Marketing (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Influencer Marketing (Seller)</h5> */}
-                        
+                          {/* <h5 className="card-title">Influencer Marketing (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c12}
@@ -1267,8 +1254,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Live Events (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
-                          
+                          {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c13}
@@ -1290,8 +1277,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Live Events (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
-                          
+                          {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={LiveEventsBuyer1}
@@ -1313,8 +1300,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Live Events (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
-                          
+                          {/* <h5 className="card-title">Live Events (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={LiveEventsBuyer2}
@@ -1336,8 +1323,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Live Events (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Live Events (Seller)</h5> */}
-                         
+                          {/* <h5 className="card-title">Live Events (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c14}
@@ -1359,8 +1346,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Live Events (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Live Events (Seller)</h5> */}
-                         
+                          {/* <h5 className="card-title">Live Events (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={LiveEventsSeller1}
@@ -1382,8 +1369,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Live Events (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Live Events (Seller)</h5> */}
-                         
+                          {/* <h5 className="card-title">Live Events (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={LiveEventsSeller2}
@@ -1405,8 +1392,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Music & Sound (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Music & Sound (Buyer)</h5> */}
-                          
+                          {/* <h5 className="card-title">Music & Sound (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c15}
@@ -1428,8 +1415,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Music & Sound (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Music & Sound (Buyer)</h5> */}
-                          
+                          {/* <h5 className="card-title">Music & Sound (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={MusicandSoundBuyer}
@@ -1451,8 +1438,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Music & Sound (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Music & Sound (Seller)</h5> */}
-                          
+                          {/* <h5 className="card-title">Music & Sound (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c16}
@@ -1474,8 +1461,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Music & Sound (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Music & Sound (Seller)</h5> */}
-                          
+                          {/* <h5 className="card-title">Music & Sound (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={MusicandSoundSeller}
@@ -1494,11 +1481,11 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                        <h5 className="card-title">Radio & Podcast (Buyer)</h5>
+                          <h5 className="card-title">Radio & Podcast (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Radio & Podcast (Buyer)</h5> */}
-                          
+                          {/* <h5 className="card-title">Radio & Podcast (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c17}
@@ -1520,8 +1507,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Radio & Podcast (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Radio & Podcast (Seller)</h5> */}
-                          
+                          {/* <h5 className="card-title">Radio & Podcast (Seller)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c18}
@@ -1543,8 +1530,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Web Series (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Web Series Live action & Animation (Buyer)</h5> */}
-                        
+                          {/* <h5 className="card-title">Web Series Live action & Animation (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c19}
@@ -1566,7 +1553,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">Web Series (Seller)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">Web Series Live action & Animation (Seller)</h5> */}
+                          {/* <h5 className="card-title">Web Series Live action & Animation (Seller)</h5> */}
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c20}
@@ -1588,8 +1575,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">XR VR & AR (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
-                        
+                          {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c21}
@@ -1611,8 +1598,8 @@ const DownloadPDF = () => {
                           <h5 className="card-title">XR VR & AR (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
-                        
+                          {/* <h5 className="card-title">XR, VR & AR (Buyer)</h5> */}
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={XRVRBuyer}
@@ -1631,13 +1618,13 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                        <h5 className="card-title">XR VR & AR (Seller)</h5>
-                        
+                          <h5 className="card-title">XR VR & AR (Seller)</h5>
+
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">XR, VR & AR (Seller)</h5> */}
-                      
-                        
+                          {/* <h5 className="card-title">XR, VR & AR (Seller)</h5> */}
+
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={c22}
@@ -1656,13 +1643,13 @@ const DownloadPDF = () => {
                         </div>
 
                         <div className="project-title-name text-center">
-                        <h5 className="card-title">XR VR & AR (Seller)</h5>
-                        
+                          <h5 className="card-title">XR VR & AR (Seller)</h5>
+
                         </div>
                         <div className="hover-content">
-                        {/* <h5 className="card-title">XR, VR & AR (Seller)</h5> */}
-                      
-                        
+                          {/* <h5 className="card-title">XR, VR & AR (Seller)</h5> */}
+
+
                           <ul className="ProjectType-list"></ul>
                           <a
                             href={XRVRSeller}
@@ -1676,10 +1663,10 @@ const DownloadPDF = () => {
                     </div>
                   </div>
                 </div>
-             
-                <div className="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab"  data-aos="fade-up-left">
-                   {/* videos */}
-                   <div className="row mt-3">
+
+                <div className="tab-pane fade" id="videos" role="tabpanel" aria-labelledby="videos-tab" data-aos="fade-up-left">
+                  {/* videos */}
+                  <div className="row mt-3">
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
@@ -1815,7 +1802,7 @@ const DownloadPDF = () => {
                     <div className="col-md-3 col-sm-3 animated fadeInUp">
                       <div className="image-container">
                         <div className="defaultimagecontainer text-center">
-                          <img src={Comics_Buyer } alt="user" className="defualtImage" />
+                          <img src={Comics_Buyer} alt="user" className="defualtImage" />
                         </div>
 
                         <div className="project-title-name text-center">
@@ -2130,7 +2117,7 @@ const DownloadPDF = () => {
                           <h5 className="card-title">XR VR & AR (Buyer)</h5>
                         </div>
                         <div className="hover-content">
-                        <h5 className="card-title">XR VR & AR (Buyer)</h5>
+                          <h5 className="card-title">XR VR & AR (Buyer)</h5>
                           <ul className="ProjectType-list"></ul>
                           <a
                             href="/assets/videos/XR, VR & AR Buyer.mp4"
@@ -2164,14 +2151,14 @@ const DownloadPDF = () => {
                         </div>
                       </div>
                     </div>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
-      
+      </div>
+
       <Footer />
     </>
   );

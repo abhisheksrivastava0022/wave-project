@@ -48,11 +48,7 @@ const Header = () => {
                                 Buyer Login
                             </a>
                         </li>
-                        <li>
-                            <a href="https://wavesbazaar.com/wave-seller/login/market.wavesbazaar.com">
-                                Viewing Room & Market screenings
-                            </a>
-                        </li>
+
                         <li>
                             <a href="https://wavesbazaar.com/project">
                                 Explore Projects
