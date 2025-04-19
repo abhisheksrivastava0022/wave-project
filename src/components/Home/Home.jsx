@@ -577,7 +577,12 @@ const Home = () => {
                       Buyer Login
                     </a>
                   </li>
-
+                  <li>
+                    {" "}
+                    <a href="https://wavesbazaar.com/wave-seller/login">
+                      Pitch  Room
+                    </a>
+                  </li>
                   <li>
                     {" "}
                     <a href="https://wavesbazaar.com/project">
