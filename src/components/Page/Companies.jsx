@@ -29,7 +29,7 @@ import Logo24 from "../../assets/img/Logo/Rajshri.png";
 import Logo25 from "../../assets/img/Logo/MukeshChhabra.png";
 import Logo26 from "../../assets/img/Logo/RedChillies.png";
 import Logo27 from "../../assets/img/Logo/LycaProductions.png";
-import Logo28 from "../../assets/img/Logo/PanoramaStudio.png";
+import Logo28 from "../../assets/img/Logo/Panorama Studios.jpg";
 import Logo29 from "../../assets/img/Logo/Bookmyshow.png";
 import Logo30 from "../../assets/img/Logo/ColorYellow.png";
 import Logo31 from "../../assets/img/Logo/Latido.png";
@@ -45,6 +45,12 @@ import Logo40 from "../../assets/img/Logo/In10Media.png";
 import Logo41 from "../../assets/img/Logo/AnnapurnaStudios.png";
 import Logo42 from "../../assets/img/Logo/ShortsTV.png";
 import Logo43 from "../../assets/img/Logo/FilmSharks.png";
+import Logo44 from "../../assets/img/Logo/DEVGN FILMS.jpg";
+import Logo45 from "../../assets/img/Logo/Janta_Cinema_Logo_vertical_RGB-2.jpg";
+import Logo46 from "../../assets/img/Logo/LVS.jpg";
+import Logo47 from "../../assets/img/Logo/Prismix.jpg";
+import Logo48 from "../../assets/img/Logo/Pulz Sound.jpg";
+
 
 const Companies = () => {
   const FeaturesCompanies = [
@@ -679,6 +685,75 @@ const Companies = () => {
                                 }}
                               />
                             </div>
+                          </div>
+                          <div className="col-md-3 mb-3">
+                            <div className="card ">
+                              <img
+                                src={Logo44}
+                                alt=""
+                                style={{
+                                  width: "100%",
+                                  maxHeight: "100px",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <div className="col-md-3 mb-3">
+                            <div className="card ">
+                              <img
+                                src={Logo45}
+                                alt=""
+                                style={{
+                                  width: "100%",
+                                  maxHeight: "100px",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            </div>
+                           
+                          </div>
+                          <div className="col-md-3 mb-3">
+                            <div className="card ">
+                              <img
+                                src={Logo46}
+                                alt=""
+                                style={{
+                                  width: "100%",
+                                  maxHeight: "100px",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            </div>
+                           
+                          </div>
+                          <div className="col-md-3 mb-3">
+                            <div className="card ">
+                              <img
+                                src={Logo47}
+                                alt=""
+                                style={{
+                                  width: "100%",
+                                  maxHeight: "100px",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            </div>
+                           
+                          </div>
+                          <div className="col-md-3 mb-3">
+                            <div className="card ">
+                              <img
+                                src={Logo48}
+                                alt=""
+                                style={{
+                                  width: "100%",
+                                  maxHeight: "100px",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            </div>
+                           
                           </div>
                             
                             </>) }
