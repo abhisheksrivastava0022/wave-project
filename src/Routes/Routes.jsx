@@ -9,6 +9,7 @@ import Faq from "../components/Page/Faq";
 import DownloadPDF from "../components/DownloadPDF/DownloadPDF";
 import FeaturedCompany from "../components/FeaturedCompany/FeaturedCompany";
 import Companies from "../components/Page/Companies";
+import PitchRoom from "../components/TermsAndCondition/PitchRoom";
 
 const basePrefix = ""; // Ensure this matches your Vite config
 
@@ -38,6 +39,10 @@ export const routes = [
   {
     path: "project/terms-and-conditions",
     element: <TermsAndCondition />,
+  },
+  {
+    path: "project/pitch-room",
+    element: <PitchRoom />,
   },
   {
     path: "featured-companies",
