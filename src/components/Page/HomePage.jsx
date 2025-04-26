@@ -321,7 +321,7 @@ const HomePage = () => {
             videography={videographyName}
             formatStageType={formatStageTypeName}
             languageName={languageName}
-            // cityName={cityName}
+          // cityName={cityName}
           />
         </>
       );
@@ -428,6 +428,7 @@ const HomePage = () => {
 
   return (
     <div>
+      {/* <div className="mainlogo">  <img className="img-responsive" src="/img/waves bazaar.jpeg" /></div> */}
       <div className="col-lg-12 home-video">
         <div className="video-section">
           <div className="container">
@@ -469,6 +470,7 @@ const HomePage = () => {
           <div className="bg-home">
             <div className="container">
               <div className="hero-banner-text">
+
                 <h1 className="animated fadeInRight">
                   Welcome to Waves Bazaar
                 </h1>
@@ -479,6 +481,7 @@ const HomePage = () => {
                   Empowering Global Media & Entertainment Industry Connections
                 </h6>
 
+
                 <div className="btn-landing">
                   <a
                     href="https://wavesbazaar.com/wave-seller/signup"
@@ -487,7 +490,7 @@ const HomePage = () => {
                     Seller’s Signup
                   </a>
                   <a
-                    href="https://wavesbazaar.com/waves-buyer/signup"
+                    href=""
                     className="btn common-btn-div animated fadeInRight"
                   >
                     Buyer’s Signup
@@ -499,30 +502,32 @@ const HomePage = () => {
                     Pitch  Room
                   </a> */}
                 </div>
-
-                <div
-                  className="btn-landing"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
-                  <a
-                    href="https://wavesbazaar.com/wave-seller/signup"
-                    className="btn common-btn-div1 animated fadeInLeft"
+                <div className="catelog">
+                  <div
+                    className="btn-landing1"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                   >
-                    View Catelog
-                  </a>
-                  {isHovered && (
-                    <div className="btn-landing">
-                      <a
-                        href="/public/pdf/Project Catalogue.pdf"
-                        className="btn common-btn-div1 animated fadeInLeft"
-                        download
-                      >
-                        Project Catalogue
-                      </a>
-                      {/* <a
+                    <a
+                      href="javascript:void(0)"
+                      className="btn btn-landing-catelog animated fadeInLeft"
+                    >
+                      View Catalogue
+                    </a>
+                    {isHovered && (
+                      <div className="btn-landing1">
+                        <a
+                          href="/pdf/Project Catalogue.pdf"
+                          className="btn btn-landing-catelog animated fadeInLeft"
+                          target="_blank"
+                          style={{ "marginLeft": "11px" }}
+                        >
+                          Project Catalogue
+
+                        </a>
+                        {/* <a
                         href="https://wavesbazaar.com/wave-seller/signup"
-                        className="btn common-btn-div1 animated fadeInLeft"
+                        className="btn common-btn-div1 animated fadeInLeft" /img/waves bazaar.jpeg
                       >
                         View Catelog
                       </a>
@@ -532,8 +537,9 @@ const HomePage = () => {
                       >
                         View Catelog
                       </a> */}
-                    </div>
-                  )}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -664,7 +670,7 @@ const HomePage = () => {
                         <h5 className="card-title">{row.title}</h5>
                         <ul className="ProjectType-list">
                           {row.category != null &&
-                          row.category !== undefined ? (
+                            row.category !== undefined ? (
                             <li title="Category">{getSegment(row.category)}</li>
                           ) : null}
                           {row.videography_type ? (
