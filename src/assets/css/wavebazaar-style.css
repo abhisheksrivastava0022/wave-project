@@ -120,7 +120,8 @@ h1,
   color: #777;
 }
 
-.topbox {}
+.topbox {
+}
 
 .topbox .col-xxl-3 {
   width: 20%;
@@ -296,7 +297,7 @@ h1,
   padding-bottom: 10px;
 }
 
-.active>.page-link,
+.active > .page-link,
 .page-link.active {
   border-color: #581c87 !important;
   background-color: #581c87 !important;
@@ -1695,7 +1696,8 @@ li.sidebar-signout a {
   padding-top: 10px;
 }
 
-.logo-landing-header {}
+.logo-landing-header {
+}
 
 .logo-landing-header .top-logo {
   display: flex;
@@ -2433,9 +2435,11 @@ h5 {
   font-weight: 700;
   color: #313133;
   background: #fff;
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(241, 241, 241, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(241, 241, 241, 1) 100%
+  );
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
@@ -2518,7 +2522,6 @@ h5 {
 
 .btn-landing1 {
   display: flex;
-
 }
 
 .btn-landing-catelog {
@@ -2545,4 +2548,24 @@ h5 {
   right: 0;
   /* bottom: 20px; */
   z-index: 1111111111111111111111;
+}
+.waves-purpel-logo {
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  max-width: 180px;
+  /* border: 2px solid green !important; */
+  & img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  .waves-purpel-logo {
+    right: 0;
+    max-width: 180px;
+    & img {
+      width: 80%;
+    }
+  }
 }

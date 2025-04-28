@@ -321,7 +321,7 @@ const HomePage = () => {
             videography={videographyName}
             formatStageType={formatStageTypeName}
             languageName={languageName}
-          // cityName={cityName}
+            // cityName={cityName}
           />
         </>
       );
@@ -469,7 +469,6 @@ const HomePage = () => {
           <div className="bg-home">
             <div className="container">
               <div className="hero-banner-text">
-
                 <h1 className="animated fadeInRight">
                   Welcome to Waves Bazaar
                 </h1>
@@ -479,7 +478,6 @@ const HomePage = () => {
                 <h6 className="mt-3 animated fadeInDown">
                   Empowering Global Media & Entertainment Industry Connections
                 </h6>
-
 
                 <div className="btn-landing">
                   <a
@@ -519,10 +517,9 @@ const HomePage = () => {
                           href="/pdf/Project Catalogue.pdf"
                           className="btn btn-landing-catelog animated fadeInLeft"
                           target="_blank"
-                          style={{ "marginLeft": "11px" }}
+                          style={{ marginLeft: "11px" }}
                         >
                           Project Catalogue
-
                         </a>
                         {/* <a
                         href="https://wavesbazaar.com/wave-seller/signup"
@@ -540,6 +537,9 @@ const HomePage = () => {
                     )}
                   </div>
                 </div>
+              </div>
+              <div className="waves-purpel-logo">
+                <img src="/public/image/waves-bazaar-logo-purple.png"></img>
               </div>
             </div>
           </div>
@@ -669,7 +669,7 @@ const HomePage = () => {
                         <h5 className="card-title">{row.title}</h5>
                         <ul className="ProjectType-list">
                           {row.category != null &&
-                            row.category !== undefined ? (
+                          row.category !== undefined ? (
                             <li title="Category">{getSegment(row.category)}</li>
                           ) : null}
                           {row.videography_type ? (
