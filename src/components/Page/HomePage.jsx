@@ -428,7 +428,6 @@ const HomePage = () => {
 
   return (
     <div>
-      {/* <div className="mainlogo">  <img className="img-responsive" src="/img/waves bazaar.jpeg" /></div> */}
       <div className="col-lg-12 home-video">
         <div className="video-section">
           <div className="container">
@@ -487,13 +486,13 @@ const HomePage = () => {
                     href="https://wavesbazaar.com/wave-seller/signup"
                     className="btn common-btn-div1 animated fadeInLeft"
                   >
-                    Seller’s Signup
+                    Seller’s Signup/Login
                   </a>
                   <a
-                    href=""
+                    href="https://wavesbazaar.com/waves-buyer/signup"
                     className="btn common-btn-div animated fadeInRight"
                   >
-                    Buyer’s Signup
+                    Buyer’s Signup/Login
                   </a>
                   {/* <a
                     href="/project/pitch-room"

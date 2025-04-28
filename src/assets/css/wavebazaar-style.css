@@ -2102,6 +2102,8 @@ h5 {
 .bg-home {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../../../public/image/bg1.jpg) center center no-repeat;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../../../public/img/wavesbgcopy1.jpg) center center no-repeat; */
   background-size: cover;
   height: 100vh;
 }
@@ -2534,4 +2536,13 @@ h5 {
   color: #5f259e;
   border: solid 2px #efe4fb;
   background: #efe4fb;
+}
+
+.mainlogo {
+  position: absolute;
+  top: 116px;
+  /* left: 67px; */
+  right: 0;
+  /* bottom: 20px; */
+  z-index: 1111111111111111111111;
 }

@@ -58,23 +58,23 @@ const Companies = () => {
       question: "International Companies",
       answer:
         [
-         Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10,
-         Logo11, Logo12, Logo13, Logo14, Logo15, Logo16, Logo17, Logo18, Logo19, Logo20,
-         Logo21, Logo22, Logo23, Logo24, Logo25, Logo26, Logo27, Logo28, Logo29, Logo30,
-         Logo31, Logo32, Logo33, Logo34, Logo35, Logo36, Logo37, Logo38, Logo39, Logo40,
-         Logo41, Logo42, Logo43,
-       ]
+          Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10,
+          Logo11, Logo12, Logo13, Logo14, Logo15, Logo16, Logo17, Logo18, Logo19, Logo20,
+          Logo21, Logo22, Logo23, Logo24, Logo25, Logo26, Logo27, Logo28, Logo29, Logo30,
+          Logo31, Logo32, Logo33, Logo34, Logo35, Logo36, Logo37, Logo38, Logo39, Logo40,
+          Logo41, Logo42, Logo43,
+        ]
     },
     {
       question: "Indian Companies",
       answer:
         [
-         Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10,
-         Logo11, Logo12, Logo13, Logo14, Logo15, Logo16, Logo17, Logo18, Logo19, Logo20,
-         Logo21, Logo22, Logo23, Logo24, Logo25, Logo26, Logo27, Logo28, Logo29, Logo30,
-         Logo31, Logo32, Logo33, Logo34, Logo35, Logo36, Logo37, Logo38, Logo39, Logo40,
-         Logo41, Logo42, Logo43,
-       ]
+          Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8, Logo9, Logo10,
+          Logo11, Logo12, Logo13, Logo14, Logo15, Logo16, Logo17, Logo18, Logo19, Logo20,
+          Logo21, Logo22, Logo23, Logo24, Logo25, Logo26, Logo27, Logo28, Logo29, Logo30,
+          Logo31, Logo32, Logo33, Logo34, Logo35, Logo36, Logo37, Logo38, Logo39, Logo40,
+          Logo41, Logo42, Logo43,
+        ]
     },
   ];
 
@@ -84,7 +84,7 @@ const Companies = () => {
         <h3 className="text-center mb-5">Featured Companies</h3>
         <div className="card">
           <div className="">
-           
+
 
             <div className="tab-content mt-2" id="myTabsContent">
               <div
@@ -99,9 +99,8 @@ const Companies = () => {
                     <div className="accordion-item" key={index}>
                       <h2 className="accordion-header" id={`heading-${index}`}>
                         <button
-                          className={`accordion-button ${
-                            index === 0 ? "" : "collapsed"
-                          }`}
+                          className={`accordion-button ${index === 0 ? "" : "collapsed"
+                            }`}
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target={`#collapse-${index}`}
@@ -119,522 +118,522 @@ const Companies = () => {
                       >
                         <div className="accordion-body">
                           <div className="row">
-                          {index === 0 ?
-                           (
-                           <>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo1}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo2}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo10}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo9}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo11}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo12}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo17}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo22}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo23}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo31}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo38}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo42}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo43}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-3 mb-3">
-                              <div className="card ">
-                                <img
-                                  src={Logo37}
-                                  alt=""
-                                  style={{
-                                    width: "100%",
-                                    maxHeight: "100px",
-                                    objectFit: "contain",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                           
-                           
-                           </>) :
-                            (
-                            <>
-                            <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo3}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo4}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo5}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo6}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo7}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo8}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo13}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo14}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo15}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo16}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo18}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo19}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo20}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo21}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo24}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo25}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo26}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo27}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo28}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo29}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo30}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo32}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo33}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo34}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo35}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
+                            {index === 0 ?
+                              (
+                                <>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo1}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo2}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo10}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo9}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo11}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo12}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo17}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo22}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo23}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo31}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo38}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo42}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo43}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo37}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+
+
+                                </>) :
+                              (
+                                <>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo3}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo4}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo5}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo6}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo7}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo8}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo13}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo14}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo15}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo16}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo18}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo19}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo20}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo21}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo24}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo25}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo26}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo27}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo28}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo29}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo30}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo32}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo33}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo34}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo35}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  {/* <div className="col-md-3 mb-3">
                             <div className="card ">
                               <img
                                 src={Logo36}
@@ -646,118 +645,118 @@ const Companies = () => {
                                 }}
                               />
                             </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo39}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo40}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo41}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo44}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo45}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                           
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo46}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                           
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo47}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                           
-                          </div>
-                          <div className="col-md-3 mb-3">
-                            <div className="card ">
-                              <img
-                                src={Logo48}
-                                alt=""
-                                style={{
-                                  width: "100%",
-                                  maxHeight: "100px",
-                                  objectFit: "contain",
-                                }}
-                              />
-                            </div>
-                           
-                          </div>
-                            
-                            </>) }
-                           
+                          </div> */}
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo39}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo40}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo41}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo44}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo45}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo46}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo47}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+
+                                  </div>
+                                  <div className="col-md-3 mb-3">
+                                    <div className="card ">
+                                      <img
+                                        src={Logo48}
+                                        alt=""
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "100px",
+                                          objectFit: "contain",
+                                        }}
+                                      />
+                                    </div>
+
+                                  </div>
+
+                                </>)}
+
                           </div>
                         </div>
                       </div>
