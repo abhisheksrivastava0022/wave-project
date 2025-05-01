@@ -539,7 +539,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="waves-purpel-logo">
-                <img src="/public/image/waves-bazaar-logo-purple.png"></img>
+                <img src="/image/waves-bazaar-logo-purple.png"></img>
               </div>
             </div>
           </div>
