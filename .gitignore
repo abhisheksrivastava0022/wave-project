@@ -15,8 +15,8 @@ dist-ssr
 *.local
 .env
 ./.env
-vite.config.js
-./vite.config.js
+# vite.config.js
+# ./vite.config.js
 
 # Editor directories and files
 .vscode/*
